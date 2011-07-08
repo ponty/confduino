@@ -19,6 +19,7 @@ Known problems:
  - Python 3 is not supported
  - tested only on linux
  - some libraries with unusual structure can not be installed
+ - not all commands have console interface
  
 Basic usage
 ============
