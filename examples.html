@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Examples &mdash; confduino v0.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="confduino v0.0.0 documentation" href="index.html" />
+    <link rel="next" title="command line help" href="help.html" />
+    <link rel="prev" title="Usage with programmers" href="usage3.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="command line help"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="usage3.html" title="Usage with programmers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>Many libraries are upgraded in examples/upgrademany.py, this can be started:</p>
+<div class="highlight-python"><pre>python -m confduino.examples.upgrademany</pre>
+</div>
+<p>Code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">confduino.libinstall</span> <span class="kn">import</span> <span class="n">install_lib</span>
+<span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+    
+<span class="n">UPGRADE</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">upgrade</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">&#39;upgrading &#39;</span> <span class="o">+</span> <span class="n">url</span>
+    <span class="n">install_lib</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">UPGRADE</span><span class="p">)</span>
+    
+<span class="nd">@entrypoint</span>
+<span class="k">def</span> <span class="nf">upgrade_many</span><span class="p">():</span>    
+    <span class="s">&#39;upgrade many libs&#39;</span>
+
+    <span class="c"># you can set your arduino path if it is not default</span>
+    <span class="c">#os.environ[&#39;ARDUINO_HOME&#39;] = &#39;/home/...&#39;</span>
+    
+    <span class="c">############################</span>
+    <span class="c"># arduino.cc</span>
+    <span class="c">############################</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Metro.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://www.arduino.cc/playground/uploads/Main/MsTimer2.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)</span>
+<span class="c">#    upgrade(&#39;http://arduino.cc/playground/uploads/Main/LedControl.zip&#39;)</span>
+<span class="c">#    upgrade(&#39;http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip&#39;)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Bounce.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/CapacitiveSense003.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PinChangeInt.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://arduino.cc/playground/uploads/Code/TimerThree.zip&#39;)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/TimedAction-1_6.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/EventFuse.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Charlieplex.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/DigitalToggle.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Enerlib.zip&#39;</span><span class="p">)</span>
+    
+    <span class="c">#upgrade(&#39;http://arduino.cc/playground/uploads/Code/AdvButton_11.zip&#39;) # this has bug</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/AdvButton.zip&#39;</span><span class="p">)</span>
+       
+    <span class="c">############################</span>
+    <span class="c"># arduiniana.org</span>
+    <span class="c">############################</span>
+    <span class="c"># TODO: how to get latest version?? </span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduiniana.org/PString/PString2.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduiniana.org/Flash/Flash3.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduiniana.org/Streaming/Streaming4.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://arduiniana.org/PWMServo/PWMServo.zip&#39;)</span>
+<span class="c">#    upgrade(&#39;http://arduiniana.org/TinyGPS/TinyGPS10.zip&#39;)</span>
+
+
+    <span class="c">############################</span>
+    <span class="c"># google</span>
+    <span class="c">############################</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://arduino-playground.googlecode.com/files/LedDisplay03.zip&#39;)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://webduino.googlecode.com/files/webduino-1.4.1.zip&#39;)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino-pid-library.googlecode.com/files/PID_v1.0.1.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://ideoarduinolibraries.googlecode.com/files/Qtouch1Wire.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino-timerone.googlecode.com/files/TimerOne-v2.zip&#39;</span><span class="p">)</span>
+
+
+    <span class="c">############################</span>
+    <span class="c"># others</span>
+    <span class="c">############################</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter1.zip&#39;</span><span class="p">)</span>
+<span class="c">#    upgrade(&#39;http://github.com/wimleers/flexitimer2/zipball/v1.0&#39;)</span>
+<span class="c">#    upgrade(&#39;http://www.state-machine.com/arduino/qp_arduino.zip&#39;)</span>
+<span class="c">#    upgrade(&#39;ftp://momjian.us/pub/arduino/TButton.zip&#39;) # AdvButton is better</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://johnmchilton.com/media/UComms.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://www.shikadi.net/files/arduino/SerialIP-1.0.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="usage3.html"
+                        title="previous chapter">Usage with programmers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="help.html"
+                        title="next chapter">command line help</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/examples.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="command line help"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="usage3.html" title="Usage with programmers"
+             >previous</a> |</li>
+        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

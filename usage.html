@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Usage with libraries &mdash; confduino v0.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="confduino v0.0.0 documentation" href="index.html" />
+    <link rel="next" title="Usage with boards" href="usage2.html" />
+    <link rel="prev" title="About" href="readme.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage2.html" title="Usage with boards"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="usage-with-libraries">
+<h1>Usage with libraries<a class="headerlink" href="#usage-with-libraries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arduino-path">
+<h2>Arduino path<a class="headerlink" href="#arduino-path" title="Permalink to this headline">¶</a></h2>
+<p>If Arduino can not be found at default path,
+then <tt class="docutils literal"><span class="pre">ARDUINO_HOME</span></tt> environment variable
+should be set.</p>
+<p>on Ubuntu:
+in <tt class="docutils literal"><span class="pre">~/.profile</span></tt>:</p>
+<div class="highlight-python"><pre>ARDUINO_HOME=~/opt/arduino
+export ARDUINO_HOME</pre>
+</div>
+<dl class="docutils">
+<dt>Default path:</dt>
+<dd><ul class="first last simple">
+<li>Mac: /Applications/Arduino.app/Contents/Resources/Java</li>
+<li>Linux: /usr/share/arduino/</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="list-installed-libraries">
+<h2>List installed libraries<a class="headerlink" href="#list-installed-libraries" title="Permalink to this headline">¶</a></h2>
+<p>From python:</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.liblist</span> <span class="kn">import</span> <span class="n">libraries</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">libraries</span><span class="p">()</span>
+<span class="go">[&#39;AdvButton&#39;, &#39;Bounce&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;DallasTemperature&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EEPROM&#39;, &#39;Enerlib&#39;, &#39;EventFuse&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;LiquidCrystal&#39;, &#39;Metro&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PString&#39;, &#39;PinChangeInt&#39;, &#39;SevenSegment&#39;, &#39;Streaming&#39;, &#39;TButton&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;Tone&#39;, &#39;bassdll&#39;]</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.liblist
+AdvButton
+Bounce
+CapSense
+Charlieplex
+DallasTemperature
+DateTime
+DateTimeStrings
+DigitalToggle
+EEPROM
+Enerlib
+EventFuse
+Flash
+FreqCounter
+LiquidCrystal
+Metro
+MsTimer2
+NewSoftSerial
+OneWire
+PID_v1
+PString
+PinChangeInt
+SevenSegment
+Streaming
+TButton
+TimedAction
+TimerOne
+Tone
+bassdll
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-new-library">
+<h2>Install new library<a class="headerlink" href="#install-new-library" title="Permalink to this headline">¶</a></h2>
+<p>Existing library will not be changed.</p>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.libinstall</span> <span class="kn">import</span> <span class="n">install_lib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">install_lib</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip</pre>
+</div>
+</div>
+<div class="section" id="upgrade-existing-library">
+<h2>Upgrade existing library<a class="headerlink" href="#upgrade-existing-library" title="Permalink to this headline">¶</a></h2>
+<p>Same as install with <em>replace_existing</em> option.</p>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.libinstall</span> <span class="kn">import</span> <span class="n">install_lib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">install_lib</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip&#39;</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip --replace-existing</pre>
+</div>
+</div>
+<div class="section" id="remove-existing-library">
+<h2>Remove existing library<a class="headerlink" href="#remove-existing-library" title="Permalink to this headline">¶</a></h2>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.libremove</span> <span class="kn">import</span> <span class="n">remove_lib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_lib</span><span class="p">(</span><span class="s">&#39;PS2Keyboard&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.libremove PS2Keyboard</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Usage with libraries</a><ul>
+<li><a class="reference internal" href="#arduino-path">Arduino path</a></li>
+<li><a class="reference internal" href="#list-installed-libraries">List installed libraries</a></li>
+<li><a class="reference internal" href="#install-new-library">Install new library</a></li>
+<li><a class="reference internal" href="#upgrade-existing-library">Upgrade existing library</a></li>
+<li><a class="reference internal" href="#remove-existing-library">Remove existing library</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="readme.html"
+                        title="previous chapter">About</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usage2.html"
+                        title="next chapter">Usage with boards</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/usage.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage2.html" title="Usage with boards"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             >previous</a> |</li>
+        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
