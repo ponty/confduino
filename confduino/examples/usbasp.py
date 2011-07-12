@@ -3,11 +3,11 @@ from confduino.util import AutoBunch
 from entrypoint2 import entrypoint
 
 @entrypoint
-def install():    
+def install(replace_existing=False):    
     'install usbasp programmer'
     usbasp = AutoBunch()
-    usbasp.name = 'usbasp'
+    usbasp.name = 'USBasp'
     usbasp.communication = 'usb'
     usbasp.protocol = 'usbasp'
     
-    install_programmer('usbasp', usbasp, replace_existing=0)
+    install_programmer('usbasp', usbasp, replace_existing=replace_existing)

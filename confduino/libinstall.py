@@ -7,8 +7,21 @@ import logging
 
 log = logging.getLogger(__name__)
 
+def clean_lib_dir(root):
+    '''remove .* and _* files and directories under root'''
+    for x in root.walkdirs('.*',errors='ignore'):
+        x.rmtree()
+    for x in root.walkdirs('_*',errors='ignore'):
+        x.rmtree()
+
+    for x in root.walkfiles('.*',errors='ignore'):
+        x.remove()
+    for x in root.walkfiles('_*',errors='ignore'):
+        x.remove()
+    
+    
 def find_lib_dir(root):
-    '''search for xxx.cpp and xxx.h in xxx dir under root'''
+    '''search for lib dir under root'''
     root = path(root)
     log.debug('files in dir:' + root)
     for x in root.walkfiles():
@@ -18,42 +31,52 @@ def find_lib_dir(root):
             f = x.next()
             if 'example' not in f.lower():
                 yield f
-#    print list(noexample(root.walkfiles('*.*')))
+
     header_only = len(list(noexample(root.walkfiles('*.cpp')))) == 0
-    found = None
+    lib_dir = None
     for h in noexample(root.walkfiles('*.h')):
         cpp = h.stripext() + '.cpp'
         if  (header_only or cpp.exists()) and h.parent.name.lower() == h.namebase.lower():
-            assert not found
-            found = h.parent
-            log.debug('found lib:' + found)  
+            assert not lib_dir
+            lib_dir = h.parent
+            log.debug('found lib:' + lib_dir)  
     
-    if not found:
+    if not lib_dir:
         # xxx.cpp and xxx.h in root? -> rename root dir
         for h in root.files('*.h'):
             cpp = h.stripext() + '.cpp'
             if  header_only or cpp.exists():
-                assert not found
+                assert not lib_dir
                 log.debug('lib has no own dir')
                 root.rename(root.parent / h.namebase)
-                found = root.parent / h.namebase
-    assert found
+                root = lib_dir = root.parent / h.namebase
+    assert lib_dir
+    return root, lib_dir
     
     
-    # find examples not under lib
+def move_examples(root, lib_dir):
+    '''find examples not under lib dir, and move into ``examples``
+    '''
     all_pde = set(root.walkfiles('*.pde'))
-    lib_pde = set(found.walkfiles('*.pde'))
+    lib_pde = set(lib_dir.walkfiles('*.pde'))
     stray_pde = all_pde.difference(lib_pde)
-    if len(stray_pde):
+    if len(stray_pde) and not len(lib_pde):
         log.debug('examples found outside lib dir, moving them:' + str(stray_pde))
-        found_examples = found / 'found_examples'
-        found_examples.makedirs()
+        examples = lib_dir / 'examples'
+        examples.makedirs()
         for x in stray_pde:
-            d = found_examples / x.namebase
+            d = examples / x.namebase
             d.makedirs()
             x.move(d)
-        
-    return found
+
+def fix_examples_dir(lib_dir):
+    '''rename examples dir to ``examples``
+    '''
+    for x in lib_dir.dirs():
+        if x != 'examples' and len(list(x.walkfiles('*.pde'))):
+            log.debug('fixing examples dir name:' + x)
+            x.rename(x.parent / 'examples')
+            return
 
 @entrypoint
 def install_lib(url, replace_existing=False):
@@ -66,7 +89,12 @@ def install_lib(url, replace_existing=False):
     d = tmpdir(tmpdir())
     f = download(url)
     extract(f, d)
-    src_dlib = find_lib_dir(d)
+    
+    clean_lib_dir(d)
+    d, src_dlib = find_lib_dir(d)
+    move_examples(d, src_dlib)
+    fix_examples_dir(src_dlib)
+    
     targ_dlib = libraries_dir() / src_dlib.name
     docopy = 0
     if targ_dlib.exists():

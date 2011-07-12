@@ -1,7 +1,5 @@
 from confduino.libinstall import install_lib
 from entrypoint2 import entrypoint
-import os
-
     
 UPGRADE = True
 
@@ -36,8 +34,8 @@ def upgrade_many():
     upgrade('http://arduino.cc/playground/uploads/Code/DigitalToggle.zip')
     upgrade('http://arduino.cc/playground/uploads/Code/Enerlib.zip')
     
-    #upgrade('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip') # this has bug
-    upgrade('http://arduino.cc/playground/uploads/Code/AdvButton.zip')
+    upgrade('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip')
+    #upgrade('http://arduino.cc/playground/uploads/Code/AdvButton.zip') # old version
        
     ############################
     # arduiniana.org
