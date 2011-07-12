@@ -54,7 +54,7 @@ install_requires = [
     'entrypoint2',
     'path.py',    
     'Bunch',
-    'pprint',
+    'prettyprint',
     
     ]
 

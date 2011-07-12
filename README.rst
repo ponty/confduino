@@ -7,6 +7,10 @@ Links:
  
 Features:
  - list, install, remove arduino_ libraries
+ - install libraries from internet or local drive
+ - fix ``examples`` directory name
+ - clean library (.*,_*,..)
+ - move examples to right location
  - list, install, remove arduino_ programmers
  - list, install, remove arduino_ boards
  - written in python
@@ -43,10 +47,12 @@ General
  * install arduino_
  * install python_
  * install setuptools_
+ * install unpackers for patool_
  * install the program::
 
     # as root
     easy_install confduino
+    
 
 
 Ubuntu
@@ -55,6 +61,7 @@ Ubuntu
 
     sudo apt-get install arduino
     sudo apt-get install python-setuptools
+    sudo apt-get install unzip
     sudo easy_install confduino
 
 Uninstall

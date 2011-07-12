@@ -13,6 +13,7 @@ def extract(zip_path, target_dir):
                      'patool',
                      'extract',
                      zip_path,
-                     '--outdir=' + target_dir
+                     '--outdir=' + target_dir,
+#                     '--verbose',
                      ]).call()
     assert p.return_code == 0, p
