@@ -7,13 +7,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with programmers &mdash; confduino v0.0.0 documentation</title>
+    <title>Usage with programmers &mdash; confduino v0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.0',
+        VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino v0.0.0 documentation" href="index.html" />
+    <link rel="top" title="confduino v0.0.1 documentation" href="index.html" />
     <link rel="next" title="Examples" href="examples.html" />
     <link rel="prev" title="Usage with boards" href="usage2.html" /> 
   </head>
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="usage2.html" title="Usage with boards"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -58,7 +58,7 @@
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.proglist</span> <span class="kn">import</span> <span class="n">programmers</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">programmers</span><span class="p">()</span>
-<span class="go">AutoBunch(arduinoisp=AutoBunch(communication=&#39;serial&#39;, name=&#39;Arduino as ISP&#39;, protocol=&#39;stk500v1&#39;, speed=&#39;19200&#39;), avrisp=AutoBunch(communication=&#39;serial&#39;, name=&#39;AVR ISP&#39;, protocol=&#39;stk500v1&#39;), avrispmkii=AutoBunch(communication=&#39;usb&#39;, name=&#39;AVRISP mkII&#39;, protocol=&#39;stk500v2&#39;), parallel=AutoBunch(force=&#39;true&#39;, name=&#39;Parallel Programmer&#39;, protocol=&#39;dapa&#39;), usbasp=AutoBunch(communication=&#39;usb&#39;, name=&#39;usbasp&#39;, protocol=&#39;usbasp&#39;), usbtinyisp=AutoBunch(name=&#39;USBtinyISP&#39;, protocol=&#39;usbtiny&#39;))</span>
+<span class="go">AutoBunch(arduinoisp=AutoBunch(communication=&#39;serial&#39;, name=&#39;Arduino as ISP&#39;, protocol=&#39;stk500v1&#39;, speed=&#39;19200&#39;), avrisp=AutoBunch(communication=&#39;serial&#39;, name=&#39;AVR ISP&#39;, protocol=&#39;stk500v1&#39;), avrispmkii=AutoBunch(communication=&#39;usb&#39;, name=&#39;AVRISP mkII&#39;, protocol=&#39;stk500v2&#39;), parallel=AutoBunch(force=&#39;true&#39;, name=&#39;Parallel Programmer&#39;, protocol=&#39;dapa&#39;), stk200=AutoBunch(force=&#39;true&#39;, name=&#39;STK200&#39;, protocol=&#39;dapa&#39;), usbasp=AutoBunch(communication=&#39;usb&#39;, name=&#39;USBasp&#39;, protocol=&#39;usbasp&#39;), usbtinyisp=AutoBunch(name=&#39;USBtinyISP&#39;, protocol=&#39;usbtiny&#39;))</span>
 </pre></div>
 </div>
 <p>From console:</p>
@@ -76,7 +76,8 @@
  &#39;parallel&#39;: {&#39;force&#39;: &#39;true&#39;,
               &#39;name&#39;: &#39;Parallel Programmer&#39;,
               &#39;protocol&#39;: &#39;dapa&#39;},
- &#39;usbasp&#39;: {&#39;communication&#39;: &#39;usb&#39;, &#39;name&#39;: &#39;usbasp&#39;, &#39;protocol&#39;: &#39;usbasp&#39;},
+ &#39;stk200&#39;: {&#39;force&#39;: &#39;true&#39;, &#39;name&#39;: &#39;STK200&#39;, &#39;protocol&#39;: &#39;dapa&#39;},
+ &#39;usbasp&#39;: {&#39;communication&#39;: &#39;usb&#39;, &#39;name&#39;: &#39;USBasp&#39;, &#39;protocol&#39;: &#39;usbasp&#39;},
  &#39;usbtinyisp&#39;: {&#39;name&#39;: &#39;USBtinyISP&#39;, &#39;protocol&#39;: &#39;usbtiny&#39;}}
 </pre></div>
 </div>
@@ -90,14 +91,14 @@
 <span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
 
 <span class="nd">@entrypoint</span>
-<span class="k">def</span> <span class="nf">install</span><span class="p">():</span>    
+<span class="k">def</span> <span class="nf">install</span><span class="p">(</span><span class="n">replace_existing</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>    
     <span class="s">&#39;install usbasp programmer&#39;</span>
     <span class="n">usbasp</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
-    <span class="n">usbasp</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;usbasp&#39;</span>
+    <span class="n">usbasp</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;USBasp&#39;</span>
     <span class="n">usbasp</span><span class="o">.</span><span class="n">communication</span> <span class="o">=</span> <span class="s">&#39;usb&#39;</span>
     <span class="n">usbasp</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="s">&#39;usbasp&#39;</span>
     
-    <span class="n">install_programmer</span><span class="p">(</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span> <span class="n">usbasp</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">install_programmer</span><span class="p">(</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span> <span class="n">usbasp</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>console is not implemented</p>
@@ -174,7 +175,7 @@
         <li class="right" >
           <a href="usage2.html" title="Usage with boards"
              >previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
