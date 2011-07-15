@@ -4,11 +4,11 @@ from entrypoint2 import entrypoint
 
 @entrypoint
 def install(replace_existing=False):    
-    'install stk200 programmer'
+    'install dapa programmer'
     bunch = AutoBunch()
-    bunch.name = 'STK200'
-    bunch.protocol = 'stk200'
-    #bunch.force = 'true'
+    bunch.name = 'DAPA'
+    bunch.protocol = 'dapa'
+    bunch.force = 'true'
     # bunch.delay=200
     
-    install_programmer('stk200', bunch, replace_existing=replace_existing)
+    install_programmer('dapa', bunch, replace_existing=replace_existing)
