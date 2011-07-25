@@ -52,7 +52,9 @@ def upgrade_many():
     ############################
     # google
     ############################
-    upgrade('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip')
+
+#    upgrade('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip') # already in core!
+
 #    upgrade('http://arduino-playground.googlecode.com/files/LedDisplay03.zip')
     upgrade('http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip')
 #    upgrade('http://webduino.googlecode.com/files/webduino-1.4.1.zip')
@@ -65,6 +67,7 @@ def upgrade_many():
     # others
     ############################
     upgrade('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
+    upgrade('http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip')
     upgrade('http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter1.zip')
 #    upgrade('http://github.com/wimleers/flexitimer2/zipball/v1.0')
 #    upgrade('http://www.state-machine.com/arduino/qp_arduino.zip')
