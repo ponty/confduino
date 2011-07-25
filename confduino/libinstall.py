@@ -96,16 +96,21 @@ def install_lib(url, replace_existing=False):
     fix_examples_dir(src_dlib)
     
     targ_dlib = libraries_dir() / src_dlib.name
-    docopy = 0
+    doaction = 0
     if targ_dlib.exists():
         log.debug('library already exists:' + targ_dlib)
         if replace_existing:
             log.debug('remove %s' % (targ_dlib))
             targ_dlib.rmtree()
-            docopy = 1
+            doaction = 1
     else:
-        docopy = 1
+        doaction = 1
         
-    if docopy:
-        log.debug('copy %s -> %s' % (src_dlib, targ_dlib))
-        src_dlib.copytree(targ_dlib)
+    if doaction:
+        log.debug('move %s -> %s' % (src_dlib, targ_dlib))
+        src_dlib.move(targ_dlib) 
+        
+        libraries_dir().copymode(targ_dlib)       
+        for x in targ_dlib.walk():
+            libraries_dir().copymode(x)
+            
