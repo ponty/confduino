@@ -10,6 +10,8 @@ From python:
     
     >>> from confduino.boardlist import boards
     >>> boards()
+    >>> boards().diecimila.build.f_cpu
+    >>> boards()['diecimila']['build']['f_cpu']
 
 From console:
 

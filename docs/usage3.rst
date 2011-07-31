@@ -10,6 +10,8 @@ From python:
     
     >>> from confduino.proglist import programmers
     >>> programmers()
+    >>> programmers().arduinoisp.speed
+    >>> programmers()['arduinoisp']['speed']
 
 From console:
 
@@ -18,8 +20,6 @@ From console:
 
 Install new programmer
 ---------------------------
-
-Existing programmer will not be changed.
 
 From python:
 

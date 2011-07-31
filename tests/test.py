@@ -69,7 +69,6 @@ brd.x3=foo
         remove_programmer('brd')
         eq_(programmers().keys(), ['ardu'])
 
-    
     def test_boards(self):
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
@@ -95,7 +94,6 @@ brd.x3=foo
 
         remove_board('brd')
         eq_(boards().keys(), ['ardu'])
-
 
 
 

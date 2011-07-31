@@ -36,7 +36,9 @@ def upgrade_many():
     
     upgrade('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip')
     #upgrade('http://arduino.cc/playground/uploads/Code/AdvButton.zip') # old version
-       
+    
+#    upgrade('http://arduino.cc/playground/uploads/Code/SerialDebugger.zip') # can't install
+      
     ############################
     # arduiniana.org
     ############################

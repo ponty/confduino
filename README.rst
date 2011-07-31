@@ -8,9 +8,9 @@ Links:
 Features:
  - list, install, remove arduino_ libraries
  - install libraries from internet or local drive
- - fix ``examples`` directory name
- - clean library (.*,_*,..)
- - move examples to right location
+ - fix ``examples`` directory name before installing
+ - clean library (.*,_*,..) before installing
+ - move examples under ``examples`` directory
  - list, install, remove arduino_ programmers
  - list, install, remove arduino_ boards
  - written in python
@@ -18,6 +18,7 @@ Features:
  - can be used as a python library or as a console program
  - unpacker backend: patool_
  - downloader backend: urllib_
+ - some functionality is based on arscons_
  
 Known problems:
  - Python 3 is not supported
@@ -37,6 +38,9 @@ or on console::
 
     python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip
 
+install a lot of libraries::
+
+    python -m confduino.libinstall.examples.upgrademany
 
 Installation
 ============
@@ -81,3 +85,4 @@ first install pip_::
 .. _python: http://www.python.org/
 .. _urllib: http://docs.python.org/library/urllib.html
 .. _patool: http://pypi.python.org/pypi/patool
+.. _arscons: http://code.google.com/p/arscons/
