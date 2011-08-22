@@ -41,11 +41,15 @@ def read_properties(filename):
     '''
     s = path(filename).text()
     dummy_section = 'xxx'
-    config = ConfigParser.RawConfigParser()
-    config.readfp(StringIO('[%s]\n' % dummy_section + s))
+    cfgparser = ConfigParser.RawConfigParser()
+    
+    # avoid converting options to lower case
+    cfgparser.optionxform = str
+    
+    cfgparser.readfp(StringIO('[%s]\n' % dummy_section + s))
     bunch = AutoBunch()
-    for x in config.options(dummy_section):
-        cmd= 'bunch.%s = "%s"' % (x, config.get(dummy_section, x))
+    for x in cfgparser.options(dummy_section):
+        cmd= 'bunch.%s = "%s"' % (x, cfgparser.get(dummy_section, x))
         exec cmd    
     return bunch
 
@@ -56,5 +60,17 @@ def bunch2properties(parent, data):
             # recursive call
             lines += bunch2properties(parent + '.' + key, value)
     except AttributeError :
-        lines += [parent + '=' + data]
+        lines += [parent + '=' + str(data)]
     return lines
+
+def clean_dir(root):
+    '''remove .* and _* files and directories under root'''
+    for x in root.walkdirs('.*', errors='ignore'):
+        x.rmtree()
+    for x in root.walkdirs('_*', errors='ignore'):
+        x.rmtree()
+
+    for x in root.walkfiles('.*', errors='ignore'):
+        x.remove()
+    for x in root.walkfiles('_*', errors='ignore'):
+        x.remove()

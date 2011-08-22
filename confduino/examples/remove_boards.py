@@ -1,18 +1,29 @@
-from confduino.boardlist import boards, boards_txt
+from confduino.boardlist import boards, boards_txt, board_names
 from confduino.boardremove import remove_board
+from confduino.hwpacklist import hwpack_names
 from entrypoint2 import entrypoint
 import psidialogs
 
         
 @entrypoint
-def remove_boards():    
+def remove_boards_gui():    
     'remove boards by GUI'
-#    
-    board_names = boards().keys()
-    sel=psidialogs.multi_choice(board_names, 
-                            'select boards to remove from %s!' % boards_txt(), 
-                            title='remove boards')
 
-    for x in sel:
-        remove_board(x)
-        print x+' was removed'
+    if len(hwpack_names()):
+        hwpack = psidialogs.choice(hwpack_names(),
+                                'select hardware package to select board from!',
+                                title='select')
+    else:
+        hwpack = hwpack_names()[0]
+    print hwpack, 'selected'
+
+    if hwpack:
+        sel = psidialogs.multi_choice(board_names(hwpack),
+                                'select boards to remove from %s!' % boards_txt(hwpack),
+                                title='remove boards')
+        print sel, 'selected'
+    
+        if sel:
+            for x in sel:
+                remove_board(x)
+                print x + ' was removed'

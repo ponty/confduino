@@ -18,6 +18,22 @@ From console:
 .. program-output:: python -m confduino.boardlist
     :prompt:
 
+List installed MCUs
+---------------------------
+
+From python:
+
+.. runblock:: pycon
+    
+    >>> from confduino.mculist import mcus
+    >>> mcus()
+
+From console:
+
+.. program-output:: python -m confduino.mculist
+
+    :prompt:
+
 Install new board
 ---------------------------
 

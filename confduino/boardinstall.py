@@ -8,7 +8,7 @@ log = logging.getLogger(__name__)
 
 # TODO: how to pass options as cli argument?
        
-def install_board(board_id, board_options, replace_existing=False):
+def install_board(board_id, board_options, hwpack='arduino', replace_existing=False):
     '''install board in boards.txt
     
     :param board_id: string identifier
@@ -17,7 +17,7 @@ def install_board(board_id, board_options, replace_existing=False):
     :rtype: None
     '''       
     doaction = 0
-    if board_id in boards().keys():
+    if board_id in boards(hwpack).keys():
         log.debug('board already exists:' + board_id)
         if replace_existing:
             log.debug('remove board: %s' % (board_id))

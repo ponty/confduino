@@ -7,65 +7,37 @@ import logging
 
 log = logging.getLogger(__name__)
 
-def boards_txt():
+def boards_txt(hwpack='arduino'):
     'path of boards.txt'
-    x = arduino_path() / 'hardware' / 'arduino' / 'boards.txt'
+    x = arduino_path() / 'hardware' / hwpack / 'boards.txt'
     assert x.exists(), x
     return x
             
-def boards():
+def boards(hwpack='arduino'):
     ''' read boards from boards.txt
     
-    example::
     
-        {
-        'atmega328': {'bootloader': {'extended_fuses': '0x05',
-                                     'file': 'ATmegaBOOT_168_atmega328.hex',
-                                     'high_fuses': '0xDA',
-                                     'lock_bits': '0x0F',
-                                     'low_fuses': '0xFF',
-                                     'path': 'atmega',
-                                     'unlock_bits': '0x3F'},
-                      'build': {'core': 'arduino',
-                                'f_cpu': '16000000L',
-                                'mcu': 'atmega328p'},
-                      'name': 'Arduino Duemilanove or Nano w/ ATmega328',
-                      'upload': {'maximum_size': '30720',
-                                 'protocol': 'stk500',
-                                 'speed': '57600'}},
-     
-        'mini': {'bootloader': {'extended_fuses': '0x00',
-                                'file': 'ATmegaBOOT_168_ng.hex',
-                                'high_fuses': '0xdd',
-                                'lock_bits': '0x0F',
-                                'low_fuses': '0xff',
-                                'path': 'atmega',
-                                'unlock_bits': '0x3F'},
-                 'build': {'core': 'arduino',
-                           'f_cpu': '16000000L',
-                           'mcu': 'atmega168'},
-                 'name': 'Arduino Mini',
-                 'upload': {'maximum_size': '14336',
-                            'protocol': 'stk500',
-                            'speed': '19200'}},
-        }
-    
+    :param core_package: 'all,'arduino',..
     '''
-    return read_properties(boards_txt())
+    bunch = read_properties(boards_txt(hwpack))
+        
+    # remove invalid boards
+    for bid, board in bunch.items():
+        log.debug('    board found:' + bid)
+        if not 'build' in board.keys() or  not 'name' in board.keys():
+            log.debug('invalid board found:' + bid)
+            del bunch[bid]
+        
+    return bunch
+
+def board_names(hwpack='arduino'):
+    'return installed board names'
+    ls = boards(hwpack).keys()
+    ls.sort()
+    return ls
 
 @entrypoint
-def print_boards():
+def print_boards(hwpack='arduino'):
     ''' print boards from boards.txt'''
-    pprint(unbunchify(boards()))
-
-def mcu(board_name):
-    return  boards()[board_name].build.mcu
-
-def f_cpu(board_name):
-    return  boards()[board_name].build.f_cpu
-
-def targets():
-    ls = [mcu(x) for x in boards().keys()]
-    ls = sorted(list(set(ls)))
-    return ls
+    pprint(unbunchify(board_names(hwpack)))
     

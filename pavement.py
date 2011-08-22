@@ -49,7 +49,7 @@ classifiers = [
 
 install_requires = [
     'setuptools',
-    'patool',
+    'unpacker',
     'easyprocess',
     'entrypoint2',
     'path.py',    

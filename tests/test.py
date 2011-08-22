@@ -1,9 +1,11 @@
 from confduino.boardinstall import install_board
-from confduino.boardlist import print_boards, boards
+from confduino.boardlist import print_boards, boards, board_names
 from confduino.boardremove import remove_board
+from confduino.hwpacklist import print_hwpacks, hwpacks, hwpack_names
 from confduino.libinstall import install_lib
 from confduino.liblist import print_libraries, libraries
 from confduino.libremove import remove_lib
+from confduino.mculist import print_mcus
 from confduino.proginstall import install_programmer
 from confduino.proglist import print_programmers, programmers
 from confduino.progremove import remove_programmer
@@ -21,6 +23,9 @@ class Test(TestCase):
         print_libraries()        
         print_boards()        
         print_programmers()        
+        print_hwpacks()        
+        print_mcus()
+
         
     def test_lib(self):
         url = 'http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip'
@@ -77,30 +82,49 @@ brd.x3=foo
         boards_txt.parent.makedirs()        
 
         boards_txt.write_text('')
+        eq_(board_names(), [])
         eq_(boards().keys(), [])
         
+        # invalid board
         boards_txt.write_text('''
-brd.x1=foo
-brd.x2=foo
 brd.x3=foo
         ''')
+        eq_(board_names(), [])
+
+
+        boards_txt.write_text('''
+brd.name=foo
+brd.build=foo
+brd.x3=foo
+        ''')
+        eq_(board_names(), ['brd'])
         eq_(boards().keys(), ['brd'])
 
+        #invalid
         install_board('ardu',dict(x1='hi'))
-        eq_(boards().keys(), ['brd','ardu'])
+        eq_(board_names(), ['brd'])
+
+        install_board('ardu',dict(name='hi',build=1))
+        eq_(set(board_names()), set(['brd','ardu']))
 
         install_board('ardu',dict(x1='hi'))
-        eq_(boards().keys(), ['brd','ardu'])
+        eq_(set(board_names()), set(['brd','ardu']))
 
         remove_board('brd')
-        eq_(boards().keys(), ['ardu'])
+        eq_(board_names(), ['ardu'])
 
-
-
-
-
-
-
-
-
-        
+    def test_packs(self):
+        d = tmpdir(suffix='_test')
+        os.environ['ARDUINO_HOME'] = d
+        (d / 'hardware').makedirs()        
+        eq_(hwpack_names(), [])
+        boards_txt = d / 'hardware' / 'p1' / 'boards.txt'        
+        boards_txt.parent.makedirs()        
+        boards_txt.write_text('')
+        eq_(hwpack_names(), ['p1'])
+        boards_txt = d / 'hardware' / 'p2' / 'boards.txt'        
+        boards_txt.parent.makedirs()        
+        boards_txt.write_text('')
+        eq_(hwpack_names(), ['p1','p2'])
+    
+       

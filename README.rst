@@ -16,7 +16,7 @@ Features:
  - written in python
  - crossplatform
  - can be used as a python library or as a console program
- - unpacker backend: patool_
+ - unpacker backend: pyunpack_
  - downloader backend: urllib_
  - some functionality is based on arscons_
  
@@ -51,8 +51,7 @@ General
  * install arduino_
  * install python_
  * install setuptools_
- * install unpackers for patool_
- * install patool_ (easy_install does not work)
+ * install backends for pyunpack_ (optional)
  * install the program::
 
     # as root
@@ -66,9 +65,10 @@ Ubuntu
 
     sudo apt-get install arduino
     sudo apt-get install python-setuptools
-    sudo apt-get install unzip
-    sudo easy_install http://sourceforge.net/projects/patool/files/0.13/patool-0.13.tar.gz/download
     sudo easy_install confduino
+    # optional
+    sudo easy_install http://sourceforge.net/projects/patool/files/0.13/patool-0.13.tar.gz/download
+    sudo apt-get install unzip unrar p7zip-full
 
 Uninstall
 ----------
@@ -86,3 +86,4 @@ first install pip_::
 .. _urllib: http://docs.python.org/library/urllib.html
 .. _patool: http://pypi.python.org/pypi/patool
 .. _arscons: http://code.google.com/p/arscons/
+.. _pyunpack: https://github.com/ponty/pyunpack

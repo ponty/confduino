@@ -1,25 +1,13 @@
-from confduino.extract import extract
 from confduino.liblist import libraries_dir
-from confduino.util import tmpdir, download
+from confduino.util import tmpdir, download, clean_dir
 from entrypoint2 import entrypoint
 from path import path
+from pyunpack import Archive
 import logging
 
 log = logging.getLogger(__name__)
 
-def clean_lib_dir(root):
-    '''remove .* and _* files and directories under root'''
-    for x in root.walkdirs('.*',errors='ignore'):
-        x.rmtree()
-    for x in root.walkdirs('_*',errors='ignore'):
-        x.rmtree()
-
-    for x in root.walkfiles('.*',errors='ignore'):
-        x.remove()
-    for x in root.walkfiles('_*',errors='ignore'):
-        x.remove()
-    
-    
+ 
 def find_lib_dir(root):
     '''search for lib dir under root'''
     root = path(root)
@@ -88,9 +76,9 @@ def install_lib(url, replace_existing=False):
     '''
     d = tmpdir(tmpdir())
     f = download(url)
-    extract(f, d)
-    
-    clean_lib_dir(d)
+    Archive(f).extractall(d)
+
+    clean_dir(d)
     d, src_dlib = find_lib_dir(d)
     move_examples(d, src_dlib)
     fix_examples_dir(src_dlib)
