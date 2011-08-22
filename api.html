@@ -7,13 +7,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; confduino v0.0.2 documentation</title>
+    <title>API &mdash; confduino v0.0.5 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.2',
+        VERSION:     '0.0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino v0.0.2 documentation" href="index.html" />
+    <link rel="top" title="confduino v0.0.5 documentation" href="index.html" />
     <link rel="prev" title="command line help" href="help.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -70,12 +70,6 @@
 </dd></dl>
 
 <span class="target" id="module-confduino.libinstall"></span><dl class="function">
-<dt id="confduino.libinstall.clean_lib_dir">
-<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">clean_lib_dir</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#confduino.libinstall.clean_lib_dir" title="Permalink to this definition">¶</a></dt>
-<dd><p>remove .* and _* files and directories under root</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="confduino.libinstall.find_lib_dir">
 <tt class="descclassname">confduino.libinstall.</tt><tt class="descname">find_lib_dir</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#confduino.libinstall.find_lib_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>search for lib dir under root</p>
@@ -134,26 +128,40 @@
 <div class="section" id="module-confduino.boardlist">
 <span id="board"></span><h2>board<a class="headerlink" href="#module-confduino.boardlist" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="confduino.boardlist.board_names">
+<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">board_names</tt><big>(</big><em>hwpack='arduino'</em><big>)</big><a class="headerlink" href="#confduino.boardlist.board_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>return installed board names</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="confduino.boardlist.boards">
-<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">boards</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.boardlist.boards" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">boards</tt><big>(</big><em>hwpack='arduino'</em><big>)</big><a class="headerlink" href="#confduino.boardlist.boards" title="Permalink to this definition">¶</a></dt>
 <dd><p>read boards from boards.txt</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><strong>core_package</strong> &#8211; &#8216;all,&#8217;arduino&#8217;,..</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="confduino.boardlist.boards_txt">
-<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">boards_txt</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.boardlist.boards_txt" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">boards_txt</tt><big>(</big><em>hwpack='arduino'</em><big>)</big><a class="headerlink" href="#confduino.boardlist.boards_txt" title="Permalink to this definition">¶</a></dt>
 <dd><p>path of boards.txt</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="confduino.boardlist.print_boards">
-<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">print_boards</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.boardlist.print_boards" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.boardlist.</tt><tt class="descname">print_boards</tt><big>(</big><em>hwpack='arduino'</em><big>)</big><a class="headerlink" href="#confduino.boardlist.print_boards" title="Permalink to this definition">¶</a></dt>
 <dd><p>print boards from boards.txt</p>
 </dd></dl>
 
 <span class="target" id="module-confduino.boardinstall"></span><dl class="function">
 <dt id="confduino.boardinstall.install_board">
-<tt class="descclassname">confduino.boardinstall.</tt><tt class="descname">install_board</tt><big>(</big><em>board_id</em>, <em>board_options</em>, <em>replace_existing=False</em><big>)</big><a class="headerlink" href="#confduino.boardinstall.install_board" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.boardinstall.</tt><tt class="descname">install_board</tt><big>(</big><em>board_id</em>, <em>board_options</em>, <em>hwpack='arduino'</em>, <em>replace_existing=False</em><big>)</big><a class="headerlink" href="#confduino.boardinstall.install_board" title="Permalink to this definition">¶</a></dt>
 <dd><p>install board in boards.txt</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -304,7 +312,7 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              >previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

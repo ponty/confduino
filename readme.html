@@ -7,13 +7,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>About &mdash; confduino v0.0.2 documentation</title>
+    <title>About &mdash; confduino v0.0.5 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.2',
+        VERSION:     '0.0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino v0.0.2 documentation" href="index.html" />
+    <link rel="top" title="confduino v0.0.5 documentation" href="index.html" />
     <link rel="next" title="Usage with libraries" href="usage.html" />
     <link rel="prev" title="Indices and tables" href="index.html" /> 
   </head>
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -66,16 +66,17 @@
 <dd><ul class="first last simple">
 <li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> libraries</li>
 <li>install libraries from internet or local drive</li>
-<li>fix <tt class="docutils literal"><span class="pre">examples</span></tt> directory name</li>
-<li>clean library (.*,_*,..)</li>
-<li>move examples to right location</li>
+<li>fix <tt class="docutils literal"><span class="pre">examples</span></tt> directory name before installing</li>
+<li>clean library (.*,_*,..) before installing</li>
+<li>move examples under <tt class="docutils literal"><span class="pre">examples</span></tt> directory</li>
 <li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> programmers</li>
 <li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> boards</li>
 <li>written in python</li>
 <li>crossplatform</li>
 <li>can be used as a python library or as a console program</li>
-<li>unpacker backend: <a class="reference external" href="http://pypi.python.org/pypi/patool">patool</a></li>
+<li>unpacker backend: <a class="reference external" href="https://github.com/ponty/pyunpack">pyunpack</a></li>
 <li>downloader backend: <a class="reference external" href="http://docs.python.org/library/urllib.html">urllib</a></li>
+<li>some functionality is based on <a class="reference external" href="http://code.google.com/p/arscons/">arscons</a></li>
 </ul>
 </dd>
 <dt>Known problems:</dt>
@@ -98,6 +99,9 @@
 <p>or on console:</p>
 <div class="highlight-python"><pre>python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip</pre>
 </div>
+<p>install a lot of libraries:</p>
+<div class="highlight-python"><pre>python -m confduino.libinstall.examples.upgrademany</pre>
+</div>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
@@ -111,9 +115,7 @@
 </li>
 <li><p class="first">install <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">setuptools</a></p>
 </li>
-<li><p class="first">install unpackers for <a class="reference external" href="http://pypi.python.org/pypi/patool">patool</a></p>
-</li>
-<li><p class="first">install <a class="reference external" href="http://pypi.python.org/pypi/patool">patool</a> (easy_install does not work)</p>
+<li><p class="first">install backends for <a class="reference external" href="https://github.com/ponty/pyunpack">pyunpack</a> (optional)</p>
 </li>
 <li><p class="first">install the program:</p>
 <div class="highlight-python"><pre># as root
@@ -127,9 +129,10 @@ easy_install confduino</pre>
 <h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>sudo apt-get install arduino
 sudo apt-get install python-setuptools
-sudo apt-get install unzip
+sudo easy_install confduino
+# optional
 sudo easy_install http://sourceforge.net/projects/patool/files/0.13/patool-0.13.tar.gz/download
-sudo easy_install confduino</pre>
+sudo apt-get install unzip unrar p7zip-full</pre>
 </div>
 </div>
 <div class="section" id="uninstall">
@@ -202,7 +205,7 @@ pip uninstall confduino</pre>
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              >previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

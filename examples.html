@@ -7,13 +7,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Examples &mdash; confduino v0.0.2 documentation</title>
+    <title>Examples &mdash; confduino v0.0.5 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.2',
+        VERSION:     '0.0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino v0.0.2 documentation" href="index.html" />
+    <link rel="top" title="confduino v0.0.5 documentation" href="index.html" />
     <link rel="next" title="command line help" href="help.html" />
     <link rel="prev" title="Usage with programmers" href="usage3.html" /> 
   </head>
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="usage3.html" title="Usage with programmers"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -95,7 +95,9 @@
     
     <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/AdvButton_11.zip&#39;</span><span class="p">)</span>
     <span class="c">#upgrade(&#39;http://arduino.cc/playground/uploads/Code/AdvButton.zip&#39;) # old version</span>
-       
+    
+<span class="c">#    upgrade(&#39;http://arduino.cc/playground/uploads/Code/SerialDebugger.zip&#39;) # can&#39;t install</span>
+      
     <span class="c">############################</span>
     <span class="c"># arduiniana.org</span>
     <span class="c">############################</span>
@@ -111,7 +113,9 @@
     <span class="c">############################</span>
     <span class="c"># google</span>
     <span class="c">############################</span>
-    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip&#39;</span><span class="p">)</span>
+
+<span class="c">#    upgrade(&#39;http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip&#39;) # already in core!</span>
+
 <span class="c">#    upgrade(&#39;http://arduino-playground.googlecode.com/files/LedDisplay03.zip&#39;)</span>
     <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip&#39;</span><span class="p">)</span>
 <span class="c">#    upgrade(&#39;http://webduino.googlecode.com/files/webduino-1.4.1.zip&#39;)</span>
@@ -124,6 +128,7 @@
     <span class="c"># others</span>
     <span class="c">############################</span>
     <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip&#39;</span><span class="p">)</span>
+    <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip&#39;</span><span class="p">)</span>
     <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter1.zip&#39;</span><span class="p">)</span>
 <span class="c">#    upgrade(&#39;http://github.com/wimleers/flexitimer2/zipball/v1.0&#39;)</span>
 <span class="c">#    upgrade(&#39;http://www.state-machine.com/arduino/qp_arduino.zip&#39;)</span>
@@ -164,11 +169,34 @@
     <span class="s">&#39;install stk200 programmer&#39;</span>
     <span class="n">bunch</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
     <span class="n">bunch</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;STK200&#39;</span>
-    <span class="n">bunch</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="s">&#39;dapa&#39;</span>
-    <span class="n">bunch</span><span class="o">.</span><span class="n">force</span> <span class="o">=</span> <span class="s">&#39;true&#39;</span>
+    <span class="n">bunch</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="s">&#39;stk200&#39;</span>
+    <span class="c">#bunch.force = &#39;true&#39;</span>
     <span class="c"># bunch.delay=200</span>
     
     <span class="n">install_programmer</span><span class="p">(</span><span class="s">&#39;stk200&#39;</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Install atmega88 board:</p>
+<div class="highlight-python"><pre>python -m confduino.examples.atmega88</pre>
+</div>
+<p>Code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">confduino.boardinstall</span> <span class="kn">import</span> <span class="n">install_board</span>
+<span class="kn">from</span> <span class="nn">confduino.util</span> <span class="kn">import</span> <span class="n">AutoBunch</span>
+<span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
+
+<span class="nd">@entrypoint</span>
+<span class="k">def</span> <span class="nf">install</span><span class="p">():</span>    
+    <span class="s">&#39;install atmega88 board&#39;</span>
+    <span class="n">atmega88</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
+    <span class="n">atmega88</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;Atmega88 usbasp 16MHz&#39;</span>
+    
+    <span class="n">atmega88</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">using</span><span class="o">=</span><span class="s">&#39;usbasp&#39;</span>
+    
+    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">mcu</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span>
+    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">f_cpu</span><span class="o">=</span><span class="s">&#39;16000000L&#39;</span>
+    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">core</span><span class="o">=</span><span class="s">&#39;arduino&#39;</span>
+    
+    <span class="n">install_board</span><span class="p">(</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">atmega88</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -222,7 +250,7 @@
         <li class="right" >
           <a href="usage3.html" title="Usage with programmers"
              >previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

@@ -26,3 +26,11 @@ Install STK200 programmer::
 Code:
 
 .. literalinclude:: ../confduino/examples/stk200.py
+
+Install atmega88 board::
+
+    python -m confduino.examples.atmega88
+
+Code:
+
+.. literalinclude:: ../confduino/examples/atmega88.py
