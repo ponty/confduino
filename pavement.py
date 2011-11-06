@@ -49,13 +49,10 @@ classifiers = [
 
 install_requires = [
     'setuptools',
-    'unpacker',
-    'easyprocess',
     'entrypoint2',
     'path.py',    
     'Bunch',
-    'prettyprint',
-    
+    'pyunpack',    
     ]
 
 setup(
