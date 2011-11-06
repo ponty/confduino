@@ -6,15 +6,15 @@ import psidialogs
 
         
 @entrypoint
-def remove_boards_gui():    
+def remove_boards_gui(hwpack=''):    
     'remove boards by GUI'
-
-    if len(hwpack_names()):
-        hwpack = psidialogs.choice(hwpack_names(),
-                                'select hardware package to select board from!',
-                                title='select')
-    else:
-        hwpack = hwpack_names()[0]
+    if not hwpack:
+        if len(hwpack_names()) > 1:
+            hwpack = psidialogs.choice(hwpack_names(),
+                                    'select hardware package to select board from!',
+                                    title='select')
+        else:
+            hwpack = hwpack_names()[0]
     print hwpack, 'selected'
 
     if hwpack:

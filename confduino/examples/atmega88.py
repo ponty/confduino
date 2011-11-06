@@ -3,15 +3,15 @@ from confduino.util import AutoBunch
 from entrypoint2 import entrypoint
 
 @entrypoint
-def install():    
+def install(id='atmega88', mcu='atmega88', f_cpu=20000000, upload='usbasp', core='arduino', replace_existing=True):    
     'install atmega88 board'
-    atmega88 = AutoBunch()
-    atmega88.name='Atmega88 usbasp 16MHz'
+    board = AutoBunch()
+    board.name = '{mcu}@{f_cpu} programmer:{upload}'.format(mcu=mcu,f_cpu=f_cpu,upload=upload)
     
-    atmega88.upload.using='usbasp'
+    board.upload.using = upload
     
-    atmega88.build.mcu='atmega88'
-    atmega88.build.f_cpu='16000000L'
-    atmega88.build.core='arduino'
+    board.build.mcu = mcu
+    board.build.f_cpu = str(f_cpu) + 'L'
+    board.build.core = core
     
-    install_board('atmega88', atmega88, replace_existing=0)
+    install_board(id, board, replace_existing=replace_existing)
