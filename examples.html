@@ -3,17 +3,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Examples &mdash; confduino v0.0.5 documentation</title>
+    <title>Examples &mdash; confduino 0.0.6 documentation</title>
+    
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.5',
+        VERSION:     '0.0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -22,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino v0.0.5 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.0.6 documentation" href="index.html" />
     <link rel="next" title="command line help" href="help.html" />
     <link rel="prev" title="Usage with programmers" href="usage3.html" /> 
   </head>
@@ -42,7 +45,7 @@
         <li class="right" >
           <a href="usage3.html" title="Usage with programmers"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -53,6 +56,8 @@
             
   <div class="section" id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-libraries">
+<h2>Install libraries<a class="headerlink" href="#install-libraries" title="Permalink to this headline">¶</a></h2>
 <p>Many libraries are upgraded in examples/upgrademany.py, this can be started:</p>
 <div class="highlight-python"><pre>python -m confduino.examples.upgrademany</pre>
 </div>
@@ -137,7 +142,9 @@
     <span class="n">upgrade</span><span class="p">(</span><span class="s">&#39;http://www.shikadi.net/files/arduino/SerialIP-1.0.zip&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Install USBasp programmer:</p>
+</div>
+<div class="section" id="install-usbasp-programmer">
+<h2>Install USBasp programmer<a class="headerlink" href="#install-usbasp-programmer" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>python -m confduino.examples.usbasp</pre>
 </div>
 <p>Code:</p>
@@ -156,7 +163,9 @@
     <span class="n">install_programmer</span><span class="p">(</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span> <span class="n">usbasp</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Install STK200 programmer:</p>
+</div>
+<div class="section" id="install-stk200-programmer">
+<h2>Install STK200 programmer<a class="headerlink" href="#install-stk200-programmer" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>python -m confduino.examples.stk200</pre>
 </div>
 <p>Code:</p>
@@ -176,7 +185,9 @@
     <span class="n">install_programmer</span><span class="p">(</span><span class="s">&#39;stk200&#39;</span><span class="p">,</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Install atmega88 board:</p>
+</div>
+<div class="section" id="install-atmega88-board">
+<h2>Install atmega88 board<a class="headerlink" href="#install-atmega88-board" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>python -m confduino.examples.atmega88</pre>
 </div>
 <p>Code:</p>
@@ -185,19 +196,81 @@
 <span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
 
 <span class="nd">@entrypoint</span>
-<span class="k">def</span> <span class="nf">install</span><span class="p">():</span>    
+<span class="k">def</span> <span class="nf">install</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">mcu</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">f_cpu</span><span class="o">=</span><span class="mi">20000000</span><span class="p">,</span> <span class="n">upload</span><span class="o">=</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span> <span class="n">core</span><span class="o">=</span><span class="s">&#39;arduino&#39;</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>    
     <span class="s">&#39;install atmega88 board&#39;</span>
-    <span class="n">atmega88</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
-    <span class="n">atmega88</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;Atmega88 usbasp 16MHz&#39;</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;{mcu}@{f_cpu} programmer:{upload}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mcu</span><span class="o">=</span><span class="n">mcu</span><span class="p">,</span><span class="n">f_cpu</span><span class="o">=</span><span class="n">f_cpu</span><span class="p">,</span><span class="n">upload</span><span class="o">=</span><span class="n">upload</span><span class="p">)</span>
     
-    <span class="n">atmega88</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">using</span><span class="o">=</span><span class="s">&#39;usbasp&#39;</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">using</span> <span class="o">=</span> <span class="n">upload</span>
     
-    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">mcu</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span>
-    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">f_cpu</span><span class="o">=</span><span class="s">&#39;16000000L&#39;</span>
-    <span class="n">atmega88</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">core</span><span class="o">=</span><span class="s">&#39;arduino&#39;</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">mcu</span> <span class="o">=</span> <span class="n">mcu</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">f_cpu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">f_cpu</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;L&#39;</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">core</span> <span class="o">=</span> <span class="n">core</span>
     
-    <span class="n">install_board</span><span class="p">(</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">atmega88</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">install_board</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
 </pre></div>
+</div>
+<p>options:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.examples.atmega88 --help
+usage: atmega88.py [-h] [-i ID] [-m MCU] [-f F_CPU] [-u UPLOAD] [-c CORE] [-r]
+                   [--debug]
+
+install atmega88 board
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i ID, --id ID
+  -m MCU, --mcu MCU
+  -f F_CPU, --f-cpu F_CPU
+  -u UPLOAD, --upload UPLOAD
+  -c CORE, --core CORE
+  -r, --replace-existing
+  --debug               set logging level to DEBUG
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-boards">
+<h2>remove boards<a class="headerlink" href="#remove-boards" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python -m confduino.examples.remove_boards
+</pre>
+</div>
+<img alt="_images/screenshot_id0.png" src="_images/screenshot_id0.png" />
+<div class="highlight-python"><pre>$ python -m confduino.examples.remove_boards --hwpack arduino
+</pre>
+</div>
+<img alt="_images/screenshot_id1.png" src="_images/screenshot_id1.png" />
+<p>Code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">confduino.boardlist</span> <span class="kn">import</span> <span class="n">boards</span><span class="p">,</span> <span class="n">boards_txt</span><span class="p">,</span> <span class="n">board_names</span>
+<span class="kn">from</span> <span class="nn">confduino.boardremove</span> <span class="kn">import</span> <span class="n">remove_board</span>
+<span class="kn">from</span> <span class="nn">confduino.hwpacklist</span> <span class="kn">import</span> <span class="n">hwpack_names</span>
+<span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
+<span class="kn">import</span> <span class="nn">psidialogs</span>
+
+        
+<span class="nd">@entrypoint</span>
+<span class="k">def</span> <span class="nf">remove_boards_gui</span><span class="p">(</span><span class="n">hwpack</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>    
+    <span class="s">&#39;remove boards by GUI&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">hwpack</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hwpack_names</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">hwpack</span> <span class="o">=</span> <span class="n">psidialogs</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">hwpack_names</span><span class="p">(),</span>
+                                    <span class="s">&#39;select hardware package to select board from!&#39;</span><span class="p">,</span>
+                                    <span class="n">title</span><span class="o">=</span><span class="s">&#39;select&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hwpack</span> <span class="o">=</span> <span class="n">hwpack_names</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">print</span> <span class="n">hwpack</span><span class="p">,</span> <span class="s">&#39;selected&#39;</span>
+
+    <span class="k">if</span> <span class="n">hwpack</span><span class="p">:</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="n">psidialogs</span><span class="o">.</span><span class="n">multi_choice</span><span class="p">(</span><span class="n">board_names</span><span class="p">(</span><span class="n">hwpack</span><span class="p">),</span>
+                                <span class="s">&#39;select boards to remove from </span><span class="si">%s</span><span class="s">!&#39;</span> <span class="o">%</span> <span class="n">boards_txt</span><span class="p">(</span><span class="n">hwpack</span><span class="p">),</span>
+                                <span class="n">title</span><span class="o">=</span><span class="s">&#39;remove boards&#39;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">sel</span><span class="p">,</span> <span class="s">&#39;selected&#39;</span>
+    
+        <span class="k">if</span> <span class="n">sel</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sel</span><span class="p">:</span>
+                <span class="n">remove_board</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                <span class="k">print</span> <span class="n">x</span> <span class="o">+</span> <span class="s">&#39; was removed&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -207,6 +280,18 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#install-libraries">Install libraries</a></li>
+<li><a class="reference internal" href="#install-usbasp-programmer">Install USBasp programmer</a></li>
+<li><a class="reference internal" href="#install-stk200-programmer">Install STK200 programmer</a></li>
+<li><a class="reference internal" href="#install-atmega88-board">Install atmega88 board</a></li>
+<li><a class="reference internal" href="#remove-boards">remove boards</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="usage3.html"
                         title="previous chapter">Usage with programmers</a></p>
@@ -221,7 +306,7 @@
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -250,12 +335,12 @@
         <li class="right" >
           <a href="usage3.html" title="Usage with programmers"
              >previous</a> |</li>
-        <li><a href="index.html">confduino v0.0.5 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>
