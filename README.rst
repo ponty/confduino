@@ -66,8 +66,6 @@ Ubuntu
     sudo apt-get install arduino
     sudo apt-get install python-setuptools
     sudo easy_install confduino
-    # optional
-    sudo easy_install http://sourceforge.net/projects/patool/files/0.13/patool-0.13.tar.gz/download
     sudo apt-get install unzip unrar p7zip-full
 
 Uninstall
@@ -84,6 +82,5 @@ first install pip_::
 .. _arduino: http://arduino.cc/
 .. _python: http://www.python.org/
 .. _urllib: http://docs.python.org/library/urllib.html
-.. _patool: http://pypi.python.org/pypi/patool
 .. _arscons: http://code.google.com/p/arscons/
 .. _pyunpack: https://github.com/ponty/pyunpack
