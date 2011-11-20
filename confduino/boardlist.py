@@ -37,7 +37,10 @@ def board_names(hwpack='arduino'):
     return ls
 
 @entrypoint
-def print_boards(hwpack='arduino'):
+def print_boards(hwpack='arduino', verbose=False):
     ''' print boards from boards.txt'''
-    pprint(unbunchify(board_names(hwpack)))
+    if verbose:
+        pprint(unbunchify(boards(hwpack)),width=1)
+    else:
+        print('\n'.join(board_names(hwpack)))
     
