@@ -18,6 +18,11 @@ From console:
 .. program-output:: python -m confduino.boardlist
     :prompt:
 
+verbose:
+
+.. program-output:: python -m confduino.boardlist --verbose
+    :prompt:
+
 List installed MCUs
 ---------------------------
 
