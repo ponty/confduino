@@ -99,7 +99,7 @@ From console::
 
 Result:
 
-.. image:: menu.png
+.. image:: menu.gif
 
 
 Removing  menu item 'all'
