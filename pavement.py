@@ -87,7 +87,7 @@ if ALL_TASKS_LOADED:
                                      'nosetests.xml', 
                                      'sloccount.sc', 
                                      '*.pdf','*.tex', 
-                                     '*.png',
+#                                     '*.png',
                                      ]
     
     options.paved.dist.manifest.include.remove('distribute_setup.py')
