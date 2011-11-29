@@ -8,6 +8,9 @@ import urllib
 
 log = logging.getLogger(__name__)
 
+class ConfduinoError(Exception):
+    pass
+
 def tmpdir (dir=None, suffix=''):
     x= tempfile.mkdtemp(suffix=suffix, prefix='confduino_', dir=dir)
     return path(x)
