@@ -9,7 +9,8 @@ from confduino.mculist import print_mcus
 from confduino.proginstall import install_programmer
 from confduino.proglist import print_programmers, programmers
 from confduino.progremove import remove_programmer
-from confduino.util import tmpdir
+from confduino.util import tmpdir, ConfduinoError
+from confduino.version import print_version, version
 from nose.tools import eq_
 from path import path
 from unittest import TestCase
@@ -17,15 +18,6 @@ import os
 
 
 class Test(TestCase):
-    def test_print(self):
-        if 'ARDUINO_HOME' in os.environ:
-            del os.environ['ARDUINO_HOME']
-        print_libraries()        
-        print_boards()        
-        print_programmers()        
-        print_hwpacks()        
-        print_mcus()
-
         
     def test_lib(self):
         url = 'http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip'
@@ -45,8 +37,12 @@ class Test(TestCase):
         install_lib(f)
         eq_(libraries(), ['PS2Keyboard'])
 
-        install_lib(f)
-        eq_(libraries(), ['PS2Keyboard'])
+        try:
+            install_lib(f)
+            assert 0
+        except ConfduinoError:
+            #OK
+            eq_(libraries(), ['PS2Keyboard'])
         
     def test_prog(self):
         d = tmpdir(suffix='_test')
@@ -65,11 +61,11 @@ brd.x3=foo
         ''')
         eq_(programmers().keys(), ['brd'])
 
-        install_programmer('ardu',dict(x1='hi'))
-        eq_(programmers().keys(), ['brd','ardu'])
+        install_programmer('ardu', dict(x1='hi'))
+        eq_(programmers().keys(), ['brd', 'ardu'])
 
-        install_programmer('ardu',dict(x1='hi'))
-        eq_(programmers().keys(), ['brd','ardu'])
+        install_programmer('ardu', dict(x1='hi'))
+        eq_(programmers().keys(), ['brd', 'ardu'])
 
         remove_programmer('brd')
         eq_(programmers().keys(), ['ardu'])
@@ -101,14 +97,14 @@ brd.x3=foo
         eq_(boards().keys(), ['brd'])
 
         #invalid
-        install_board('ardu',dict(x1='hi'))
+        install_board('ardu', dict(x1='hi'))
         eq_(board_names(), ['brd'])
 
-        install_board('ardu',dict(name='hi',build=1))
-        eq_(set(board_names()), set(['brd','ardu']))
+        install_board('ardu', dict(name='hi', build=1))
+        eq_(set(board_names()), set(['brd', 'ardu']))
 
-        install_board('ardu',dict(x1='hi'))
-        eq_(set(board_names()), set(['brd','ardu']))
+        install_board('ardu', dict(x1='hi'))
+        eq_(set(board_names()), set(['brd', 'ardu']))
 
         remove_board('brd')
         eq_(board_names(), ['ardu'])
@@ -125,6 +121,12 @@ brd.x3=foo
         boards_txt = d / 'hardware' / 'p2' / 'boards.txt'        
         boards_txt.parent.makedirs()        
         boards_txt.write_text('')
-        eq_(hwpack_names(), ['p1','p2'])
+        eq_(hwpack_names(), ['p1', 'p2'])
     
-       
+    def test_version(self):
+        d = tmpdir(suffix='_test')
+        os.environ['ARDUINO_HOME'] = d
+        (d / 'lib').makedirs()     
+        v=d / 'lib'/'version.txt'
+        v.write_text('0017')   
+        eq_(int(version()), 17)
