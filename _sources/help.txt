@@ -67,3 +67,11 @@ remove
 
 .. program-output:: python -m confduino.progremove --help
     :prompt:
+
+--------
+version
+--------
+
+.. program-output:: python -m confduino.version --help
+    :prompt:
+    

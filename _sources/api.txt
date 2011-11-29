@@ -43,6 +43,12 @@ programmer
 .. automodule:: confduino.progremove
     :members:
 
+--------
+version
+--------
+
+.. automodule:: confduino.version
+    :members:
 
 
 

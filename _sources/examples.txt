@@ -65,4 +65,15 @@ remove boards
 Code:
 
 .. literalinclude:: ../confduino/examples/remove_boards.py
+
+remove libraries
+-------------------------
+    
+.. program-screenshot:: python -m confduino.examples.remove_libraries
+    :prompt:
+    
+
+Code:
+
+.. literalinclude:: ../confduino/examples/remove_libraries.py
     

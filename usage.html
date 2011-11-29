@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with libraries &mdash; confduino 0.0.6 documentation</title>
+    <title>Usage with libraries &mdash; confduino 0.0.7 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.6',
+        VERSION:     '0.0.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.6 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.0.7 documentation" href="index.html" />
     <link rel="next" title="Usage with boards" href="usage2.html" />
     <link rel="prev" title="About" href="readme.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="readme.html" title="About"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -80,46 +80,98 @@ export ARDUINO_HOME</pre>
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.liblist</span> <span class="kn">import</span> <span class="n">libraries</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">libraries</span><span class="p">()</span>
-<span class="go">[&#39;AdvButton&#39;, &#39;Bounce&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;Collection&#39;, &#39;DallasTemperature&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EEPROM&#39;, &#39;Enerlib&#39;, &#39;EventFuse&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;LiquidCrystal&#39;, &#39;Metro&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PString&#39;, &#39;PinChangeInt&#39;, &#39;Qtouch1Wire&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialDebug&#39;, &#39;SerialIP&#39;, &#39;SevenSegment&#39;, &#39;Streaming&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;UComms&#39;, &#39;bassdll&#39;, &#39;libcoll&#39;, &#39;myprojects&#39;]</span>
+<span class="go">[&#39;AdvButton&#39;, &#39;ArduinoTestSuite&#39;, &#39;ArduinoUnit&#39;, &#39;AtTouch&#39;, &#39;Bounce&#39;, &#39;Button&#39;, &#39;ByteBuffer&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;DB&#39;, &#39;DallasTemperature&#39;, &#39;DataFlash&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EDB&#39;, &#39;EEPROM&#39;, &#39;EasyTransfer&#39;, &#39;Enerlib&#39;, &#39;Ethernet&#39;, &#39;EventFuse&#39;, &#39;FancyLED&#39;, &#39;Firmata&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;FrequencyTimer2&#39;, &#39;LED&#39;, &#39;LPM11162&#39;, &#39;LedControl&#39;, &#39;LedDisplay&#39;, &#39;LiquidCrystal&#39;, &#39;Matrix&#39;, &#39;MatrixMath&#39;, &#39;Messenger&#39;, &#39;Metro&#39;, &#39;Morse&#39;, &#39;MorseEnDecoder&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PS2X_lib&#39;, &#39;PString&#39;, &#39;PWMServo&#39;, &#39;PinChangeInt&#39;, &#39;Ping&#39;, &#39;Qtouch1Wire&#39;, &#39;QueueArray&#39;, &#39;QueueList&#39;, &#39;SD&#39;, &#39;SPI&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialIP&#39;, &#39;SerialManager&#39;, &#39;Servo&#39;, &#39;SevenSegment&#39;, &#39;SimpleMessageSystem&#39;, &#39;SoftEasyTransfer&#39;, &#39;SoftwareSerial&#39;, &#39;Sprite&#39;, &#39;StackArray&#39;, &#39;StackList&#39;, &#39;Streaming&#39;, &#39;TButton&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;TinyGPS&#39;, &#39;Tween&#39;, &#39;Twitter&#39;, &#39;UComms&#39;, &#39;UsbDevice&#39;, &#39;UsbKeyboard&#39;, &#39;WebServer&#39;, &#39;WiShield&#39;, &#39;Wire&#39;, &#39;arduinode&#39;, &#39;bassdll&#39;, &#39;libcoll&#39;, &#39;morse&#39;, &#39;multiCameraIrControl&#39;, &#39;myprojects&#39;, &#39;osa&#39;, &#39;spline&#39;, &#39;tmp&#39;, &#39;usb&#39;, &#39;x10&#39;]</span>
 </pre></div>
 </div>
 <p>From console:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.liblist
 AdvButton
+ArduinoTestSuite
+ArduinoUnit
+AtTouch
 Bounce
+Button
+ByteBuffer
 CapSense
 Charlieplex
-Collection
+DB
 DallasTemperature
+DataFlash
 DateTime
 DateTimeStrings
 DigitalToggle
+EDB
 EEPROM
+EasyTransfer
 Enerlib
+Ethernet
 EventFuse
+FancyLED
+Firmata
 Flash
 FreqCounter
+FrequencyTimer2
+LED
+LPM11162
+LedControl
+LedDisplay
 LiquidCrystal
+Matrix
+MatrixMath
+Messenger
 Metro
+Morse
+MorseEnDecoder
 MsTimer2
 NewSoftSerial
 OneWire
 PID_v1
 PS2Keyboard
+PS2X_lib
 PString
+PWMServo
 PinChangeInt
+Ping
 Qtouch1Wire
+QueueArray
+QueueList
+SD
+SPI
 SSerial2Mobile
-SerialDebug
 SerialIP
+SerialManager
+Servo
 SevenSegment
+SimpleMessageSystem
+SoftEasyTransfer
+SoftwareSerial
+Sprite
+StackArray
+StackList
 Streaming
+TButton
 TimedAction
 TimerOne
+TinyGPS
+Tween
+Twitter
 UComms
+UsbDevice
+UsbKeyboard
+WebServer
+WiShield
+Wire
+arduinode
 bassdll
 libcoll
+morse
+multiCameraIrControl
 myprojects
+osa
+spline
+tmp
+usb
+x10
 </pre></div>
 </div>
 </div>
@@ -158,6 +210,35 @@ myprojects
 <div class="highlight-python"><pre>python -m confduino.libremove PS2Keyboard</pre>
 </div>
 </div>
+<div class="section" id="create-menu-item-all-for-examples">
+<h2>Create menu item &#8220;all&#8221; for examples<a class="headerlink" href="#create-menu-item-all-for-examples" title="Permalink to this headline">¶</a></h2>
+<p>If you have a lot of libraries and low screen resolution
+then all menu items under &#8220;examples&#8221; can not be accessed.</p>
+<p>Bug report: &#8220;Long menus don&#8217;t scroll&#8221; (<a class="reference external" href="http://code.google.com/p/arduino/issues/detail?id=426">http://code.google.com/p/arduino/issues/detail?id=426</a>)</p>
+<p>My workaround creates a 2 level deep menu structure
+without changing other menu items. Symbolic links are used if possible.</p>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallcreate</span> <span class="kn">import</span> <span class="n">create_examples_all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create_examples_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.exampallcreate</pre>
+</div>
+<p>Result:</p>
+<img alt="_images/menu.png" src="_images/menu.png" />
+</div>
+<div class="section" id="removing-menu-item-all">
+<h2>Removing  menu item &#8216;all&#8217;<a class="headerlink" href="#removing-menu-item-all" title="Permalink to this headline">¶</a></h2>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallremove</span> <span class="kn">import</span> <span class="n">remove_examples_all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_examples_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.exampallremove</pre>
+</div>
+</div>
 </div>
 
 
@@ -174,6 +255,8 @@ myprojects
 <li><a class="reference internal" href="#install-new-library">Install new library</a></li>
 <li><a class="reference internal" href="#upgrade-existing-library">Upgrade existing library</a></li>
 <li><a class="reference internal" href="#remove-existing-library">Remove existing library</a></li>
+<li><a class="reference internal" href="#create-menu-item-all-for-examples">Create menu item &#8220;all&#8221; for examples</a></li>
+<li><a class="reference internal" href="#removing-menu-item-all">Removing  menu item &#8216;all&#8217;</a></li>
 </ul>
 </li>
 </ul>
@@ -221,12 +304,12 @@ myprojects
         <li class="right" >
           <a href="readme.html" title="About"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>

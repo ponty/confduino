@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; confduino 0.0.6 documentation</title>
+    <title>API &mdash; confduino 0.0.7 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.6',
+        VERSION:     '0.0.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.6 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.0.7 documentation" href="index.html" />
     <link rel="prev" title="command line help" href="help.html" /> 
   </head>
   <body>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -55,6 +55,34 @@
 <div class="section" id="module-confduino.liblist">
 <span id="lib"></span><h2>lib<a class="headerlink" href="#module-confduino.liblist" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="confduino.liblist.lib_dir">
+<tt class="descclassname">confduino.liblist.</tt><tt class="descname">lib_dir</tt><big>(</big><em>lib</em><big>)</big><a class="headerlink" href="#confduino.liblist.lib_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return library directory</p>
+<p>$ARDUINO/libraries/$LIB</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.liblist.lib_example_dir">
+<tt class="descclassname">confduino.liblist.</tt><tt class="descname">lib_example_dir</tt><big>(</big><em>lib</em>, <em>example</em><big>)</big><a class="headerlink" href="#confduino.liblist.lib_example_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return library example directory</p>
+<p>$ARDUINO/libraries/$LIB/examples/$EXAMPLE</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.liblist.lib_examples">
+<tt class="descclassname">confduino.liblist.</tt><tt class="descname">lib_examples</tt><big>(</big><em>lib</em><big>)</big><a class="headerlink" href="#confduino.liblist.lib_examples" title="Permalink to this definition">¶</a></dt>
+<dd><p>return library examples</p>
+<p>EXAMPLE1,EXAMPLE2,..</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.liblist.lib_examples_dir">
+<tt class="descclassname">confduino.liblist.</tt><tt class="descname">lib_examples_dir</tt><big>(</big><em>lib</em><big>)</big><a class="headerlink" href="#confduino.liblist.lib_examples_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return library examples directory</p>
+<p>$ARDUINO/libraries/$LIB/examples</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="confduino.liblist.libraries">
 <tt class="descclassname">confduino.liblist.</tt><tt class="descname">libraries</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.liblist.libraries" title="Permalink to this definition">¶</a></dt>
 <dd><p>return installed library names</p>
@@ -64,6 +92,7 @@
 <dt id="confduino.liblist.libraries_dir">
 <tt class="descclassname">confduino.liblist.</tt><tt class="descname">libraries_dir</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.liblist.libraries_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>return library root path</p>
+<p>$ARDUINO/libraries</p>
 </dd></dl>
 
 <dl class="function">
@@ -73,18 +102,6 @@
 </dd></dl>
 
 <span class="target" id="module-confduino.libinstall"></span><dl class="function">
-<dt id="confduino.libinstall.find_lib_dir">
-<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">find_lib_dir</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#confduino.libinstall.find_lib_dir" title="Permalink to this definition">¶</a></dt>
-<dd><p>search for lib dir under root</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="confduino.libinstall.fix_examples_dir">
-<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">fix_examples_dir</tt><big>(</big><em>lib_dir</em><big>)</big><a class="headerlink" href="#confduino.libinstall.fix_examples_dir" title="Permalink to this definition">¶</a></dt>
-<dd><p>rename examples dir to <tt class="docutils literal"><span class="pre">examples</span></tt></p>
-</dd></dl>
-
-<dl class="function">
 <dt id="confduino.libinstall.install_lib">
 <tt class="descclassname">confduino.libinstall.</tt><tt class="descname">install_lib</tt><big>(</big><em>url</em>, <em>replace_existing=False</em><big>)</big><a class="headerlink" href="#confduino.libinstall.install_lib" title="Permalink to this definition">¶</a></dt>
 <dd><p>install library from web or local files system</p>
@@ -103,12 +120,6 @@
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="confduino.libinstall.move_examples">
-<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">move_examples</tt><big>(</big><em>root</em>, <em>lib_dir</em><big>)</big><a class="headerlink" href="#confduino.libinstall.move_examples" title="Permalink to this definition">¶</a></dt>
-<dd><p>find examples not under lib dir, and move into <tt class="docutils literal"><span class="pre">examples</span></tt></p>
 </dd></dl>
 
 <span class="target" id="module-confduino.libremove"></span><dl class="function">
@@ -260,6 +271,30 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-confduino.version">
+<span id="version"></span><h2>version<a class="headerlink" href="#module-confduino.version" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="confduino.version.print_version">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">print_version</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.print_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>print arduino version</p>
+<p>example: 0022</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.version.version">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">version</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version</p>
+<p>example: 0022</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.version.version_txt">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">version_txt</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.version_txt" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version.txt path</p>
+<p>$ARDUINO/lib/version.txt</p>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -274,6 +309,7 @@
 <li><a class="reference internal" href="#module-confduino.liblist">lib</a></li>
 <li><a class="reference internal" href="#module-confduino.boardlist">board</a></li>
 <li><a class="reference internal" href="#module-confduino.proglist">programmer</a></li>
+<li><a class="reference internal" href="#module-confduino.version">version</a></li>
 </ul>
 </li>
 </ul>
@@ -315,12 +351,12 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.6 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>
