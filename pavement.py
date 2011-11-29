@@ -47,13 +47,7 @@ classifiers = [
     "Programming Language :: Python",
     ]
 
-install_requires = [
-    'setuptools',
-    'entrypoint2',
-    'path.py',    
-    'Bunch',
-    'pyunpack',    
-    ]
+install_requires = open("requirements.txt").read().split('\n')
 
 setup(
     name=NAME,
