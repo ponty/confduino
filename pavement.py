@@ -12,6 +12,7 @@ try:
     from paved.dist import *
     from paved.util import *
     from paved.docs import *
+    from paved.pkg import *
     from paved.pycheck import *
     from sphinxcontrib import paverutils
     ALL_TASKS_LOADED = True
