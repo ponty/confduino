@@ -3,7 +3,6 @@ confduino is an arduino_ library configurator
 Links:
  * home: https://github.com/ponty/confduino
  * documentation: http://ponty.github.com/confduino
- * arduino libraries: http://www.arduino.cc/en/Reference/Libraries
  
 Features:
  - list, install, remove arduino_ libraries
@@ -25,6 +24,8 @@ Known problems:
  - tested only on linux
  - some libraries with unusual structure can not be installed
  - not all commands have console interface
+
+arduino libraries: http://www.arduino.cc/en/Reference/Libraries
  
 Basic usage
 ============
@@ -50,12 +51,12 @@ General
 
  * install arduino_
  * install python_
- * install setuptools_
+ * install pip_
  * install backends for pyunpack_ (optional)
  * install the program::
 
     # as root
-    easy_install confduino
+    pip install confduino
     
 
 
@@ -64,14 +65,14 @@ Ubuntu
 ::
 
     sudo apt-get install arduino
-    sudo apt-get install python-setuptools
-    sudo easy_install confduino
+    sudo apt-get install python-pip
+    sudo pip install confduino
     sudo apt-get install unzip unrar p7zip-full
 
 Uninstall
 ----------
 
-first install pip_::
+::
 
     # as root
     pip uninstall confduino
