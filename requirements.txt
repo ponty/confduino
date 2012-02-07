@@ -3,5 +3,4 @@ entrypoint2
 path.py
 Bunch
 pyunpack
-decotrace
 

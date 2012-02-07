@@ -3,20 +3,16 @@ from confduino.util import tmpdir, download, clean_dir, ConfduinoError
 from entrypoint2 import entrypoint
 from path import path
 from pyunpack import Archive
-import decotrace
 import logging
 
 log = logging.getLogger(__name__)
-decotrace.traced = decotrace.TraceContext(log.debug)
 
-@decotrace.traced 
 def noexample(x):
     while 1:
         f = x.next()
         if 'example' not in f.lower():
             yield f
             
-@decotrace.traced 
 def create_name(root):
     header_only = len(list(noexample(root.walkfiles('*.cpp')))) == 0
 #    libname = None
@@ -45,7 +41,6 @@ def create_name(root):
     libname = hchoosen.namebase
     return libname
 
-@decotrace.traced 
 def rename_root(root):
     name = create_name(root)
     log.debug('lib has no own dir')
@@ -53,7 +48,6 @@ def rename_root(root):
     root = root.parent / name
     return root
 
-@decotrace.traced 
 def fix_libdir(lib_dir):
     allh = lib_dir.files('*.h')
     if len(allh) == 1:
@@ -62,7 +56,6 @@ def fix_libdir(lib_dir):
         lib_dir = x
     return lib_dir
 
-@decotrace.traced 
 def find_lib_dir(root):
     '''search for lib dir under root'''
     root = path(root)
@@ -122,7 +115,6 @@ def find_lib_dir(root):
     return root, lib_dir
     
     
-@decotrace.traced 
 def move_examples(root, lib_dir):
     '''find examples not under lib dir, and move into ``examples``
     '''
@@ -138,7 +130,6 @@ def move_examples(root, lib_dir):
             d.makedirs()
             x.move(d)
 
-@decotrace.traced 
 def fix_examples_dir(lib_dir):
     '''rename examples dir to ``examples``
     '''
