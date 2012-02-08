@@ -36,7 +36,6 @@ From python:
 From console:
 
 .. program-output:: python -m confduino.mculist
-
     :prompt:
 
 Install new board

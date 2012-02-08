@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; confduino 0.0.9 documentation</title>
+    <title>API &mdash; confduino 0.0.11 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.9',
+        VERSION:     '0.0.11',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.9 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.0.11 documentation" href="index.html" />
     <link rel="prev" title="command line help" href="help.html" /> 
   </head>
   <body>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.9 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -102,6 +102,18 @@
 </dd></dl>
 
 <span class="target" id="module-confduino.libinstall"></span><dl class="function">
+<dt id="confduino.libinstall.find_lib_dir">
+<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">find_lib_dir</tt><big>(</big><em>root</em><big>)</big><a class="headerlink" href="#confduino.libinstall.find_lib_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>search for lib dir under root</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.libinstall.fix_examples_dir">
+<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">fix_examples_dir</tt><big>(</big><em>lib_dir</em><big>)</big><a class="headerlink" href="#confduino.libinstall.fix_examples_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>rename examples dir to <tt class="docutils literal"><span class="pre">examples</span></tt></p>
+</dd></dl>
+
+<dl class="function">
 <dt id="confduino.libinstall.install_lib">
 <tt class="descclassname">confduino.libinstall.</tt><tt class="descname">install_lib</tt><big>(</big><em>url</em>, <em>replace_existing=False</em><big>)</big><a class="headerlink" href="#confduino.libinstall.install_lib" title="Permalink to this definition">¶</a></dt>
 <dd><p>install library from web or local files system</p>
@@ -120,6 +132,12 @@
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.libinstall.move_examples">
+<tt class="descclassname">confduino.libinstall.</tt><tt class="descname">move_examples</tt><big>(</big><em>root</em>, <em>lib_dir</em><big>)</big><a class="headerlink" href="#confduino.libinstall.move_examples" title="Permalink to this definition">¶</a></dt>
+<dd><p>find examples not under lib dir, and move into <tt class="docutils literal"><span class="pre">examples</span></tt></p>
 </dd></dl>
 
 <span class="target" id="module-confduino.libremove"></span><dl class="function">
@@ -216,8 +234,14 @@
 <span id="programmer"></span><h2>programmer<a class="headerlink" href="#module-confduino.proglist" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="confduino.proglist.print_programmers">
-<tt class="descclassname">confduino.proglist.</tt><tt class="descname">print_programmers</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.proglist.print_programmers" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.proglist.</tt><tt class="descname">print_programmers</tt><big>(</big><em>verbose=False</em><big>)</big><a class="headerlink" href="#confduino.proglist.print_programmers" title="Permalink to this definition">¶</a></dt>
 <dd><p>print programmers from programmers.txt</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.proglist.programmer_names">
+<tt class="descclassname">confduino.proglist.</tt><tt class="descname">programmer_names</tt><big>(</big><em>hwpack='arduino'</em><big>)</big><a class="headerlink" href="#confduino.proglist.programmer_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>return installed board names</p>
 </dd></dl>
 
 <dl class="function">
@@ -351,7 +375,7 @@
         <li class="right" >
           <a href="help.html" title="command line help"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.9 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
