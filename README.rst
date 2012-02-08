@@ -22,6 +22,7 @@ Features:
 Known problems:
  - Python 3 is not supported
  - tested only on linux
+ - tested only with arduino version 0022
  - some libraries with unusual structure can not be installed
  - not all commands have console interface
 
