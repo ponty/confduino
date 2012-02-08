@@ -17,7 +17,16 @@ def programmers():
     ''' read programmers from programmers.txt'''
     return read_properties(programmers_txt())
 
+def programmer_names(hwpack='arduino'):
+    'return installed board names'
+    ls = programmers().keys()
+    ls.sort()
+    return ls
+
 @entrypoint
-def print_programmers():
+def print_programmers(verbose=False):
     ''' print programmers from programmers.txt'''
-    pprint( unbunchify(programmers()))
+    if verbose:
+        pprint( unbunchify(programmers()))
+    else:
+        print('\n'.join(programmer_names()))

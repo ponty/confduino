@@ -18,6 +18,11 @@ From console:
 .. program-output:: python -m confduino.proglist
     :prompt:
 
+verbose:
+
+.. program-output:: python -m confduino.proglist --verbose
+    :prompt:
+
 Install new programmer
 ---------------------------
 
