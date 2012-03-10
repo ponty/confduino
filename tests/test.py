@@ -130,3 +130,5 @@ brd.x3=foo
         v=d / 'lib'/'version.txt'
         v.write_text('0017')   
         eq_(int(version()), 17)
+        v.write_text('\n0018\n')   
+        eq_(int(version()), 18)

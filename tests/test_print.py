@@ -5,28 +5,31 @@ from confduino.mculist import print_mcus
 from confduino.proglist import print_programmers
 from confduino.version import print_version
 from nose.tools import eq_
-from unittest import TestCase
+from data import TEST_ARDUINO_PATHS
 import os
 
-class Test(TestCase):
-    def test_print(self):
-        if 'ARDUINO_HOME' in os.environ:
-            del os.environ['ARDUINO_HOME']
-        print_libraries()        
+def test_print():
+    for x in TEST_ARDUINO_PATHS:
+        os.environ['ARDUINO_HOME'] = x
+        print 'ARDUINO_HOME=', x
+        
         print_boards()        
-        print_programmers()        
         print_hwpacks()        
+        print_libraries()        
         print_mcus()
-#        print_version()
+        print_programmers()        
+        print_version()
 
 def test_cli():
-    if 'ARDUINO_HOME' in os.environ:
-        del os.environ['ARDUINO_HOME']
-    eq_(os.system('python -m confduino.boardlist'), 0)
-    eq_(os.system('python -m confduino.boardlist --verbose'), 0)
-    eq_(os.system('python -m confduino.hwpacklist'), 0)
-    eq_(os.system('python -m confduino.proglist'), 0)
-    eq_(os.system('python -m confduino.proglist --verbose'), 0)
-    eq_(os.system('python -m confduino.boardlist'), 0)
-    eq_(os.system('python -m confduino.liblist'), 0)
-    eq_(os.system('python -m confduino.mculist'), 0)
+    for x in TEST_ARDUINO_PATHS:
+        os.environ['ARDUINO_HOME'] = x
+        print 'ARDUINO_HOME=', x
+        
+        eq_(os.system('python -m confduino.boardlist'), 0)
+        eq_(os.system('python -m confduino.boardlist --verbose'), 0)
+        eq_(os.system('python -m confduino.hwpacklist'), 0)
+        eq_(os.system('python -m confduino.proglist'), 0)
+        eq_(os.system('python -m confduino.proglist --verbose'), 0)
+        eq_(os.system('python -m confduino.boardlist'), 0)
+        eq_(os.system('python -m confduino.liblist'), 0)
+        eq_(os.system('python -m confduino.mculist'), 0)

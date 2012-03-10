@@ -1,4 +1,3 @@
-from confduino.boardlist import boards
 from confduino.util import AutoBunch, bunch2properties
 from nose.tools import eq_
 
