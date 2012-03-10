@@ -13,11 +13,12 @@ Features:
  - list, install, remove arduino_ programmers
  - list, install, remove arduino_ boards
  - written in python
- - crossplatform
+ - cross-platform
  - can be used as a python library or as a console program
- - unpacker backend: pyunpack_
- - downloader backend: urllib_
+ - unpacker back-end: pyunpack_
+ - downloader back-end: urllib_
  - some functionality is based on arscons_
+ - supported python versions: 2.5, 2.6, 2.7, PyPy
  
 Known problems:
  - Python 3 is not supported
@@ -53,7 +54,7 @@ General
  * install arduino_
  * install python_
  * install pip_
- * install backends for pyunpack_ (optional)
+ * install back-ends for pyunpack_ (optional)
  * install the program::
 
     # as root

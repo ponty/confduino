@@ -23,6 +23,11 @@ verbose:
 .. program-output:: python -m confduino.proglist --verbose
     :prompt:
 
+Help:
+
+.. program-output:: python -m confduino.proglist --help
+    :prompt:
+
 Install new programmer
 ---------------------------
 
@@ -45,8 +50,10 @@ From console::
 
     python -m confduino.progremove parallel
 
+Help:
 
-
+.. program-output:: python -m confduino.progremove --help
+    :prompt:
 
 
 
