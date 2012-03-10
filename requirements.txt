@@ -1,4 +1,3 @@
-setuptools
 entrypoint2
 path.py
 Bunch
