@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with libraries &mdash; confduino 0.0.11 documentation</title>
+    <title>Usage with libraries &mdash; confduino 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.11',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,9 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.11 documentation" href="index.html" />
-    <link rel="next" title="Usage with boards" href="usage2.html" />
-    <link rel="prev" title="About" href="readme.html" /> 
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="Usage with boards" href="usage_board.html" />
+    <link rel="prev" title="menu item “all”" href="usage_all.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,12 +40,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="usage2.html" title="Usage with boards"
+          <a href="usage_board.html" title="Usage with boards"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="readme.html" title="About"
+          <a href="usage_all.html" title="menu item “all”"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -56,31 +56,12 @@
             
   <div class="section" id="usage-with-libraries">
 <h1>Usage with libraries<a class="headerlink" href="#usage-with-libraries" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="arduino-path">
-<h2>Arduino path<a class="headerlink" href="#arduino-path" title="Permalink to this headline">¶</a></h2>
-<p>If Arduino can not be found at default path,
-then <tt class="docutils literal"><span class="pre">ARDUINO_HOME</span></tt> environment variable
-should be set.</p>
-<p>on Ubuntu:
-in <tt class="docutils literal"><span class="pre">~/.profile</span></tt>:</p>
-<div class="highlight-python"><pre>ARDUINO_HOME=~/opt/arduino
-export ARDUINO_HOME</pre>
-</div>
-<dl class="docutils">
-<dt>Default path:</dt>
-<dd><ul class="first last simple">
-<li>Mac: /Applications/Arduino.app/Contents/Resources/Java</li>
-<li>Linux: /usr/share/arduino/</li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="list-installed-libraries">
 <h2>List installed libraries<a class="headerlink" href="#list-installed-libraries" title="Permalink to this headline">¶</a></h2>
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.liblist</span> <span class="kn">import</span> <span class="n">libraries</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">libraries</span><span class="p">()</span>
-<span class="go">[&#39;AdvButton&#39;, &#39;ArduinoTestSuite&#39;, &#39;ArduinoUnit&#39;, &#39;AtTouch&#39;, &#39;Bounce&#39;, &#39;Button&#39;, &#39;ByteBuffer&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;DB&#39;, &#39;DallasTemperature&#39;, &#39;DataFlash&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EDB&#39;, &#39;EEPROM&#39;, &#39;EasyTransfer&#39;, &#39;Enerlib&#39;, &#39;Ethernet&#39;, &#39;EventFuse&#39;, &#39;FancyLED&#39;, &#39;Firmata&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;FrequencyTimer2&#39;, &#39;LED&#39;, &#39;LPM11162&#39;, &#39;LedControl&#39;, &#39;LedDisplay&#39;, &#39;LiquidCrystal&#39;, &#39;Matrix&#39;, &#39;MatrixMath&#39;, &#39;Messenger&#39;, &#39;Metro&#39;, &#39;Morse&#39;, &#39;MorseEnDecoder&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PS2X_lib&#39;, &#39;PString&#39;, &#39;PWMServo&#39;, &#39;PinChangeInt&#39;, &#39;Ping&#39;, &#39;Qtouch1Wire&#39;, &#39;QueueArray&#39;, &#39;QueueList&#39;, &#39;SD&#39;, &#39;SPI&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialIP&#39;, &#39;SerialManager&#39;, &#39;Servo&#39;, &#39;SevenSegment&#39;, &#39;SimpleMessageSystem&#39;, &#39;SoftEasyTransfer&#39;, &#39;SoftwareSerial&#39;, &#39;Sprite&#39;, &#39;StackArray&#39;, &#39;StackList&#39;, &#39;Streaming&#39;, &#39;TButton&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;TinyGPS&#39;, &#39;Tween&#39;, &#39;Twitter&#39;, &#39;UComms&#39;, &#39;UsbDevice&#39;, &#39;UsbKeyboard&#39;, &#39;WebServer&#39;, &#39;WiShield&#39;, &#39;Wire&#39;, &#39;arduinode&#39;, &#39;bassdll&#39;, &#39;libcoll&#39;, &#39;morse&#39;, &#39;multiCameraIrControl&#39;, &#39;myprojects&#39;, &#39;osa&#39;, &#39;spline&#39;, &#39;tmp&#39;, &#39;usb&#39;, &#39;x10&#39;]</span>
+<span class="go">[&#39;AdvButton&#39;, &#39;ArduinoTestSuite&#39;, &#39;ArduinoUnit&#39;, &#39;AtTouch&#39;, &#39;Bounce&#39;, &#39;Button&#39;, &#39;ByteBuffer&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;Coll&#39;, &#39;DB&#39;, &#39;DallasTemperature&#39;, &#39;DataFlash&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EDB&#39;, &#39;EEPROM&#39;, &#39;EasyTransfer&#39;, &#39;Enerlib&#39;, &#39;Ethernet&#39;, &#39;EventFuse&#39;, &#39;FancyLED&#39;, &#39;Firmata&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;FrequencyTimer2&#39;, &#39;LED&#39;, &#39;LPM11162&#39;, &#39;LedControl&#39;, &#39;LedDisplay&#39;, &#39;LiquidCrystal&#39;, &#39;Matrix&#39;, &#39;MatrixMath&#39;, &#39;Messenger&#39;, &#39;Metro&#39;, &#39;Morse&#39;, &#39;MorseEnDecoder&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PS2X_lib&#39;, &#39;PString&#39;, &#39;PWMServo&#39;, &#39;PinChangeInt&#39;, &#39;Ping&#39;, &#39;Qtouch1Wire&#39;, &#39;QueueArray&#39;, &#39;QueueList&#39;, &#39;SD&#39;, &#39;SPI&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialIP&#39;, &#39;SerialManager&#39;, &#39;Servo&#39;, &#39;SevenSegment&#39;, &#39;SimpleMessageSystem&#39;, &#39;SoftEasyTransfer&#39;, &#39;SoftUsb&#39;, &#39;SoftwareSerial&#39;, &#39;Sprite&#39;, &#39;StackArray&#39;, &#39;StackList&#39;, &#39;Streaming&#39;, &#39;TButton&#39;, &#39;TVout&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;TinyGPS&#39;, &#39;Tween&#39;, &#39;Twitter&#39;, &#39;UComms&#39;, &#39;UsbDevice&#39;, &#39;UsbKeyboard&#39;, &#39;WebServer&#39;, &#39;WiShield&#39;, &#39;Wire&#39;, &#39;arduinode&#39;, &#39;bassdll&#39;, &#39;morse&#39;, &#39;multiCameraIrControl&#39;, &#39;myprojects&#39;, &#39;osa&#39;, &#39;spline&#39;, &#39;tmp&#39;, &#39;x10&#39;]</span>
 </pre></div>
 </div>
 <p>From console:</p>
@@ -94,6 +75,7 @@ Button
 ByteBuffer
 CapSense
 Charlieplex
+Coll
 DB
 DallasTemperature
 DataFlash
@@ -144,12 +126,14 @@ Servo
 SevenSegment
 SimpleMessageSystem
 SoftEasyTransfer
+SoftUsb
 SoftwareSerial
 Sprite
 StackArray
 StackList
 Streaming
 TButton
+TVout
 TimedAction
 TimerOne
 TinyGPS
@@ -163,15 +147,24 @@ WiShield
 Wire
 arduinode
 bassdll
-libcoll
 morse
 multiCameraIrControl
 myprojects
 osa
 spline
 tmp
-usb
 x10
+</pre></div>
+</div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.liblist --help
+usage: liblist.py [-h] [--debug]
+
+print installed arduino libraries
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
 </pre></div>
 </div>
 </div>
@@ -198,6 +191,22 @@ x10
 <p>From console:</p>
 <div class="highlight-python"><pre>python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip --replace-existing</pre>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.libinstall --help
+usage: libinstall.py [-h] [-r] [--debug] url
+
+install library from web or local files system
+
+positional arguments:
+  url                   web address or file path
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r, --replace-existing
+                        bool
+  --debug               set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 <div class="section" id="remove-existing-library">
 <h2>Remove existing library<a class="headerlink" href="#remove-existing-library" title="Permalink to this headline">¶</a></h2>
@@ -209,34 +218,19 @@ x10
 <p>From console:</p>
 <div class="highlight-python"><pre>python -m confduino.libremove PS2Keyboard</pre>
 </div>
-</div>
-<div class="section" id="create-menu-item-all-for-examples">
-<h2>Create menu item &#8220;all&#8221; for examples<a class="headerlink" href="#create-menu-item-all-for-examples" title="Permalink to this headline">¶</a></h2>
-<p>If you have a lot of libraries and low screen resolution
-then all menu items under &#8220;examples&#8221; can not be accessed.</p>
-<p>Bug report: &#8220;Long menus don&#8217;t scroll&#8221; (<a class="reference external" href="http://code.google.com/p/arduino/issues/detail?id=426">http://code.google.com/p/arduino/issues/detail?id=426</a>)</p>
-<p>My workaround creates a 2 level deep menu structure
-without changing other menu items. Symbolic links are used if possible.</p>
-<p>From python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallcreate</span> <span class="kn">import</span> <span class="n">create_examples_all</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">create_examples_all</span><span class="p">()</span>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.libremove --help
+usage: libremove.py [-h] [--debug] lib_name
+
+remove library
+
+positional arguments:
+  lib_name    library name (e.g. &#39;PS2Keyboard&#39;)
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
 </pre></div>
-</div>
-<p>From console:</p>
-<div class="highlight-python"><pre>python -m confduino.exampallcreate</pre>
-</div>
-<p>Result:</p>
-<img alt="_images/menu.png" src="_images/menu.png" />
-</div>
-<div class="section" id="removing-menu-item-all">
-<h2>Removing  menu item &#8216;all&#8217;<a class="headerlink" href="#removing-menu-item-all" title="Permalink to this headline">¶</a></h2>
-<p>From python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallremove</span> <span class="kn">import</span> <span class="n">remove_examples_all</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_examples_all</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>From console:</p>
-<div class="highlight-python"><pre>python -m confduino.exampallremove</pre>
 </div>
 </div>
 </div>
@@ -250,26 +244,23 @@ without changing other menu items. Symbolic links are used if possible.</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Usage with libraries</a><ul>
-<li><a class="reference internal" href="#arduino-path">Arduino path</a></li>
 <li><a class="reference internal" href="#list-installed-libraries">List installed libraries</a></li>
 <li><a class="reference internal" href="#install-new-library">Install new library</a></li>
 <li><a class="reference internal" href="#upgrade-existing-library">Upgrade existing library</a></li>
 <li><a class="reference internal" href="#remove-existing-library">Remove existing library</a></li>
-<li><a class="reference internal" href="#create-menu-item-all-for-examples">Create menu item &#8220;all&#8221; for examples</a></li>
-<li><a class="reference internal" href="#removing-menu-item-all">Removing  menu item &#8216;all&#8217;</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="readme.html"
-                        title="previous chapter">About</a></p>
+  <p class="topless"><a href="usage_all.html"
+                        title="previous chapter">menu item &#8220;all&#8221;</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="usage2.html"
+  <p class="topless"><a href="usage_board.html"
                         title="next chapter">Usage with boards</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/usage.txt"
+    <li><a href="_sources/usage_lib.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -299,12 +290,12 @@ without changing other menu items. Symbolic links are used if possible.</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="usage2.html" title="Usage with boards"
+          <a href="usage_board.html" title="Usage with boards"
              >next</a> |</li>
         <li class="right" >
-          <a href="readme.html" title="About"
+          <a href="usage_all.html" title="menu item “all”"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

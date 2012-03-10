@@ -1,24 +1,6 @@
 Usage with libraries
 ====================
 
-Arduino path
--------------
-
-If Arduino can not be found at default path,
-then ``ARDUINO_HOME`` environment variable 
-should be set.
-
-on Ubuntu:
-in ``~/.profile``::
-
-    ARDUINO_HOME=~/opt/arduino
-    export ARDUINO_HOME
-
-Default path:
- * Mac: /Applications/Arduino.app/Contents/Resources/Java 
- * Linux: /usr/share/arduino/
-
-
 List installed libraries
 ---------------------------
 
@@ -34,6 +16,11 @@ From console:
 .. program-output:: python -m confduino.liblist
     :prompt:
 
+Help:
+
+.. program-output:: python -m confduino.liblist --help
+    :prompt:
+
 Install new library
 ---------------------------
 
@@ -47,6 +34,7 @@ From python:
 From console::
 
     python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip
+
     
 Upgrade existing library
 ---------------------------
@@ -62,6 +50,10 @@ From console::
 
     python -m confduino.libinstall http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip --replace-existing
 
+Help:
+
+.. program-output:: python -m confduino.libinstall --help
+    :prompt:
 
 Remove existing library
 ---------------------------
@@ -75,45 +67,10 @@ From console::
 
     python -m confduino.libremove PS2Keyboard
 
+Help:
 
-Create menu item "all" for examples
---------------------------------------------
-
-If you have a lot of libraries and low screen resolution 
-then all menu items under "examples" can not be accessed.
-
-Bug report: "Long menus don't scroll" (http://code.google.com/p/arduino/issues/detail?id=426)
-
-My workaround creates a 2 level deep menu structure 
-without changing other menu items. Symbolic links are used if possible.
-
-From python:
-
-    >>> from confduino.exampallcreate import create_examples_all
-    >>> create_examples_all()
-
-From console::
-
-    python -m confduino.exampallcreate
-
-
-Result:
-
-.. image:: menu.png
-
-
-Removing  menu item 'all'
--------------------------------
-
-From python:
-
-    >>> from confduino.exampallremove import remove_examples_all
-    >>> remove_examples_all()
-
-From console::
-
-    python -m confduino.exampallremove
-
+.. program-output:: python -m confduino.libremove --help
+    :prompt:
 
 
 

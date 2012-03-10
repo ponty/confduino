@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with boards &mdash; confduino 0.0.11 documentation</title>
+    <title>Usage with boards &mdash; confduino 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.11',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,9 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.11 documentation" href="index.html" />
-    <link rel="next" title="Usage with programmers" href="usage3.html" />
-    <link rel="prev" title="Usage with libraries" href="usage.html" /> 
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="Usage with programmers" href="usage_prog.html" />
+    <link rel="prev" title="Usage with libraries" href="usage_lib.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,12 +40,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="usage3.html" title="Usage with programmers"
+          <a href="usage_prog.html" title="Usage with programmers"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="usage.html" title="Usage with libraries"
+          <a href="usage_lib.html" title="Usage with libraries"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -318,6 +318,19 @@ uno
                     &#39;speed&#39;: &#39;115200&#39;}}}
 </pre></div>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.boardlist --help
+usage: boardlist.py [-h] [--hwpack HWPACK] [-v] [--debug]
+
+print boards from boards.txt
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --hwpack HWPACK
+  -v, --verbose
+  --debug          set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 <div class="section" id="list-installed-mcus">
 <h2>List installed MCUs<a class="headerlink" href="#list-installed-mcus" title="Permalink to this headline">¶</a></h2>
@@ -372,6 +385,17 @@ attiny85
 attiny861
 </pre></div>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.mculist --help
+usage: mculist.py [-h] [--debug]
+
+print boards from boards.txt
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 <div class="section" id="install-new-board">
 <h2>Install new board<a class="headerlink" href="#install-new-board" title="Permalink to this headline">¶</a></h2>
@@ -409,6 +433,20 @@ attiny861
 <p>From console:</p>
 <div class="highlight-python"><pre>python -m confduino.boardremove diecimila</pre>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.boardremove --help
+usage: boardremove.py [-h] [--debug] board_id
+
+remove board
+
+positional arguments:
+  board_id    board id (e.g. &#39;diecimila&#39;)
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -430,14 +468,14 @@ attiny861
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="usage.html"
+  <p class="topless"><a href="usage_lib.html"
                         title="previous chapter">Usage with libraries</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="usage3.html"
+  <p class="topless"><a href="usage_prog.html"
                         title="next chapter">Usage with programmers</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/usage2.txt"
+    <li><a href="_sources/usage_board.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -467,12 +505,12 @@ attiny861
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="usage3.html" title="Usage with programmers"
+          <a href="usage_prog.html" title="Usage with programmers"
              >next</a> |</li>
         <li class="right" >
-          <a href="usage.html" title="Usage with libraries"
+          <a href="usage_lib.html" title="Usage with libraries"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

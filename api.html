@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>API &mdash; confduino 0.0.11 documentation</title>
+    <title>API &mdash; confduino 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.11',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.11 documentation" href="index.html" />
-    <link rel="prev" title="command line help" href="help.html" /> 
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
   </head>
   <body>
     <div class="related">
@@ -39,9 +39,9 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="help.html" title="command line help"
+          <a href="examples.html" title="Examples"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -298,16 +298,38 @@
 <div class="section" id="module-confduino.version">
 <span id="version"></span><h2>version<a class="headerlink" href="#module-confduino.version" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="confduino.version.all_sketch_extensions">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">all_sketch_extensions</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.all_sketch_extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>[&#8216;.pde&#8217;,&#8217;.ino&#8217;]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="confduino.version.intversion">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">intversion</tt><big>(</big><em>text=None</em><big>)</big><a class="headerlink" href="#confduino.version.intversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version as int</p>
+<p>0022 -&gt;  22
+0022ubuntu0.1 -&gt;  22
+0023 -&gt;  23
+1.0  -&gt; 100</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="confduino.version.print_version">
-<tt class="descclassname">confduino.version.</tt><tt class="descname">print_version</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.print_version" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">confduino.version.</tt><tt class="descname">print_version</tt><big>(</big><em>integer=False</em><big>)</big><a class="headerlink" href="#confduino.version.print_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>print arduino version</p>
 <p>example: 0022</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="confduino.version.sketch_extension">
+<tt class="descclassname">confduino.version.</tt><tt class="descname">sketch_extension</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.sketch_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>.pde or .ino</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="confduino.version.version">
 <tt class="descclassname">confduino.version.</tt><tt class="descname">version</tt><big>(</big><big>)</big><a class="headerlink" href="#confduino.version.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>return version</p>
+<dd><p>return version as string</p>
 <p>example: 0022</p>
 </dd></dl>
 
@@ -339,8 +361,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="help.html"
-                        title="previous chapter">command line help</a></p>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Examples</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/api.txt"
@@ -373,9 +395,9 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="help.html" title="command line help"
+          <a href="examples.html" title="Examples"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

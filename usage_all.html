@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>menu item “all” &mdash; confduino 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="Usage with libraries" href="usage_lib.html" />
+    <link rel="prev" title="Check Arduino version" href="usage_version.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_lib.html" title="Usage with libraries"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="usage_version.html" title="Check Arduino version"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="menu-item-all">
+<h1>menu item &#8220;all&#8221;<a class="headerlink" href="#menu-item-all" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-menu-item-all-for-examples">
+<h2>Create menu item &#8220;all&#8221; for examples<a class="headerlink" href="#create-menu-item-all-for-examples" title="Permalink to this headline">¶</a></h2>
+<p>If you have a lot of libraries and low screen resolution
+then all menu items under &#8220;examples&#8221; can not be accessed.</p>
+<p>Bug report: &#8220;Long menus don&#8217;t scroll&#8221; (<a class="reference external" href="http://code.google.com/p/arduino/issues/detail?id=426">http://code.google.com/p/arduino/issues/detail?id=426</a>)</p>
+<p>My workaround creates a 2 level deep menu structure
+without changing other menu items. Symbolic links are used if possible.</p>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallcreate</span> <span class="kn">import</span> <span class="n">create_examples_all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create_examples_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.exampallcreate</pre>
+</div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.exampallcreate --help
+usage: exampallcreate.py [-h] [--debug]
+
+create arduino/examples/all directory
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
+</pre></div>
+</div>
+<p>Result:</p>
+<img alt="_images/menu.png" src="_images/menu.png" />
+</div>
+<div class="section" id="removing-menu-item-all">
+<h2>Removing  menu item &#8216;all&#8217;<a class="headerlink" href="#removing-menu-item-all" title="Permalink to this headline">¶</a></h2>
+<p>From python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.exampallremove</span> <span class="kn">import</span> <span class="n">remove_examples_all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_examples_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From console:</p>
+<div class="highlight-python"><pre>python -m confduino.exampallremove</pre>
+</div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.exampallremove --help
+usage: exampallremove.py [-h] [--debug]
+
+remove arduino/examples/all directory
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --debug     set logging level to DEBUG
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">menu item &#8220;all&#8221;</a><ul>
+<li><a class="reference internal" href="#create-menu-item-all-for-examples">Create menu item &#8220;all&#8221; for examples</a></li>
+<li><a class="reference internal" href="#removing-menu-item-all">Removing  menu item &#8216;all&#8217;</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="usage_version.html"
+                        title="previous chapter">Check Arduino version</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usage_lib.html"
+                        title="next chapter">Usage with libraries</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/usage_all.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_lib.html" title="Usage with libraries"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="usage_version.html" title="Check Arduino version"
+             >previous</a> |</li>
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

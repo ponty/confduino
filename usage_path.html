@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; confduino 0.1.0 documentation</title>
+    <title>Arduino path &mdash; confduino 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" /> 
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="Check Arduino version" href="usage_version.html" />
+    <link rel="prev" title="About" href="readme.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,6 +39,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_version.html" title="Check Arduino version"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -46,16 +54,50 @@
         <div class="bodywrapper">
           <div class="body">
             
-  
+  <div class="section" id="arduino-path">
+<h1>Arduino path<a class="headerlink" href="#arduino-path" title="Permalink to this headline">¶</a></h1>
+<p>If Arduino can not be found at default path,
+then <tt class="docutils literal"><span class="pre">ARDUINO_HOME</span></tt> environment variable
+should be set.</p>
+<p>on Ubuntu (<a class="reference external" href="https://help.ubuntu.com/community/EnvironmentVariables">https://help.ubuntu.com/community/EnvironmentVariables</a>):
+in <tt class="docutils literal"><span class="pre">~/.profile</span></tt>:</p>
+<div class="highlight-python"><pre>ARDUINO_HOME=~/opt/arduino
+export ARDUINO_HOME</pre>
+</div>
+<p>temporary changes:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-1.0 python -m confduino.version
+1.0
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version
+0022ubuntu0.1
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Default path:</dt>
+<dd><ul class="first last simple">
+<li>Mac: /Applications/Arduino.app/Contents/Resources/Java</li>
+<li>Linux: /usr/share/arduino/</li>
+</ul>
+</dd>
+</dl>
+</div>
+
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="readme.html"
+                        title="previous chapter">About</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usage_version.html"
+                        title="next chapter">Check Arduino version</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/links.txt"
+    <li><a href="_sources/usage_path.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -84,6 +126,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_version.html" title="Check Arduino version"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             >previous</a> |</li>
         <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>

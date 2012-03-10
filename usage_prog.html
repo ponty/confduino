@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with programmers &mdash; confduino 0.0.11 documentation</title>
+    <title>Usage with programmers &mdash; confduino 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.11',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,9 +25,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.0.11 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
     <link rel="next" title="Examples" href="examples.html" />
-    <link rel="prev" title="Usage with boards" href="usage2.html" /> 
+    <link rel="prev" title="Usage with boards" href="usage_board.html" /> 
   </head>
   <body>
     <div class="related">
@@ -43,9 +43,9 @@
           <a href="examples.html" title="Examples"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="usage2.html" title="Usage with boards"
+          <a href="usage_board.html" title="Usage with boards"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -99,6 +99,18 @@ usbtinyisp
  &#39;usbtinyisp&#39;: {&#39;name&#39;: &#39;USBtinyISP&#39;, &#39;protocol&#39;: &#39;usbtiny&#39;}}
 </pre></div>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.proglist --help
+usage: proglist.py [-h] [-v] [--debug]
+
+print programmers from programmers.txt
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose
+  --debug        set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 <div class="section" id="install-new-programmer">
 <h2>Install new programmer<a class="headerlink" href="#install-new-programmer" title="Permalink to this headline">¶</a></h2>
@@ -130,6 +142,20 @@ usbtinyisp
 <p>From console:</p>
 <div class="highlight-python"><pre>python -m confduino.progremove parallel</pre>
 </div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.progremove --help
+usage: progremove.py [-h] [--debug] programmer_id
+
+remove programmer
+
+positional arguments:
+  programmer_id  programmer id (e.g. &#39;avrisp&#39;)
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --debug        set logging level to DEBUG
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -150,14 +176,14 @@ usbtinyisp
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="usage2.html"
+  <p class="topless"><a href="usage_board.html"
                         title="previous chapter">Usage with boards</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="examples.html"
                         title="next chapter">Examples</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/usage3.txt"
+    <li><a href="_sources/usage_prog.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -190,9 +216,9 @@ usbtinyisp
           <a href="examples.html" title="Examples"
              >next</a> |</li>
         <li class="right" >
-          <a href="usage2.html" title="Usage with boards"
+          <a href="usage_board.html" title="Usage with boards"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.0.11 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

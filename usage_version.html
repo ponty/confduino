@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Check Arduino version &mdash; confduino 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="menu item “all”" href="usage_all.html" />
+    <link rel="prev" title="Arduino path" href="usage_path.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_all.html" title="menu item “all”"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="usage_path.html" title="Arduino path"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="check-arduino-version">
+<h1>Check Arduino version<a class="headerlink" href="#check-arduino-version" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="from-python">
+<h2>From python<a class="headerlink" href="#from-python" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.version</span> <span class="kn">import</span> <span class="n">version</span><span class="p">,</span> <span class="n">intversion</span><span class="p">,</span> <span class="n">sketch_extension</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino</span> <span class="kn">import</span> <span class="n">set_arduino_path</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">()</span>
+<span class="go">&#39;0022&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intversion</span><span class="p">()</span>
+<span class="go">22</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sketch_extension</span><span class="p">()</span>
+<span class="go">&#39;.pde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_arduino_path</span><span class="p">(</span><span class="s">&#39;~/opt/arduino-0023&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">()</span>
+<span class="go">&#39;0023&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intversion</span><span class="p">()</span>
+<span class="go">23</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sketch_extension</span><span class="p">()</span>
+<span class="go">&#39;.pde&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_arduino_path</span><span class="p">(</span><span class="s">&#39;~/opt/arduino-1.0&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">()</span>
+<span class="go">&#39;1.0&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intversion</span><span class="p">()</span>
+<span class="go">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sketch_extension</span><span class="p">()</span>
+<span class="go">&#39;.ino&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_arduino_path</span><span class="p">(</span><span class="s">&#39;/usr/share/arduino&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">()</span>
+<span class="go">&#39;0022ubuntu0.1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intversion</span><span class="p">()</span>
+<span class="go">22</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sketch_extension</span><span class="p">()</span>
+<span class="go">&#39;.pde&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="from-console">
+<h2>From console<a class="headerlink" href="#from-console" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.version
+0022
+</pre></div>
+</div>
+<p>Help:</p>
+<div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.version --help
+usage: version.py [-h] [-i] [--debug] [--version]
+
+print arduino version
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -i, --integer
+  --debug        set logging level to DEBUG
+  --version      show program&#39;s version number and exit
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-0022 python -m confduino.version
+0022
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-0022 python -m confduino.version --integer
+22
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-0023 python -m confduino.version
+0023
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-0023 python -m confduino.version --integer
+23
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-1.0 python -m confduino.version
+1.0
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=~/opt/arduino-1.0 python -m confduino.version --integer
+100
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version
+0022ubuntu0.1
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre>$ env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version --integer
+22
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Check Arduino version</a><ul>
+<li><a class="reference internal" href="#from-python">From python</a></li>
+<li><a class="reference internal" href="#from-console">From console</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="usage_path.html"
+                        title="previous chapter">Arduino path</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="usage_all.html"
+                        title="next chapter">menu item &#8220;all&#8221;</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/usage_version.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usage_all.html" title="menu item “all”"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="usage_path.html" title="Arduino path"
+             >previous</a> |</li>
+        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

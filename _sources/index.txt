@@ -10,11 +10,13 @@ Contents:
     :maxdepth: 2
 
     readme
-    usage
-    usage2
-    usage3
+    usage_path
+    usage_version
+    usage_all
+    usage_lib
+    usage_board
+    usage_prog
     examples
-    help
     api
         
 Indices and tables

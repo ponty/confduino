@@ -23,6 +23,11 @@ verbose:
 .. program-output:: python -m confduino.boardlist --verbose
     :prompt:
 
+Help:
+
+.. program-output:: python -m confduino.boardlist --help
+    :prompt:
+
 List installed MCUs
 ---------------------------
 
@@ -36,6 +41,11 @@ From python:
 From console:
 
 .. program-output:: python -m confduino.mculist
+    :prompt:
+
+Help:
+
+.. program-output:: python -m confduino.mculist --help
     :prompt:
 
 Install new board
@@ -62,8 +72,10 @@ From console::
 
     python -m confduino.boardremove diecimila
 
-
-
+Help:
+    
+.. program-output:: python -m confduino.boardremove --help
+    :prompt:
 
 
 
