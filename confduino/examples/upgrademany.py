@@ -72,6 +72,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduino-dblib.googlecode.com/files/DB.zip')
     inst('http://morse-endecoder.googlecode.com/files/Morse_EnDecoder_2010.12.06.tar.gz')
     inst('http://arduino-pinchangeint.googlecode.com/files/PinChangeInt.zip')
+    inst('http://arduino-tvout.googlecode.com/files/TVout_R5.91.zip')    
     
     ############################
     # others
