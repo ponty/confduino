@@ -40,7 +40,7 @@ options.paved.clean.patterns += ['*.pickle',
                                  'sloccount.sc', 
                                  '*.pdf','*.tex', 
 #                                     '*.png',
-                                 '*.zip',   
+#                                 '*.zip',   
                                  'distribute_setup.py',
                                  ]
 
@@ -56,7 +56,9 @@ options.paved.dist.manifest.include.add('requirements.txt')
        'html', 
        'pdf', 
        'sdist', 
-       'nose')
+       'nose',
+       'tox',
+       )
 def alltest():
     'all tasks to check'
     pass
