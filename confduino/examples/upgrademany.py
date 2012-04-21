@@ -2,10 +2,10 @@ from confduino import exampallcreate
 from confduino.libinstall import install_lib
 from confduino.util import ConfduinoError
 from entrypoint2 import entrypoint
-    
-   
+
+
 @entrypoint
-def upgrade_many(upgrade=True, create_examples_all=True):    
+def upgrade_many(upgrade=True, create_examples_all=True):
     '''upgrade many libs
     
     source: http://arduino.cc/playground/Main/LibraryList
@@ -13,7 +13,8 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     you can set your arduino path if it is not default
     os.environ['ARDUINO_HOME'] = '/home/...'
     '''
-    urls=set()
+    urls = set()
+
     def inst(url):
         print 'upgrading ' + url
         assert url not in urls
@@ -23,7 +24,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
             print ' -> ', lib
         except ConfduinoError as e:
             print e
-            
+
 
     ############################
     # github.com
@@ -33,14 +34,14 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('https://github.com/madsci1016/Arduino-PS2X/zipball/master')
 #    inst('http://github.com/wimleers/flexitimer2/zipball/v1.0')# can't install
     inst('https://github.com/kerinin/arduino-splines/zipball/master')
-    inst('https://github.com/asynclabs/WiShield/zipball/master')   
-    inst('https://github.com/asynclabs/dataflash/zipball/master') 
+    inst('https://github.com/asynclabs/WiShield/zipball/master')
+    inst('https://github.com/asynclabs/dataflash/zipball/master')
     inst('https://github.com/slugmobile/AtTouch/zipball/master')
     inst('https://github.com/carlynorama/Arduino-Library-Button/zipball/master')
     inst('https://github.com/carlynorama/Arduino-Library-FancyLED/zipball/master')
     inst('https://github.com/markfickett/arduinomorse/zipball/master')
-    
-      
+    inst('https://github.com/rocketscream/Low-Power/zipball/master')
+
     ############################
     # arduiniana.org
     ############################
@@ -59,7 +60,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     # TODO: how to get latest version?? 
     # parse http://code.google.com/p/arduino-pinchangeint/downloads/list
 
-#    inst('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip') # already in core!
+    inst('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip') # simplified version in core
     inst('http://arduino-playground.googlecode.com/files/LedDisplay03.zip')
     inst('http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip')
     inst('http://webduino.googlecode.com/files/webduino-1.4.1.zip')# can't install
@@ -72,8 +73,9 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduino-dblib.googlecode.com/files/DB.zip')
     inst('http://morse-endecoder.googlecode.com/files/Morse_EnDecoder_2010.12.06.tar.gz')
     inst('http://arduino-pinchangeint.googlecode.com/files/PinChangeInt.zip')
-    inst('http://arduino-tvout.googlecode.com/files/TVout_R5.91.zip')    
-    
+    inst('http://arduino-tvout.googlecode.com/files/TVout_R5.91.zip')
+    inst('http://narcoleptic.googlecode.com/files/Narcoleptic_v1a.zip')
+
     ############################
     # others
     ############################
@@ -86,7 +88,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://www.shikadi.net/files/arduino/SerialIP-1.0.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
-    inst('http://arduino-tweet.appspot.com/Library-Twitter-1.2.2.zip')    
+    inst('http://arduino-tweet.appspot.com/Library-Twitter-1.2.2.zip')
 #    inst('http://gkaindl.com/php/download.php?key=ArduinoEthernet')# can't install
     inst('http://geekcowboy.net/downloads/x10.zip')
     inst('http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip')
@@ -94,7 +96,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip')
     inst('http://alexandre.quessy.net/static/avr/Tween_01.zip')
     inst('http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip')
-    
+
     ############################
     # arduino.cc
     ############################
@@ -114,23 +116,22 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduino.cc/playground/uploads/Code/Charlieplex.zip')
     inst('http://arduino.cc/playground/uploads/Code/DigitalToggle.zip')
     inst('http://arduino.cc/playground/uploads/Code/Enerlib.zip')
-    
+
     inst('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip')
     #inst('http://arduino.cc/playground/uploads/Code/AdvButton.zip') # old version
-    
+
 #    inst('http://arduino.cc/playground/uploads/Code/SerialDebugger.zip') # can't install
     inst('http://arduino.cc/playground/uploads/Code/MatrixMath.zip')
-      
+
     inst('http://arduino.cc/playground/uploads/Code/StackArray.zip')
     inst('http://arduino.cc/playground/uploads/Code/StackList.zip')
     inst('http://arduino.cc/playground/uploads/Code/QueueArray.zip')
     inst('http://arduino.cc/playground/uploads/Code/QueueList.zip')
     inst('http://arduino.cc/playground/uploads/Code/Ping-1_3.zip')
     inst('http://www.arduino.cc/playground/uploads/Code/LED.zip')
-    
+
 #    inst('')
     if create_examples_all:
         print 'create "all" menu item'
         exampallcreate.create_examples_all()
     print 'install finished'
-
