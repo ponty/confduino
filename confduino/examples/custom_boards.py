@@ -28,7 +28,7 @@ def main(
             ):
     'install custom boards'
 
-    def install(mcu, f_cpu):
+    def install(mcu, f_cpu, kbyte):
         board = AutoBunch()
         board.name = TEMPL_NAME.format(mcu=mcu,
                                        f_cpu=format_freq(f_cpu),
@@ -38,7 +38,7 @@ def main(
                                        upload=upload)
 
         board.upload.using = upload
-        board.upload.maximum_size = 8 * 1024
+        board.upload.maximum_size = kbyte * 1024
 
         board.build.mcu = mcu
         board.build.f_cpu = str(f_cpu) + 'L'
@@ -46,8 +46,12 @@ def main(
 
         install_board(board_id, board, replace_existing=replace_existing)
 
-    install('atmega8', 1000000)
-    install('atmega8', 12000000)
-    install('atmega88', 1000000)
-    install('atmega88', 12000000)
-    install('atmega88', 20000000)
+    install('atmega8', 1000000, 8)
+    install('atmega8', 12000000, 8)
+    install('atmega88', 1000000, 8)
+    install('atmega88', 8000000, 8)
+    install('atmega88', 12000000, 8)
+    install('atmega88', 20000000, 8)
+    install('atmega328p', 20000000, 32)
+    install('atmega328p', 8000000, 32)
+    install('atmega328p', 1000000, 32)

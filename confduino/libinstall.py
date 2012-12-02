@@ -75,7 +75,9 @@ def find_lib_dir(root):
     
     keywords = list(root.walkfiles('keywords.txt'))
     if len(keywords):
-        assert len(keywords) == 1
+        if len(keywords) > 1:
+            log.warning('more keywords.txt found. Installing only one.  %s'% keywords) # TODO:
+
         lib_dir = keywords[0].parent
         lib_dir = fix_libdir(lib_dir)
         return root, lib_dir
