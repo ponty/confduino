@@ -18,20 +18,20 @@ import os
 
 
 class Test(TestCase):
-        
+
     def test_lib(self):
         url = 'http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip'
         f = path(__file__).parent / 'data' / 'PS2Keyboard002.zip'
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
-        
-        (d / 'libraries').makedirs()        
+
+        (d / 'libraries').makedirs()
         eq_(libraries(), [])
-        
+
         install_lib(url)
         eq_(libraries(), ['PS2Keyboard'])
-        
-        remove_lib('PS2Keyboard')        
+
+        remove_lib('PS2Keyboard')
         eq_(libraries(), [])
 
         install_lib(f)
@@ -41,19 +41,19 @@ class Test(TestCase):
             install_lib(f)
             assert 0
         except ConfduinoError:
-            #OK
+            # OK
             eq_(libraries(), ['PS2Keyboard'])
-        
+
     def test_prog(self):
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
-        programmers_txt = d / 'hardware' / 'arduino' / 'programmers.txt'        
-        
-        programmers_txt.parent.makedirs()        
+        programmers_txt = d / 'hardware' / 'arduino' / 'programmers.txt'
+
+        programmers_txt.parent.makedirs()
 
         programmers_txt.write_text('')
         eq_(programmers().keys(), [])
-        
+
         programmers_txt.write_text('''
 brd.x1.y1=foo
 brd.x2=foo
@@ -73,20 +73,19 @@ brd.x3=foo
     def test_boards(self):
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
-        boards_txt = d / 'hardware' / 'arduino' / 'boards.txt'        
-        
-        boards_txt.parent.makedirs()        
+        boards_txt = d / 'hardware' / 'arduino' / 'boards.txt'
+
+        boards_txt.parent.makedirs()
 
         boards_txt.write_text('')
         eq_(board_names(), [])
         eq_(boards().keys(), [])
-        
+
         # invalid board
         boards_txt.write_text('''
 brd.x3=foo
         ''')
         eq_(board_names(), [])
-
 
         boards_txt.write_text('''
 brd.name=foo
@@ -96,7 +95,7 @@ brd.x3=foo
         eq_(board_names(), ['brd'])
         eq_(boards().keys(), ['brd'])
 
-        #invalid
+        # invalid
         install_board('ardu', dict(x1='hi'))
         eq_(board_names(), ['brd'])
 
@@ -112,23 +111,23 @@ brd.x3=foo
     def test_packs(self):
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
-        (d / 'hardware').makedirs()        
+        (d / 'hardware').makedirs()
         eq_(hwpack_names(), [])
-        boards_txt = d / 'hardware' / 'p1' / 'boards.txt'        
-        boards_txt.parent.makedirs()        
+        boards_txt = d / 'hardware' / 'p1' / 'boards.txt'
+        boards_txt.parent.makedirs()
         boards_txt.write_text('')
         eq_(hwpack_names(), ['p1'])
-        boards_txt = d / 'hardware' / 'p2' / 'boards.txt'        
-        boards_txt.parent.makedirs()        
+        boards_txt = d / 'hardware' / 'p2' / 'boards.txt'
+        boards_txt.parent.makedirs()
         boards_txt.write_text('')
         eq_(hwpack_names(), ['p1', 'p2'])
-    
+
     def test_version(self):
         d = tmpdir(suffix='_test')
         os.environ['ARDUINO_HOME'] = d
-        (d / 'lib').makedirs()     
-        v=d / 'lib'/'version.txt'
-        v.write_text('0017')   
+        (d / 'lib').makedirs()
+        v = d / 'lib' / 'version.txt'
+        v.write_text('0017')
         eq_(int(version()), 17)
-        v.write_text('\n0018\n')   
+        v.write_text('\n0018\n')
         eq_(int(version()), 18)

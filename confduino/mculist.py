@@ -6,7 +6,7 @@ import logging
 
 log = logging.getLogger(__name__)
 
-           
+
 def mcus():
     '''MCU list
     '''
@@ -16,12 +16,14 @@ def mcus():
             ls += [mcu(b, h)]
     ls = sorted(list(set(ls)))
     return ls
-  
+
+
 def mcu(board_id, hwpack_id):
     '''
     '''
     board = boards(hwpack=hwpack_id)[board_id]
     return board.build.mcu
+
 
 @entrypoint
 def print_mcus():

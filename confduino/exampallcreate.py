@@ -7,22 +7,23 @@ import os
 
 log = logging.getLogger(__name__)
 
+
 @entrypoint
 def create_examples_all():
-    '''create arduino/examples/all directory 
+    '''create arduino/examples/all directory
 
     :rtype: None
     '''
     remove_examples_all()
     examples_all_dir().mkdir()
-           
+
     for lib in libraries():
         maindir = examples_all_dir() / lib.upper()[0:1] / lib
-#        libraries_dir() / 
+#        libraries_dir() /
         maindir.makedirs_p()
-        
-        for ex in  lib_examples(lib):
-            d=lib_example_dir(lib, ex)
+
+        for ex in lib_examples(lib):
+            d = lib_example_dir(lib, ex)
             if hasattr(os, 'symlink'):
                 d.symlink(maindir / ex)
             else:

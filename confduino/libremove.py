@@ -4,10 +4,11 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 @entrypoint
 def remove_lib(lib_name):
     '''remove library
-    
+
     :param lib_name: library name (e.g. 'PS2Keyboard')
     :rtype: None
     '''

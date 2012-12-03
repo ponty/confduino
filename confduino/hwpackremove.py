@@ -5,10 +5,11 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 @entrypoint
 def remove_hwpack(name):
     '''remove hardware package
-    
+
     :param name: hardware package name (e.g. 'Sanguino')
     :rtype: None
     '''

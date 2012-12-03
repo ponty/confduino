@@ -6,16 +6,18 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 def hwpack_dir():
     'return hardware packages root path'
     x = arduino_path() / 'hardware'
     assert x.exists(), x
     return x
 
+
 def hwpacks():
     '''
         example::
-    
+
 {'Sanguino': {'sanguino': {'bootloader': {'extended_fuses': '0xFD',
                                           'file': 'ATmegaBOOT_644P.hex',
                                           'high_fuses': '0xDC',
@@ -87,17 +89,19 @@ def hwpacks():
         bunch[x] = boards(x)
     return bunch
 
+
 def hwpack_names():
     'return installed hardware package names'
     ls = hwpack_dir().listdir()
     ls = [x.name for x in ls]
     ls = [x for x in ls if x != 'tools']
-    arduino_included='arduino' in ls
+    arduino_included = 'arduino' in ls
     ls = [x for x in ls if x != 'arduino']
     ls.sort()
     if arduino_included:
-        ls = ['arduino'] + ls # move to 1st pos
+        ls = ['arduino'] + ls  # move to 1st pos
     return ls
+
 
 @entrypoint
 def print_hwpacks():

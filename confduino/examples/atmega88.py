@@ -7,13 +7,13 @@ TEMPL = '{mcu}@{f_cpu} programmer:{upload}'
 
 @entrypoint
 def install(
-            board_id='atmega88',
-            mcu='atmega88',
-            f_cpu=20000000,
-            upload='usbasp',
-            core='arduino',
-            replace_existing=True,
-            ):
+    board_id='atmega88',
+    mcu='atmega88',
+    f_cpu=20000000,
+    upload='usbasp',
+    core='arduino',
+    replace_existing=True,
+):
     'install atmega88 board'
 
     board = AutoBunch()

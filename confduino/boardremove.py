@@ -5,10 +5,11 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 @entrypoint
 def remove_board(board_id):
     '''remove board
-    
+
     :param board_id: board id (e.g. 'diecimila')
     :rtype: None
     '''

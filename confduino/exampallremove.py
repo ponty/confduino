@@ -4,9 +4,10 @@ import logging
 
 log = logging.getLogger(__name__)
 
+
 @entrypoint
 def remove_examples_all():
-    '''remove arduino/examples/all directory 
+    '''remove arduino/examples/all directory
 
     :rtype: None
     '''

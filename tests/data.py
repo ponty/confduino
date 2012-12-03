@@ -1,8 +1,8 @@
 
 
-TEST_ARDUINO_PATHS='''
+TEST_ARDUINO_PATHS = '''
 ~/opt/arduino-0022
-~/opt/arduino-0023 
-~/opt/arduino-1.0 
-/usr/share/arduino 
-'''.strip().split()+['']
+~/opt/arduino-0023
+~/opt/arduino-1.0
+/usr/share/arduino
+'''.strip().split() + ['']

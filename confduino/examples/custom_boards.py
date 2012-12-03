@@ -22,10 +22,10 @@ def format_freq(f):
 
 @entrypoint
 def main(
-            upload='usbasp',
-            core='arduino',
-            replace_existing=True,
-            ):
+    upload='usbasp',
+    core='arduino',
+    replace_existing=True,
+):
     'install custom boards'
 
     def install(mcu, f_cpu, kbyte):
@@ -34,8 +34,8 @@ def main(
                                        f_cpu=format_freq(f_cpu),
                                        upload=upload)
         board_id = TEMPL_ID.format(mcu=mcu,
-                                       f_cpu=(f_cpu),
-                                       upload=upload)
+                                   f_cpu=(f_cpu),
+                                   upload=upload)
 
         board.upload.using = upload
         board.upload.maximum_size = kbyte * 1024

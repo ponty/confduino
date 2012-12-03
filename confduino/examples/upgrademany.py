@@ -7,7 +7,7 @@ from entrypoint2 import entrypoint
 @entrypoint
 def upgrade_many(upgrade=True, create_examples_all=True):
     '''upgrade many libs
-    
+
     source: http://arduino.cc/playground/Main/LibraryList
 
     you can set your arduino path if it is not default
@@ -25,7 +25,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
         except Exception as e:
             print e
 
-    #inst('http://nootropicdesign.com/hackvision/downloads/Controllers.zip')
+    # inst('http://nootropicdesign.com/hackvision/downloads/Controllers.zip')
 
     ############################
     # github.com
@@ -47,7 +47,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     ############################
     # arduiniana.org
     ############################
-    # TODO: how to get latest version?? 
+    # TODO: how to get latest version??
     inst('http://arduiniana.org/PString/PString2.zip')
     inst('http://arduiniana.org/Flash/Flash3.zip')
     inst('http://arduiniana.org/NewSoftSerial/NewSoftSerial10c.zip')
@@ -55,17 +55,17 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduiniana.org/PWMServo/PWMServo.zip')
     inst('http://arduiniana.org/TinyGPS/TinyGPS10.zip')
 
-
     ############################
     # google
     ############################
-    # TODO: how to get latest version?? 
+    # TODO: how to get latest version??
     # parse http://code.google.com/p/arduino-pinchangeint/downloads/list
-
-    inst('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip') # simplified version in core
+    inst('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip')
+         # simplified version in core
     inst('http://arduino-playground.googlecode.com/files/LedDisplay03.zip')
     inst('http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip')
-    inst('http://webduino.googlecode.com/files/webduino-1.4.1.zip')# can't install
+    inst('http://webduino.googlecode.com/files/webduino-1.4.1.zip')
+         # can't install
     inst('http://arduino-pid-library.googlecode.com/files/PID_v1.0.1.zip')
     inst('http://ideoarduinolibraries.googlecode.com/files/Qtouch1Wire.zip')
     inst('http://arduino-timerone.googlecode.com/files/TimerOne-v8.zip')
@@ -88,7 +88,8 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
     inst('http://arduino-tweet.appspot.com/Library-Twitter-1.2.2.zip')
-#    inst('http://gkaindl.com/php/download.php?key=ArduinoEthernet')# can't install
+# inst('http://gkaindl.com/php/download.php?key=ArduinoEthernet')# can't
+# install
     inst('http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip')
     inst('http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip')
     inst('http://alexandre.quessy.net/static/avr/Tween_01.zip')
@@ -100,24 +101,30 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip')
     inst('http://arduino.cc/playground/uploads/Code/Metro.zip')
     inst('http://www.arduino.cc/playground/uploads/Main/MsTimer2.zip')
-#    inst('http://www.arduino.cc/playground/uploads/Code/Time.zip')# can't install
+# inst('http://www.arduino.cc/playground/uploads/Code/Time.zip')# can't
+# install
     inst('http://arduino.cc/playground/uploads/Main/LedControl.zip')
-#    inst('http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip')# can't install
+# inst('http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip')#
+# can't install
     inst('http://arduino.cc/playground/uploads/Code/Bounce.zip')
     inst('http://arduino.cc/playground/uploads/Main/CapacitiveSense003.zip')
     inst('http://arduino.cc/playground/uploads/Main/PinChangeInt.zip')
-#    inst('http://arduino.cc/playground/uploads/Code/TimerThree.zip')# can't install
+# inst('http://arduino.cc/playground/uploads/Code/TimerThree.zip')# can't
+# install
     inst('http://arduino.cc/playground/uploads/Code/TimedAction-1_6.zip')
-#    inst('http://www.arduino.cc/playground/uploads/Code/Time.zip')# can't install
+# inst('http://www.arduino.cc/playground/uploads/Code/Time.zip')# can't
+# install
     inst('http://arduino.cc/playground/uploads/Code/EventFuse.zip')
     inst('http://arduino.cc/playground/uploads/Code/Charlieplex.zip')
     inst('http://arduino.cc/playground/uploads/Code/DigitalToggle.zip')
     inst('http://arduino.cc/playground/uploads/Code/Enerlib.zip')
 
     inst('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip')
-    #inst('http://arduino.cc/playground/uploads/Code/AdvButton.zip') # old version
+    # inst('http://arduino.cc/playground/uploads/Code/AdvButton.zip') # old
+    # version
 
-#    inst('http://arduino.cc/playground/uploads/Code/SerialDebugger.zip') # can't install
+# inst('http://arduino.cc/playground/uploads/Code/SerialDebugger.zip') #
+# can't install
     inst('http://arduino.cc/playground/uploads/Code/MatrixMath.zip')
 
     inst('http://arduino.cc/playground/uploads/Code/StackArray.zip')
