@@ -10,12 +10,10 @@ from nose.tools import eq_
 def test_ver2():
     set_arduino_path('~/opt/arduino-0022')
     eq_(version(), '0022')
-    set_arduino_path('~/opt/arduino-0023')
-    eq_(version(), '0023')
     set_arduino_path('~/opt/arduino-1.0')
     eq_(version(), '1.0')
     set_arduino_path('/usr/share/arduino/')
-    eq_(version(), '0022ubuntu0.1')
+    eq_(version(), '1.0')
 
 
 def test_iver():
