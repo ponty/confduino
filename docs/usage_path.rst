@@ -13,11 +13,11 @@ in ``~/.profile``::
 
 temporary changes:
 
-.. program-output:: env ARDUINO_HOME=~/opt/arduino-1.0 python -m confduino.version
+.. program-output:: env ARDUINO_HOME=~/opt/arduino-0022 python -m confduino.version
     :prompt:
     :shell:
 
-.. program-output:: env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version
+.. program-output:: env ARDUINO_HOME=~/opt/arduino-1.0 python -m confduino.version
     :prompt:
     :shell:
 

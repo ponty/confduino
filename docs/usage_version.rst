@@ -14,7 +14,7 @@ From python
     >>> intversion()
     >>> sketch_extension()
     >>>
-    >>> set_arduino_path('~/opt/arduino-0023')
+    >>> set_arduino_path('~/opt/arduino-0022')
     >>> version()
     >>> intversion()
     >>> sketch_extension()
@@ -48,14 +48,6 @@ Examples
     :shell:
 
 .. program-output:: env ARDUINO_HOME=~/opt/arduino-0022 python -m confduino.version --integer
-    :prompt:
-    :shell:
-
-.. program-output:: env ARDUINO_HOME=~/opt/arduino-0023 python -m confduino.version
-    :prompt:
-    :shell:
-
-.. program-output:: env ARDUINO_HOME=~/opt/arduino-0023 python -m confduino.version --integer
     :prompt:
     :shell:
 
