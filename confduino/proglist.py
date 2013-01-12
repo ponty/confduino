@@ -3,6 +3,7 @@ from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
 from pprint import pprint
+from prettyprint.prettyprint import pp
 import logging
 
 log = logging.getLogger(__name__)
@@ -31,6 +32,6 @@ def programmer_names(hwpack='arduino'):
 def print_programmers(verbose=False):
     ''' print programmers from programmers.txt'''
     if verbose:
-        pprint(unbunchify(programmers()))
+        pp(unbunchify(programmers()))
     else:
         print('\n'.join(programmer_names()))

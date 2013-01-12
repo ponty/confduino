@@ -3,6 +3,7 @@ from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
 from pprint import pprint
+from prettyprint.prettyprint import pp
 import logging
 
 log = logging.getLogger(__name__)
@@ -44,6 +45,6 @@ def board_names(hwpack='arduino'):
 def print_boards(hwpack='arduino', verbose=False):
     ''' print boards from boards.txt'''
     if verbose:
-        pprint(unbunchify(boards(hwpack)), width=1)
+        pp(unbunchify(boards(hwpack)))
     else:
         print('\n'.join(board_names(hwpack)))

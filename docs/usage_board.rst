@@ -18,7 +18,7 @@ From console:
 .. program-output:: python -m confduino.boardlist
     :prompt:
 
-verbose:
+verbose (JSON compatible):
 
 .. program-output:: python -m confduino.boardlist --verbose
     :prompt:
