@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with libraries &mdash; confduino 0.1.0 documentation</title>
+    <title>Usage with libraries &mdash; confduino 0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.2 documentation" href="index.html" />
     <link rel="next" title="Usage with boards" href="usage_board.html" />
     <link rel="prev" title="menu item “all”" href="usage_all.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="usage_all.html" title="menu item “all”"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -61,13 +61,12 @@
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.liblist</span> <span class="kn">import</span> <span class="n">libraries</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">libraries</span><span class="p">()</span>
-<span class="go">[&#39;AdvButton&#39;, &#39;ArduinoTestSuite&#39;, &#39;ArduinoUnit&#39;, &#39;AtTouch&#39;, &#39;Bounce&#39;, &#39;Button&#39;, &#39;ByteBuffer&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;Coll&#39;, &#39;DB&#39;, &#39;DallasTemperature&#39;, &#39;DataFlash&#39;, &#39;DateTime&#39;, &#39;DateTimeStrings&#39;, &#39;DigitalToggle&#39;, &#39;EDB&#39;, &#39;EEPROM&#39;, &#39;EasyTransfer&#39;, &#39;Enerlib&#39;, &#39;Ethernet&#39;, &#39;EventFuse&#39;, &#39;FancyLED&#39;, &#39;Firmata&#39;, &#39;Flash&#39;, &#39;FreqCounter&#39;, &#39;FrequencyTimer2&#39;, &#39;LED&#39;, &#39;LPM11162&#39;, &#39;LedControl&#39;, &#39;LedDisplay&#39;, &#39;LiquidCrystal&#39;, &#39;Matrix&#39;, &#39;MatrixMath&#39;, &#39;Messenger&#39;, &#39;Metro&#39;, &#39;Morse&#39;, &#39;MorseEnDecoder&#39;, &#39;MsTimer2&#39;, &#39;NewSoftSerial&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PS2X_lib&#39;, &#39;PString&#39;, &#39;PWMServo&#39;, &#39;PinChangeInt&#39;, &#39;Ping&#39;, &#39;Qtouch1Wire&#39;, &#39;QueueArray&#39;, &#39;QueueList&#39;, &#39;SD&#39;, &#39;SPI&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialIP&#39;, &#39;SerialManager&#39;, &#39;Servo&#39;, &#39;SevenSegment&#39;, &#39;SimpleMessageSystem&#39;, &#39;SoftEasyTransfer&#39;, &#39;SoftUsb&#39;, &#39;SoftwareSerial&#39;, &#39;Sprite&#39;, &#39;StackArray&#39;, &#39;StackList&#39;, &#39;Streaming&#39;, &#39;TButton&#39;, &#39;TVout&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;TinyGPS&#39;, &#39;Tween&#39;, &#39;Twitter&#39;, &#39;UComms&#39;, &#39;UsbDevice&#39;, &#39;UsbKeyboard&#39;, &#39;WebServer&#39;, &#39;WiShield&#39;, &#39;Wire&#39;, &#39;arduinode&#39;, &#39;bassdll&#39;, &#39;morse&#39;, &#39;multiCameraIrControl&#39;, &#39;myprojects&#39;, &#39;osa&#39;, &#39;spline&#39;, &#39;tmp&#39;, &#39;x10&#39;]</span>
+<span class="go">[&#39;AdvButton&#39;, &#39;ArduinoUnit&#39;, &#39;AtTouch&#39;, &#39;Bounce&#39;, &#39;Button&#39;, &#39;ByteBuffer&#39;, &#39;CapSense&#39;, &#39;Charlieplex&#39;, &#39;DB&#39;, &#39;DallasTemperature&#39;, &#39;DataFlash&#39;, &#39;DigitalToggle&#39;, &#39;EDB&#39;, &#39;EEPROM&#39;, &#39;EasyTransferI2C&#39;, &#39;Enerlib&#39;, &#39;Esplora&#39;, &#39;Ethernet&#39;, &#39;EventFuse&#39;, &#39;FancyLED&#39;, &#39;Firmata&#39;, &#39;Flash&#39;, &#39;FrequencyTimer2&#39;, &#39;LED&#39;, &#39;LPM11162&#39;, &#39;LedControl&#39;, &#39;LedDisplay&#39;, &#39;LiquidCrystal&#39;, &#39;LowPower&#39;, &#39;MatrixMath&#39;, &#39;Metro&#39;, &#39;MorseEnDecoder&#39;, &#39;MsTimer2&#39;, &#39;Narcoleptic&#39;, &#39;NewSoftSerial&#39;, &#39;NoiseFilter&#39;, &#39;OneWire&#39;, &#39;PID_v1&#39;, &#39;PS2Keyboard&#39;, &#39;PS2X_lib&#39;, &#39;PString&#39;, &#39;PWMServo&#39;, &#39;PinChangeInt&#39;, &#39;Ping&#39;, &#39;Qtouch1Wire&#39;, &#39;QueueArray&#39;, &#39;QueueList&#39;, &#39;SD&#39;, &#39;SPI&#39;, &#39;SSerial2Mobile&#39;, &#39;SerialIP&#39;, &#39;SerialManager&#39;, &#39;Servo&#39;, &#39;SevSeg&#39;, &#39;SoftEasyTransfer&#39;, &#39;SoftUsb&#39;, &#39;SoftwareSerial&#39;, &#39;StackArray&#39;, &#39;StackList&#39;, &#39;Stepper&#39;, &#39;Streaming&#39;, &#39;TVout&#39;, &#39;TimedAction&#39;, &#39;TimerOne&#39;, &#39;TinyGPS&#39;, &#39;Tone&#39;, &#39;Tween&#39;, &#39;Twitter&#39;, &#39;WebServer&#39;, &#39;WiFi&#39;, &#39;WiShield&#39;, &#39;Wire&#39;, &#39;arduinode&#39;, &#39;morse&#39;, &#39;multiCameraIrControl&#39;, &#39;rtttl&#39;, &#39;spline&#39;]</span>
 </pre></div>
 </div>
 <p>From console:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.liblist
 AdvButton
-ArduinoTestSuite
 ArduinoUnit
 AtTouch
 Bounce
@@ -75,37 +74,34 @@ Button
 ByteBuffer
 CapSense
 Charlieplex
-Coll
 DB
 DallasTemperature
 DataFlash
-DateTime
-DateTimeStrings
 DigitalToggle
 EDB
 EEPROM
-EasyTransfer
+EasyTransferI2C
 Enerlib
+Esplora
 Ethernet
 EventFuse
 FancyLED
 Firmata
 Flash
-FreqCounter
 FrequencyTimer2
 LED
 LPM11162
 LedControl
 LedDisplay
 LiquidCrystal
-Matrix
+LowPower
 MatrixMath
-Messenger
 Metro
-Morse
 MorseEnDecoder
 MsTimer2
+Narcoleptic
 NewSoftSerial
+NoiseFilter
 OneWire
 PID_v1
 PS2Keyboard
@@ -123,37 +119,30 @@ SSerial2Mobile
 SerialIP
 SerialManager
 Servo
-SevenSegment
-SimpleMessageSystem
+SevSeg
 SoftEasyTransfer
 SoftUsb
 SoftwareSerial
-Sprite
 StackArray
 StackList
+Stepper
 Streaming
-TButton
 TVout
 TimedAction
 TimerOne
 TinyGPS
+Tone
 Tween
 Twitter
-UComms
-UsbDevice
-UsbKeyboard
 WebServer
+WiFi
 WiShield
 Wire
 arduinode
-bassdll
 morse
 multiCameraIrControl
-myprojects
-osa
+rtttl
 spline
-tmp
-x10
 </pre></div>
 </div>
 <p>Help:</p>
@@ -193,7 +182,7 @@ optional arguments:
 </div>
 <p>Help:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.libinstall --help
-usage: libinstall.py [-h] [-r] [--debug] url
+usage: libinstall.py [-h] [-r] [-f] [--debug] url
 
 install library from web or local files system
 
@@ -204,6 +193,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -r, --replace-existing
                         bool
+  -f, --fix-wprogram
   --debug               set logging level to DEBUG
 </pre></div>
 </div>
@@ -295,12 +285,12 @@ optional arguments:
         <li class="right" >
           <a href="usage_all.html" title="menu item “all”"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>

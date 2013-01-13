@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage with boards &mdash; confduino 0.1.0 documentation</title>
+    <title>Usage with boards &mdash; confduino 0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.2 documentation" href="index.html" />
     <link rel="next" title="Usage with programmers" href="usage_prog.html" />
     <link rel="prev" title="Usage with libraries" href="usage_lib.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="usage_lib.html" title="Usage with libraries"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -61,7 +61,7 @@
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.boardlist</span> <span class="kn">import</span> <span class="n">boards</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">boards</span><span class="p">()</span>
-<span class="go">AutoBunch(atmega8=AutoBunch(bootloader=AutoBunch(file=&#39;ATmegaBOOT.hex&#39;, high_fuses=&#39;0xca&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xdf&#39;, path=&#39;atmega8&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega8&#39;), name=&#39;Arduino NG or older w/ ATmega8&#39;, upload=AutoBunch(maximum_size=&#39;7168&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), atmega88=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;20000000L&#39;, mcu=&#39;atmega88&#39;), name=&#39;atmega88@20000000 programmer:usbasp&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), bt=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;bt&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Arduino BT w/ ATmega168&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), bt328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_bt.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;bt&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;Arduino BT w/ ATmega328&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), diecimila=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_diecimila.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Arduino Diecimila, Duemilanove, or Nano w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), fio=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;arduino:atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino:arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;Arduino Fio&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;stk500&#39;, speed=&#39;57600&#39;)), lilypad=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;LilyPadBOOT_168.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xe2&#39;, path=&#39;lilypad&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;LilyPad Arduino w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), lilypad328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;LilyPad Arduino w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;stk500&#39;, speed=&#39;57600&#39;)), mega=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xF5&#39;, file=&#39;ATmegaBOOT_168_atmega1280.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega1280&#39;), name=&#39;Arduino Mega (ATmega1280)&#39;, upload=AutoBunch(maximum_size=&#39;126976&#39;, protocol=&#39;stk500&#39;, speed=&#39;57600&#39;)), mega2560=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xFD&#39;, file=&#39;stk500boot_v2_mega2560.hex&#39;, high_fuses=&#39;0xD8&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;stk500v2&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega2560&#39;), name=&#39;Arduino Mega 2560&#39;, upload=AutoBunch(maximum_size=&#39;258048&#39;, protocol=&#39;stk500v2&#39;, speed=&#39;115200&#39;)), metaboard=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Metaboard&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;14336&#39;, protocol=&#39;usbasp&#39;, speed=&#39;19200&#39;)), mini=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_ng.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Arduino Mini&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), pro=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_pro_8MHz.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xc6&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), pro328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;stk500&#39;, speed=&#39;57600&#39;)), pro5v=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_diecimila.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;), name=&#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;stk500&#39;, speed=&#39;19200&#39;)), pro5v328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;stk500&#39;, speed=&#39;57600&#39;)), uno=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;optiboot_atmega328.hex&#39;, high_fuses=&#39;0xde&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;optiboot&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;), name=&#39;Arduino Uno&#39;, upload=AutoBunch(maximum_size=&#39;32256&#39;, protocol=&#39;stk500&#39;, speed=&#39;115200&#39;)))</span>
+<span class="go">AutoBunch(LilyPadUSB=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xce&#39;, file=&#39;Caterina-LilyPadUSB.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x2F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;caterina-LilyPadUSB&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega32u4&#39;, pid=&#39;0x9208&#39;, variant=&#39;leonardo&#39;, vid=&#39;0x1B4F&#39;), name=&#39;LilyPad Arduino USB&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;avr109&#39;, speed=&#39;57600&#39;)), atmega168=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_ng.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;standard&#39;), name=&#39;Arduino NG or older w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), atmega328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Duemilanove w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), atmega328p_1000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;1000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;atmega328p@1MHz&#39;, upload=AutoBunch(maximum_size=&#39;32768&#39;, using=&#39;usbasp&#39;)), atmega328p_20000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;20000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;atmega328p@20MHz&#39;, upload=AutoBunch(maximum_size=&#39;32768&#39;, using=&#39;usbasp&#39;)), atmega328p_8000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;atmega328p@8MHz&#39;, upload=AutoBunch(maximum_size=&#39;32768&#39;, using=&#39;usbasp&#39;)), atmega8=AutoBunch(bootloader=AutoBunch(file=&#39;ATmegaBOOT-prod-firmware-2009-11-07.hex&#39;, high_fuses=&#39;0xca&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xdf&#39;, path=&#39;atmega8&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega8&#39;, variant=&#39;standard&#39;), name=&#39;Arduino NG or older w/ ATmega8&#39;, upload=AutoBunch(maximum_size=&#39;7168&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), atmega88_1000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;1000000L&#39;, mcu=&#39;atmega88&#39;, variant=&#39;standard&#39;), name=&#39;atmega88@1MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), atmega88_12000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;12000000L&#39;, mcu=&#39;atmega88&#39;, variant=&#39;standard&#39;), name=&#39;atmega88@12MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), atmega88_20000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;20000000L&#39;, mcu=&#39;atmega88&#39;, variant=&#39;standard&#39;), name=&#39;atmega88@20MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), atmega88_8000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega88&#39;, variant=&#39;standard&#39;), name=&#39;atmega88@8MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), atmega8_1000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;1000000L&#39;, mcu=&#39;atmega8&#39;, variant=&#39;standard&#39;), name=&#39;atmega8@1MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), atmega8_12000000=AutoBunch(build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;12000000L&#39;, mcu=&#39;atmega8&#39;, variant=&#39;standard&#39;), name=&#39;atmega8@12MHz&#39;, upload=AutoBunch(maximum_size=&#39;8192&#39;, using=&#39;usbasp&#39;)), bt=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;bt&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino BT w/ ATmega168&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), bt328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_bt.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;bt&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino BT w/ ATmega328&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), diecimila=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_diecimila.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Diecimila or Duemilanove w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), esplora=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xcb&#39;, file=&#39;Caterina-Esplora.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x2F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;caterina&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega32u4&#39;, pid=&#39;0x803C&#39;, variant=&#39;leonardo&#39;, vid=&#39;0x2341&#39;), name=&#39;Arduino Esplora&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;avr109&#39;, speed=&#39;57600&#39;)), ethernet=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;optiboot_atmega328.hex&#39;, high_fuses=&#39;0xde&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;optiboot&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Ethernet&#39;, upload=AutoBunch(maximum_size=&#39;32256&#39;, protocol=&#39;arduino&#39;, speed=&#39;115200&#39;)), fio=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;arduino:atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino Fio&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), leonardo=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xcb&#39;, file=&#39;Caterina-Leonardo.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x2F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;caterina&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega32u4&#39;, pid=&#39;0x8036&#39;, variant=&#39;leonardo&#39;, vid=&#39;0x2341&#39;), name=&#39;Arduino Leonardo&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;avr109&#39;, speed=&#39;57600&#39;)), lilypad=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;LilyPadBOOT_168.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xe2&#39;, path=&#39;lilypad&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;standard&#39;), name=&#39;LilyPad Arduino w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), lilypad328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;LilyPad Arduino w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), mega=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xF5&#39;, file=&#39;ATmegaBOOT_168_atmega1280.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega1280&#39;, variant=&#39;mega&#39;), name=&#39;Arduino Mega (ATmega1280)&#39;, upload=AutoBunch(maximum_size=&#39;126976&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), mega2560=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xFD&#39;, file=&#39;stk500boot_v2_mega2560.hex&#39;, high_fuses=&#39;0xD8&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;stk500v2&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega2560&#39;, variant=&#39;mega&#39;), name=&#39;Arduino Mega 2560 or Mega ADK&#39;, upload=AutoBunch(maximum_size=&#39;258048&#39;, protocol=&#39;wiring&#39;, speed=&#39;115200&#39;)), micro=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0xcb&#39;, file=&#39;Caterina-Micro.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x2F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;caterina&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega32u4&#39;, pid=&#39;0x8037&#39;, variant=&#39;micro&#39;, vid=&#39;0x2341&#39;), name=&#39;Arduino Micro&#39;, upload=AutoBunch(disable_flushing=&#39;true&#39;, maximum_size=&#39;28672&#39;, protocol=&#39;avr109&#39;, speed=&#39;57600&#39;)), mini=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_ng.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino Mini w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), mini328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;optiboot_atmega328-Mini.hex&#39;, high_fuses=&#39;0xd8&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;optiboot&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino Mini w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;28672&#39;, protocol=&#39;arduino&#39;, speed=&#39;115200&#39;)), nano=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_diecimila.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino Nano w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), nano328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;eightanaloginputs&#39;), name=&#39;Arduino Nano w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), pro=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_pro_8MHz.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xc6&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), pro328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;8000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), pro5v=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x00&#39;, file=&#39;ATmegaBOOT_168_diecimila.hex&#39;, high_fuses=&#39;0xdd&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega168&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega168&#39;, upload=AutoBunch(maximum_size=&#39;14336&#39;, protocol=&#39;arduino&#39;, speed=&#39;19200&#39;)), pro5v328=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;ATmegaBOOT_168_atmega328.hex&#39;, high_fuses=&#39;0xDA&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xFF&#39;, path=&#39;atmega&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328&#39;, upload=AutoBunch(maximum_size=&#39;30720&#39;, protocol=&#39;arduino&#39;, speed=&#39;57600&#39;)), uno=AutoBunch(bootloader=AutoBunch(extended_fuses=&#39;0x05&#39;, file=&#39;optiboot_atmega328.hex&#39;, high_fuses=&#39;0xde&#39;, lock_bits=&#39;0x0F&#39;, low_fuses=&#39;0xff&#39;, path=&#39;optiboot&#39;, unlock_bits=&#39;0x3F&#39;), build=AutoBunch(core=&#39;arduino&#39;, f_cpu=&#39;16000000L&#39;, mcu=&#39;atmega328p&#39;, variant=&#39;standard&#39;), name=&#39;Arduino Uno&#39;, upload=AutoBunch(maximum_size=&#39;32256&#39;, protocol=&#39;arduino&#39;, speed=&#39;115200&#39;)))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">boards</span><span class="p">()</span><span class="o">.</span><span class="n">diecimila</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">f_cpu</span>
 <span class="go">&#39;16000000L&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">boards</span><span class="p">()[</span><span class="s">&#39;diecimila&#39;</span><span class="p">][</span><span class="s">&#39;build&#39;</span><span class="p">][</span><span class="s">&#39;f_cpu&#39;</span><span class="p">]</span>
@@ -70,18 +70,35 @@
 </div>
 <p>From console:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.boardlist
+LilyPadUSB
+atmega168
+atmega328
+atmega328p_1000000
+atmega328p_20000000
+atmega328p_8000000
 atmega8
-atmega88
+atmega88_1000000
+atmega88_12000000
+atmega88_20000000
+atmega88_8000000
+atmega8_1000000
+atmega8_12000000
 bt
 bt328
 diecimila
+esplora
+ethernet
 fio
+leonardo
 lilypad
 lilypad328
 mega
 mega2560
-metaboard
+micro
 mini
+mini328
+nano
+nano328
 pro
 pro328
 pro5v
@@ -89,233 +106,715 @@ pro5v328
 uno
 </pre></div>
 </div>
-<p>verbose:</p>
+<p>verbose (JSON compatible):</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.boardlist --verbose
-{&#39;atmega8&#39;: {&#39;bootloader&#39;: {&#39;file&#39;: &#39;ATmegaBOOT.hex&#39;,
-                            &#39;high_fuses&#39;: &#39;0xca&#39;,
-                            &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                            &#39;low_fuses&#39;: &#39;0xdf&#39;,
-                            &#39;path&#39;: &#39;atmega8&#39;,
-                            &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-             &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                       &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                       &#39;mcu&#39;: &#39;atmega8&#39;},
-             &#39;name&#39;: &#39;Arduino NG or older w/ ATmega8&#39;,
-             &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;7168&#39;,
-                        &#39;protocol&#39;: &#39;stk500&#39;,
-                        &#39;speed&#39;: &#39;19200&#39;}},
- &#39;atmega88&#39;: {&#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                        &#39;f_cpu&#39;: &#39;20000000L&#39;,
-                        &#39;mcu&#39;: &#39;atmega88&#39;},
-              &#39;name&#39;: &#39;atmega88@20000000 programmer:usbasp&#39;,
-              &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;8192&#39;,
-                         &#39;using&#39;: &#39;usbasp&#39;}},
- &#39;bt&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                       &#39;file&#39;: &#39;ATmegaBOOT_168.hex&#39;,
-                       &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                       &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                       &#39;low_fuses&#39;: &#39;0xff&#39;,
-                       &#39;path&#39;: &#39;bt&#39;,
-                       &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-        &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                  &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                  &#39;mcu&#39;: &#39;atmega168&#39;},
-        &#39;name&#39;: &#39;Arduino BT w/ ATmega168&#39;,
-        &#39;upload&#39;: {&#39;disable_flushing&#39;: &#39;true&#39;,
-                   &#39;maximum_size&#39;: &#39;14336&#39;,
-                   &#39;protocol&#39;: &#39;stk500&#39;,
-                   &#39;speed&#39;: &#39;19200&#39;}},
- &#39;bt328&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                          &#39;file&#39;: &#39;ATmegaBOOT_168_atmega328_bt.hex&#39;,
-                          &#39;high_fuses&#39;: &#39;0xd8&#39;,
-                          &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                          &#39;low_fuses&#39;: &#39;0xff&#39;,
-                          &#39;path&#39;: &#39;bt&#39;,
-                          &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-           &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                     &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                     &#39;mcu&#39;: &#39;atmega328p&#39;},
-           &#39;name&#39;: &#39;Arduino BT w/ ATmega328&#39;,
-           &#39;upload&#39;: {&#39;disable_flushing&#39;: &#39;true&#39;,
-                      &#39;maximum_size&#39;: &#39;28672&#39;,
-                      &#39;protocol&#39;: &#39;stk500&#39;,
-                      &#39;speed&#39;: &#39;19200&#39;}},
- &#39;diecimila&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                              &#39;file&#39;: &#39;ATmegaBOOT_168_diecimila.hex&#39;,
-                              &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                              &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                              &#39;low_fuses&#39;: &#39;0xff&#39;,
-                              &#39;path&#39;: &#39;atmega&#39;,
-                              &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-               &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                         &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                         &#39;mcu&#39;: &#39;atmega168&#39;},
-               &#39;name&#39;: &#39;Arduino Diecimila, Duemilanove, or Nano w/ ATmega168&#39;,
-               &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;14336&#39;,
-                          &#39;protocol&#39;: &#39;stk500&#39;,
-                          &#39;speed&#39;: &#39;19200&#39;}},
- &#39;fio&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                        &#39;file&#39;: &#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;,
-                        &#39;high_fuses&#39;: &#39;0xDA&#39;,
-                        &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                        &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                        &#39;path&#39;: &#39;arduino:atmega&#39;,
-                        &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-         &#39;build&#39;: {&#39;core&#39;: &#39;arduino:arduino&#39;,
-                   &#39;f_cpu&#39;: &#39;8000000L&#39;,
-                   &#39;mcu&#39;: &#39;atmega328p&#39;},
-         &#39;name&#39;: &#39;Arduino Fio&#39;,
-         &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;30720&#39;,
-                    &#39;protocol&#39;: &#39;stk500&#39;,
-                    &#39;speed&#39;: &#39;57600&#39;}},
- &#39;lilypad&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                            &#39;file&#39;: &#39;LilyPadBOOT_168.hex&#39;,
-                            &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                            &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                            &#39;low_fuses&#39;: &#39;0xe2&#39;,
-                            &#39;path&#39;: &#39;lilypad&#39;,
-                            &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-             &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                       &#39;f_cpu&#39;: &#39;8000000L&#39;,
-                       &#39;mcu&#39;: &#39;atmega168&#39;},
-             &#39;name&#39;: &#39;LilyPad Arduino w/ ATmega168&#39;,
-             &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;14336&#39;,
-                        &#39;protocol&#39;: &#39;stk500&#39;,
-                        &#39;speed&#39;: &#39;19200&#39;}},
- &#39;lilypad328&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                               &#39;file&#39;: &#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;,
-                               &#39;high_fuses&#39;: &#39;0xDA&#39;,
-                               &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                               &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                               &#39;path&#39;: &#39;atmega&#39;,
-                               &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-                &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                          &#39;f_cpu&#39;: &#39;8000000L&#39;,
-                          &#39;mcu&#39;: &#39;atmega328p&#39;},
-                &#39;name&#39;: &#39;LilyPad Arduino w/ ATmega328&#39;,
-                &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;30720&#39;,
-                           &#39;protocol&#39;: &#39;stk500&#39;,
-                           &#39;speed&#39;: &#39;57600&#39;}},
- &#39;mega&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0xF5&#39;,
-                         &#39;file&#39;: &#39;ATmegaBOOT_168_atmega1280.hex&#39;,
-                         &#39;high_fuses&#39;: &#39;0xDA&#39;,
-                         &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                         &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                         &#39;path&#39;: &#39;atmega&#39;,
-                         &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-          &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                    &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                    &#39;mcu&#39;: &#39;atmega1280&#39;},
-          &#39;name&#39;: &#39;Arduino Mega (ATmega1280)&#39;,
-          &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;126976&#39;,
-                     &#39;protocol&#39;: &#39;stk500&#39;,
-                     &#39;speed&#39;: &#39;57600&#39;}},
- &#39;mega2560&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0xFD&#39;,
-                             &#39;file&#39;: &#39;stk500boot_v2_mega2560.hex&#39;,
-                             &#39;high_fuses&#39;: &#39;0xD8&#39;,
-                             &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                             &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                             &#39;path&#39;: &#39;stk500v2&#39;,
-                             &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-              &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                        &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                        &#39;mcu&#39;: &#39;atmega2560&#39;},
-              &#39;name&#39;: &#39;Arduino Mega 2560&#39;,
-              &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;258048&#39;,
-                         &#39;protocol&#39;: &#39;stk500v2&#39;,
-                         &#39;speed&#39;: &#39;115200&#39;}},
- &#39;metaboard&#39;: {&#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                         &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                         &#39;mcu&#39;: &#39;atmega168&#39;},
-               &#39;name&#39;: &#39;Metaboard&#39;,
-               &#39;upload&#39;: {&#39;disable_flushing&#39;: &#39;true&#39;,
-                          &#39;maximum_size&#39;: &#39;14336&#39;,
-                          &#39;protocol&#39;: &#39;usbasp&#39;,
-                          &#39;speed&#39;: &#39;19200&#39;}},
- &#39;mini&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                         &#39;file&#39;: &#39;ATmegaBOOT_168_ng.hex&#39;,
-                         &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                         &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                         &#39;low_fuses&#39;: &#39;0xff&#39;,
-                         &#39;path&#39;: &#39;atmega&#39;,
-                         &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-          &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                    &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                    &#39;mcu&#39;: &#39;atmega168&#39;},
-          &#39;name&#39;: &#39;Arduino Mini&#39;,
-          &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;14336&#39;,
-                     &#39;protocol&#39;: &#39;stk500&#39;,
-                     &#39;speed&#39;: &#39;19200&#39;}},
- &#39;pro&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                        &#39;file&#39;: &#39;ATmegaBOOT_168_pro_8MHz.hex&#39;,
-                        &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                        &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                        &#39;low_fuses&#39;: &#39;0xc6&#39;,
-                        &#39;path&#39;: &#39;atmega&#39;,
-                        &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-         &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                   &#39;f_cpu&#39;: &#39;8000000L&#39;,
-                   &#39;mcu&#39;: &#39;atmega168&#39;},
-         &#39;name&#39;: &#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega168&#39;,
-         &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;14336&#39;,
-                    &#39;protocol&#39;: &#39;stk500&#39;,
-                    &#39;speed&#39;: &#39;19200&#39;}},
- &#39;pro328&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                           &#39;file&#39;: &#39;ATmegaBOOT_168_atmega328_pro_8MHz.hex&#39;,
-                           &#39;high_fuses&#39;: &#39;0xDA&#39;,
-                           &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                           &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                           &#39;path&#39;: &#39;atmega&#39;,
-                           &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-            &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                      &#39;f_cpu&#39;: &#39;8000000L&#39;,
-                      &#39;mcu&#39;: &#39;atmega328p&#39;},
-            &#39;name&#39;: &#39;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328&#39;,
-            &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;30720&#39;,
-                       &#39;protocol&#39;: &#39;stk500&#39;,
-                       &#39;speed&#39;: &#39;57600&#39;}},
- &#39;pro5v&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x00&#39;,
-                          &#39;file&#39;: &#39;ATmegaBOOT_168_diecimila.hex&#39;,
-                          &#39;high_fuses&#39;: &#39;0xdd&#39;,
-                          &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                          &#39;low_fuses&#39;: &#39;0xff&#39;,
-                          &#39;path&#39;: &#39;atmega&#39;,
-                          &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-           &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                     &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                     &#39;mcu&#39;: &#39;atmega168&#39;},
-           &#39;name&#39;: &#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega168&#39;,
-           &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;14336&#39;,
-                      &#39;protocol&#39;: &#39;stk500&#39;,
-                      &#39;speed&#39;: &#39;19200&#39;}},
- &#39;pro5v328&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                             &#39;file&#39;: &#39;ATmegaBOOT_168_atmega328.hex&#39;,
-                             &#39;high_fuses&#39;: &#39;0xDA&#39;,
-                             &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                             &#39;low_fuses&#39;: &#39;0xFF&#39;,
-                             &#39;path&#39;: &#39;atmega&#39;,
-                             &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-              &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                        &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                        &#39;mcu&#39;: &#39;atmega328p&#39;},
-              &#39;name&#39;: &#39;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328&#39;,
-              &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;30720&#39;,
-                         &#39;protocol&#39;: &#39;stk500&#39;,
-                         &#39;speed&#39;: &#39;57600&#39;}},
- &#39;uno&#39;: {&#39;bootloader&#39;: {&#39;extended_fuses&#39;: &#39;0x05&#39;,
-                        &#39;file&#39;: &#39;optiboot_atmega328.hex&#39;,
-                        &#39;high_fuses&#39;: &#39;0xde&#39;,
-                        &#39;lock_bits&#39;: &#39;0x0F&#39;,
-                        &#39;low_fuses&#39;: &#39;0xff&#39;,
-                        &#39;path&#39;: &#39;optiboot&#39;,
-                        &#39;unlock_bits&#39;: &#39;0x3F&#39;},
-         &#39;build&#39;: {&#39;core&#39;: &#39;arduino&#39;,
-                   &#39;f_cpu&#39;: &#39;16000000L&#39;,
-                   &#39;mcu&#39;: &#39;atmega328p&#39;},
-         &#39;name&#39;: &#39;Arduino Uno&#39;,
-         &#39;upload&#39;: {&#39;maximum_size&#39;: &#39;32256&#39;,
-                    &#39;protocol&#39;: &#39;stk500&#39;,
-                    &#39;speed&#39;: &#39;115200&#39;}}}
+{
+    &quot;LilyPadUSB&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xce&quot;, 
+            &quot;file&quot;: &quot;Caterina-LilyPadUSB.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x2F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;caterina-LilyPadUSB&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega32u4&quot;, 
+            &quot;pid&quot;: &quot;0x9208&quot;, 
+            &quot;variant&quot;: &quot;leonardo&quot;, 
+            &quot;vid&quot;: &quot;0x1B4F&quot;
+        }, 
+        &quot;name&quot;: &quot;LilyPad Arduino USB&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;avr109&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;atmega168&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_ng.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino NG or older w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;atmega328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Duemilanove w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;atmega328p_1000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;1000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega328p@1MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;32768&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega328p_20000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;20000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega328p@20MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;32768&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega328p_8000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega328p@8MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;32768&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega8&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;file&quot;: &quot;ATmegaBOOT-prod-firmware-2009-11-07.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xca&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xdf&quot;, 
+            &quot;path&quot;: &quot;atmega8&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega8&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino NG or older w/ ATmega8&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;7168&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;atmega88_1000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;1000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega88&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega88@1MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega88_12000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;12000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega88&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega88@12MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega88_20000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;20000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega88&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega88@20MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega88_8000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega88&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega88@8MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega8_1000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;1000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega8&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega8@1MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;atmega8_12000000&quot;: {
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;12000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega8&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;atmega8@12MHz&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;8192&quot;, 
+            &quot;using&quot;: &quot;usbasp&quot;
+        }
+    }, 
+    &quot;bt&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;bt&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino BT w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;bt328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328_bt.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;bt&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino BT w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;diecimila&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_diecimila.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Diecimila or Duemilanove w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;esplora&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xcb&quot;, 
+            &quot;file&quot;: &quot;Caterina-Esplora.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x2F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;caterina&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega32u4&quot;, 
+            &quot;pid&quot;: &quot;0x803C&quot;, 
+            &quot;variant&quot;: &quot;leonardo&quot;, 
+            &quot;vid&quot;: &quot;0x2341&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Esplora&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;avr109&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;ethernet&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;optiboot_atmega328.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xde&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;optiboot&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Ethernet&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;32256&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;115200&quot;
+        }
+    }, 
+    &quot;fio&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328_pro_8MHz.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;arduino:atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Fio&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;leonardo&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xcb&quot;, 
+            &quot;file&quot;: &quot;Caterina-Leonardo.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x2F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;caterina&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega32u4&quot;, 
+            &quot;pid&quot;: &quot;0x8036&quot;, 
+            &quot;variant&quot;: &quot;leonardo&quot;, 
+            &quot;vid&quot;: &quot;0x2341&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Leonardo&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;avr109&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;lilypad&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;LilyPadBOOT_168.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xe2&quot;, 
+            &quot;path&quot;: &quot;lilypad&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;LilyPad Arduino w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;lilypad328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328_pro_8MHz.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;LilyPad Arduino w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;mega&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xF5&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega1280.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega1280&quot;, 
+            &quot;variant&quot;: &quot;mega&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Mega (ATmega1280)&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;126976&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;mega2560&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xFD&quot;, 
+            &quot;file&quot;: &quot;stk500boot_v2_mega2560.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xD8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;stk500v2&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega2560&quot;, 
+            &quot;variant&quot;: &quot;mega&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Mega 2560 or Mega ADK&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;258048&quot;, 
+            &quot;protocol&quot;: &quot;wiring&quot;, 
+            &quot;speed&quot;: &quot;115200&quot;
+        }
+    }, 
+    &quot;micro&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0xcb&quot;, 
+            &quot;file&quot;: &quot;Caterina-Micro.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x2F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;caterina&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega32u4&quot;, 
+            &quot;pid&quot;: &quot;0x8037&quot;, 
+            &quot;variant&quot;: &quot;micro&quot;, 
+            &quot;vid&quot;: &quot;0x2341&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Micro&quot;, 
+        &quot;upload&quot;: {
+            &quot;disable_flushing&quot;: &quot;true&quot;, 
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;avr109&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;mini&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_ng.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Mini w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;mini328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;optiboot_atmega328-Mini.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xd8&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;optiboot&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Mini w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;28672&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;115200&quot;
+        }
+    }, 
+    &quot;nano&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_diecimila.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Nano w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;nano328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;eightanaloginputs&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Nano w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;pro&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_pro_8MHz.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xc6&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;pro328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328_pro_8MHz.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;8000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Pro or Pro Mini (3.3V, 8 MHz) w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;pro5v&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x00&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_diecimila.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xdd&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega168&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega168&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;14336&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;19200&quot;
+        }
+    }, 
+    &quot;pro5v328&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;ATmegaBOOT_168_atmega328.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xDA&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xFF&quot;, 
+            &quot;path&quot;: &quot;atmega&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Pro or Pro Mini (5V, 16 MHz) w/ ATmega328&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;30720&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;57600&quot;
+        }
+    }, 
+    &quot;uno&quot;: {
+        &quot;bootloader&quot;: {
+            &quot;extended_fuses&quot;: &quot;0x05&quot;, 
+            &quot;file&quot;: &quot;optiboot_atmega328.hex&quot;, 
+            &quot;high_fuses&quot;: &quot;0xde&quot;, 
+            &quot;lock_bits&quot;: &quot;0x0F&quot;, 
+            &quot;low_fuses&quot;: &quot;0xff&quot;, 
+            &quot;path&quot;: &quot;optiboot&quot;, 
+            &quot;unlock_bits&quot;: &quot;0x3F&quot;
+        }, 
+        &quot;build&quot;: {
+            &quot;core&quot;: &quot;arduino&quot;, 
+            &quot;f_cpu&quot;: &quot;16000000L&quot;, 
+            &quot;mcu&quot;: &quot;atmega328p&quot;, 
+            &quot;variant&quot;: &quot;standard&quot;
+        }, 
+        &quot;name&quot;: &quot;Arduino Uno&quot;, 
+        &quot;upload&quot;: {
+            &quot;maximum_size&quot;: &quot;32256&quot;, 
+            &quot;protocol&quot;: &quot;arduino&quot;, 
+            &quot;speed&quot;: &quot;115200&quot;
+        }
+    }
+}
 </pre></div>
 </div>
 <p>Help:</p>
@@ -337,52 +836,18 @@ optional arguments:
 <p>From python:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">confduino.mculist</span> <span class="kn">import</span> <span class="n">mcus</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mcus</span><span class="p">()</span>
-<span class="go">[&#39;at90can128&#39;, &#39;at90can32&#39;, &#39;at90can64&#39;, &#39;at90usb1286&#39;, &#39;at90usb1287&#39;, &#39;at90usb162&#39;, &#39;at90usb646&#39;, &#39;at90usb647&#39;, &#39;atmega128&#39;, &#39;atmega1280&#39;, &#39;atmega1281&#39;, &#39;atmega1284p&#39;, &#39;atmega16&#39;, &#39;atmega165&#39;, &#39;atmega165p&#39;, &#39;atmega168&#39;, &#39;atmega169&#39;, &#39;atmega2560&#39;, &#39;atmega2561&#39;, &#39;atmega32&#39;, &#39;atmega324p&#39;, &#39;atmega328p&#39;, &#39;atmega3290p&#39;, &#39;atmega32u4&#39;, &#39;atmega48&#39;, &#39;atmega64&#39;, &#39;atmega640&#39;, &#39;atmega644&#39;, &#39;atmega644p&#39;, &#39;atmega645&#39;, &#39;atmega8&#39;, &#39;atmega8515&#39;, &#39;atmega8535&#39;, &#39;atmega88&#39;, &#39;atmega88p&#39;, &#39;atmega8u2&#39;, &#39;attiny2313&#39;, &#39;attiny26&#39;, &#39;attiny45&#39;, &#39;attiny85&#39;, &#39;attiny861&#39;]</span>
+<span class="go">[&#39;atmega1280&#39;, &#39;atmega168&#39;, &#39;atmega2560&#39;, &#39;atmega328p&#39;, &#39;atmega32u4&#39;, &#39;atmega8&#39;, &#39;atmega88&#39;]</span>
 </pre></div>
 </div>
 <p>From console:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m confduino.mculist
-at90can128
-at90can32
-at90can64
-at90usb1286
-at90usb1287
-at90usb162
-at90usb646
-at90usb647
-atmega128
 atmega1280
-atmega1281
-atmega1284p
-atmega16
-atmega165
-atmega165p
 atmega168
-atmega169
 atmega2560
-atmega2561
-atmega32
-atmega324p
 atmega328p
-atmega3290p
 atmega32u4
-atmega48
-atmega64
-atmega640
-atmega644
-atmega644p
-atmega645
 atmega8
-atmega8515
-atmega8535
 atmega88
-atmega88p
-atmega8u2
-attiny2313
-attiny26
-attiny45
-attiny85
-attiny861
 </pre></div>
 </div>
 <p>Help:</p>
@@ -405,20 +870,34 @@ optional arguments:
 <span class="kn">from</span> <span class="nn">confduino.util</span> <span class="kn">import</span> <span class="n">AutoBunch</span>
 <span class="kn">from</span> <span class="nn">entrypoint2</span> <span class="kn">import</span> <span class="n">entrypoint</span>
 
+<span class="n">TEMPL</span> <span class="o">=</span> <span class="s">&#39;{mcu}@{f_cpu} programmer:{upload}&#39;</span>
+
+
 <span class="nd">@entrypoint</span>
-<span class="k">def</span> <span class="nf">install</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">mcu</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span> <span class="n">f_cpu</span><span class="o">=</span><span class="mi">20000000</span><span class="p">,</span> <span class="n">upload</span><span class="o">=</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span> <span class="n">core</span><span class="o">=</span><span class="s">&#39;arduino&#39;</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>    
+<span class="k">def</span> <span class="nf">install</span><span class="p">(</span>
+    <span class="n">board_id</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span>
+    <span class="n">mcu</span><span class="o">=</span><span class="s">&#39;atmega88&#39;</span><span class="p">,</span>
+    <span class="n">f_cpu</span><span class="o">=</span><span class="mi">20000000</span><span class="p">,</span>
+    <span class="n">upload</span><span class="o">=</span><span class="s">&#39;usbasp&#39;</span><span class="p">,</span>
+    <span class="n">core</span><span class="o">=</span><span class="s">&#39;arduino&#39;</span><span class="p">,</span>
+    <span class="n">replace_existing</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">):</span>
     <span class="s">&#39;install atmega88 board&#39;</span>
+
     <span class="n">board</span> <span class="o">=</span> <span class="n">AutoBunch</span><span class="p">()</span>
-    <span class="n">board</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;{mcu}@{f_cpu} programmer:{upload}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mcu</span><span class="o">=</span><span class="n">mcu</span><span class="p">,</span><span class="n">f_cpu</span><span class="o">=</span><span class="n">f_cpu</span><span class="p">,</span><span class="n">upload</span><span class="o">=</span><span class="n">upload</span><span class="p">)</span>
-    
+    <span class="n">board</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">TEMPL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mcu</span><span class="o">=</span><span class="n">mcu</span><span class="p">,</span> <span class="n">f_cpu</span><span class="o">=</span><span class="n">f_cpu</span><span class="p">,</span> <span class="n">upload</span><span class="o">=</span><span class="n">upload</span><span class="p">)</span>
+
     <span class="n">board</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">using</span> <span class="o">=</span> <span class="n">upload</span>
-    <span class="n">board</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">maximum_size</span> <span class="o">=</span> <span class="mi">8</span><span class="o">*</span><span class="mi">1024</span>
-    
+    <span class="n">board</span><span class="o">.</span><span class="n">upload</span><span class="o">.</span><span class="n">maximum_size</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">1024</span>
+
     <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">mcu</span> <span class="o">=</span> <span class="n">mcu</span>
     <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">f_cpu</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">f_cpu</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;L&#39;</span>
     <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">core</span> <span class="o">=</span> <span class="n">core</span>
-    
-    <span class="n">install_board</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
+
+    <span class="c"># for 1.0</span>
+    <span class="n">board</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">variant</span> <span class="o">=</span> <span class="s">&#39;standard&#39;</span>
+
+    <span class="n">install_board</span><span class="p">(</span><span class="n">board_id</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">replace_existing</span><span class="o">=</span><span class="n">replace_existing</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>console is not implemented</p>
@@ -510,12 +989,12 @@ optional arguments:
         <li class="right" >
           <a href="usage_lib.html" title="Usage with libraries"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>

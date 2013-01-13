@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>About &mdash; confduino 0.1.0 documentation</title>
+    <title>About &mdash; confduino 0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.1.0 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.2 documentation" href="index.html" />
     <link rel="next" title="Arduino path" href="usage_path.html" />
     <link rel="prev" title="Indices and tables" href="index.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -65,28 +65,44 @@
 </ul>
 </dd>
 <dt>Features:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> libraries</dt>
 <dd><ul class="first last simple">
-<li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> libraries</li>
 <li>install libraries from internet or local drive</li>
 <li>fix <tt class="docutils literal"><span class="pre">examples</span></tt> directory name before installing</li>
 <li>clean library (.*,_*,..) before installing</li>
 <li>move examples under <tt class="docutils literal"><span class="pre">examples</span></tt> directory</li>
-<li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> programmers</li>
-<li>list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> boards</li>
-<li>written in python</li>
-<li>cross-platform</li>
-<li>can be used as a python library or as a console program</li>
-<li>unpacker back-end: <a class="reference external" href="https://github.com/ponty/pyunpack">pyunpack</a></li>
-<li>downloader back-end: <a class="reference external" href="http://docs.python.org/library/urllib.html">urllib</a></li>
-<li>some functionality is based on <a class="reference external" href="http://code.google.com/p/arscons/">arscons</a></li>
-<li>supported python versions: 2.5, 2.6, 2.7, PyPy</li>
+<li>upgrade library to 1.0: replace <tt class="docutils literal"><span class="pre">#include</span> <span class="pre">&quot;wprogram.h&quot;</span></tt> with <tt class="docutils literal"><span class="pre">#include</span> <span class="pre">&quot;Arduino.h&quot;</span></tt></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> programmers</p>
+</li>
+<li><p class="first">list, install, remove <a class="reference external" href="http://arduino.cc/">arduino</a> boards</p>
+</li>
+<li><p class="first">written in python</p>
+</li>
+<li><p class="first">cross-platform</p>
+</li>
+<li><p class="first">can be used as a python library or as a console program</p>
+</li>
+<li><p class="first">unpacker back-end: <a class="reference external" href="https://github.com/ponty/pyunpack">pyunpack</a></p>
+</li>
+<li><p class="first">downloader back-end: <a class="reference external" href="http://docs.python.org/library/urllib.html">urllib</a></p>
+</li>
+<li><p class="first">some functionality is based on <a class="reference external" href="http://code.google.com/p/arscons/">arscons</a></p>
+</li>
+<li><p class="first">supported python versions: 2.7</p>
+</li>
+<li><p class="first">supported Arduino versions: 0022, 0023, 1.0</p>
+</li>
 </ul>
 </dd>
 <dt>Known problems:</dt>
 <dd><ul class="first last simple">
-<li>Python 3 is not supported</li>
 <li>tested only on linux</li>
-<li>tested only with arduino version 0022</li>
 <li>some libraries with unusual structure can not be installed</li>
 <li>not all commands have console interface</li>
 </ul>
@@ -207,12 +223,12 @@ pip uninstall confduino</pre>
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.1.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>
