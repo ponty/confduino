@@ -6,7 +6,7 @@ from data import TEST_ARDUINO_INSTALLATIONS
 
 def test_ver2():
     for x in TEST_ARDUINO_INSTALLATIONS:
-        print x
+        print (x)
         set_arduino_path(x.path)
         eq_(version(), x.ver)
 
@@ -23,6 +23,6 @@ def test_iver():
 
 def test_iver2():
     for x in TEST_ARDUINO_INSTALLATIONS:
-        print x
+        print (x)
         set_arduino_path(x.path)
         eq_(intversion(), x.iver)

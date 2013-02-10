@@ -12,7 +12,7 @@ import os
 def test_print():
     for x in TEST_ARDUINO_PATHS:
         os.environ['ARDUINO_HOME'] = x
-        print 'ARDUINO_HOME=', x
+        print ('ARDUINO_HOME=', x)
 
         print_boards()
         print_hwpacks()
@@ -25,12 +25,12 @@ def test_print():
 def test_cli():
     def check_print(cmd):
         cmd = 'python -m confduino.%s > /dev/null' % cmd
-        print cmd
+        print (cmd)
         eq_(os.system(cmd), 0)
 
     for x in TEST_ARDUINO_PATHS:
         os.environ['ARDUINO_HOME'] = x
-        print 'ARDUINO_HOME=', x
+        print ('ARDUINO_HOME=', x)
 
         check_print('boardlist')
         check_print('boardlist --verbose')
