@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Examples &mdash; confduino 0.2 documentation</title>
+    <title>Examples &mdash; confduino 0.2.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.2',
+        VERSION:     '0.2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="confduino 0.2 documentation" href="index.html" />
+    <link rel="top" title="confduino 0.2.1 documentation" href="index.html" />
     <link rel="next" title="API" href="api.html" />
     <link rel="prev" title="Usage with programmers" href="usage_prog.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="usage_prog.html" title="Usage with programmers"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -89,8 +89,6 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">print</span> <span class="n">e</span>
 
-    <span class="c"># inst(&#39;http://nootropicdesign.com/hackvision/downloads/Controllers.zip&#39;)</span>
-
     <span class="c">############################</span>
     <span class="c"># github.com</span>
     <span class="c">############################</span>
@@ -124,12 +122,13 @@
     <span class="c">############################</span>
     <span class="c"># TODO: how to get latest version??</span>
     <span class="c"># parse http://code.google.com/p/arduino-pinchangeint/downloads/list</span>
+
+    <span class="c"># simplified version in core</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip&#39;</span><span class="p">)</span>
-         <span class="c"># simplified version in core</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino-playground.googlecode.com/files/LedDisplay03.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://webduino.googlecode.com/files/webduino-1.4.1.zip&#39;</span><span class="p">)</span>
-         <span class="c"># can&#39;t install</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino-pid-library.googlecode.com/files/PID_v1.0.1.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://ideoarduinolibraries.googlecode.com/files/Qtouch1Wire.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino-timerone.googlecode.com/files/TimerOne-v8.zip&#39;</span><span class="p">)</span>
@@ -147,17 +146,24 @@
     <span class="c">############################</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip&#39;</span><span class="p">)</span>
-<span class="c">#    inst(&#39;http://www.state-machine.com/arduino/qp_arduino.zip&#39;) # too big</span>
+
+<span class="c"># too big</span>
+<span class="c">#    inst(&#39;http://www.state-machine.com/arduino/qp_arduino.zip&#39;)</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.shikadi.net/files/arduino/SerialIP-1.0.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino-tweet.appspot.com/Library-Twitter-1.2.2.zip&#39;</span><span class="p">)</span>
-<span class="c"># inst(&#39;http://gkaindl.com/php/download.php?key=ArduinoEthernet&#39;)# can&#39;t</span>
-<span class="c"># install</span>
+
+<span class="c"># can&#39;t install</span>
+<span class="c"># inst(&#39;http://gkaindl.com/php/download.php?key=ArduinoEthernet&#39;)</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://alexandre.quessy.net/static/avr/Tween_01.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip&#39;</span><span class="p">)</span>
+    <span class="c"># inst(&#39;http://nootropicdesign.com/hackvision/downloads/Controllers.zip&#39;)</span>
+    <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter_1_12.zip&#39;</span><span class="p">)</span>
 
     <span class="c">############################</span>
     <span class="c"># arduino.cc</span>
@@ -165,32 +171,41 @@
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Metro.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.arduino.cc/playground/uploads/Main/MsTimer2.zip&#39;</span><span class="p">)</span>
-<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)# can&#39;t</span>
-<span class="c"># install</span>
-    <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/LedControl.zip&#39;</span><span class="p">)</span>
-<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip&#39;)#</span>
+
 <span class="c"># can&#39;t install</span>
+<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)</span>
+
+    <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/LedControl.zip&#39;</span><span class="p">)</span>
+
+<span class="c"># can&#39;t install</span>
+<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip&#39;)#</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Bounce.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/CapacitiveSense003.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Main/PinChangeInt.zip&#39;</span><span class="p">)</span>
-<span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/TimerThree.zip&#39;)# can&#39;t</span>
-<span class="c"># install</span>
+
+<span class="c"># can&#39;t install</span>
+<span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/TimerThree.zip&#39;)</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/TimedAction-1_6.zip&#39;</span><span class="p">)</span>
-<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)# can&#39;t</span>
-<span class="c"># install</span>
+
+<span class="c"># can&#39;t install</span>
+<span class="c"># inst(&#39;http://www.arduino.cc/playground/uploads/Code/Time.zip&#39;)</span>
+
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/EventFuse.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Charlieplex.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/DigitalToggle.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/Enerlib.zip&#39;</span><span class="p">)</span>
 
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/AdvButton_11.zip&#39;</span><span class="p">)</span>
-    <span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/AdvButton.zip&#39;) # old</span>
-    <span class="c"># version</span>
 
-<span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/SerialDebugger.zip&#39;) #</span>
+    <span class="c"># old version</span>
+    <span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/AdvButton.zip&#39;)</span>
+
 <span class="c"># can&#39;t install</span>
-    <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/MatrixMath.zip&#39;</span><span class="p">)</span>
+<span class="c"># inst(&#39;http://arduino.cc/playground/uploads/Code/SerialDebugger.zip&#39;) #</span>
 
+    <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/MatrixMath.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/StackArray.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/StackList.zip&#39;</span><span class="p">)</span>
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://arduino.cc/playground/uploads/Code/QueueArray.zip&#39;</span><span class="p">)</span>
@@ -199,6 +214,7 @@
     <span class="n">inst</span><span class="p">(</span><span class="s">&#39;http://www.arduino.cc/playground/uploads/Code/LED.zip&#39;</span><span class="p">)</span>
 
 <span class="c">#    inst(&#39;&#39;)</span>
+
     <span class="k">if</span> <span class="n">create_examples_all</span><span class="p">:</span>
         <span class="k">print</span> <span class="s">&#39;create &quot;all&quot; menu item&#39;</span>
         <span class="n">exampallcreate</span><span class="o">.</span><span class="n">create_examples_all</span><span class="p">()</span>
@@ -446,7 +462,7 @@ optional arguments:
         <li class="right" >
           <a href="usage_prog.html" title="Usage with programmers"
              >previous</a> |</li>
-        <li><a href="index.html">confduino 0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">confduino 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
