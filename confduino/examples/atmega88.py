@@ -26,4 +26,7 @@ def install(
     board.build.f_cpu = str(f_cpu) + 'L'
     board.build.core = core
 
+    # for 1.0
+    board.build.variant = 'standard'
+
     install_board(board_id, board, replace_existing=replace_existing)

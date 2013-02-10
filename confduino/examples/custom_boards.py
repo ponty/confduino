@@ -3,7 +3,7 @@ from confduino.boardinstall import install_board
 from confduino.util import AutoBunch
 from entrypoint2 import entrypoint
 
-TEMPL_NAME = '{mcu}@{f_cpu} prog:{upload}'
+TEMPL_NAME = '{mcu}@{f_cpu}'
 TEMPL_ID = '{mcu}_{f_cpu}'
 
 
@@ -43,6 +43,9 @@ def main(
         board.build.mcu = mcu
         board.build.f_cpu = str(f_cpu) + 'L'
         board.build.core = core
+
+        # for 1.0
+        board.build.variant = 'standard'
 
         install_board(board_id, board, replace_existing=replace_existing)
 

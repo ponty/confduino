@@ -26,6 +26,7 @@ def intversion(text=None):
     0022ubuntu0.1 ->  22
     0023 ->  23
     1.0  -> 100
+    1.0.3  -> 103
     '''
     s = text
 
@@ -39,8 +40,9 @@ def intversion(text=None):
         i = int(s[0:4])
     # >=100
     elif '.' in s:
-        maj, minor = s.split('.')
-        i = int(maj) * 100 + int(minor)
+        ls = s.split('.')
+        ls += [0, 0, 0]
+        i = int(ls[0]) * 100 + int(ls[1]) * 10 + int(ls[2])
 
     return i
 

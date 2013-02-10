@@ -19,7 +19,7 @@ Features:
  - downloader back-end: urllib_
  - some functionality is based on arscons_
  - supported python versions: 2.6, 2.7
- - supported Arduino versions: 0022, 0023, 1.0
+ - supported Arduino versions: 0022, 0023, 1.0, 1.0.3
  
 Known problems:
  - Python 3 is not supported
