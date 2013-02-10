@@ -23,15 +23,20 @@ def test_print():
 
 
 def test_cli():
+    def check_print(cmd):
+        cmd = 'python -m confduino.%s > /dev/null' % cmd
+        print cmd
+        eq_(os.system(cmd), 0)
+
     for x in TEST_ARDUINO_PATHS:
         os.environ['ARDUINO_HOME'] = x
         print 'ARDUINO_HOME=', x
 
-        eq_(os.system('python -m confduino.boardlist'), 0)
-        eq_(os.system('python -m confduino.boardlist --verbose'), 0)
-        eq_(os.system('python -m confduino.hwpacklist'), 0)
-        eq_(os.system('python -m confduino.proglist'), 0)
-        eq_(os.system('python -m confduino.proglist --verbose'), 0)
-        eq_(os.system('python -m confduino.boardlist'), 0)
-        eq_(os.system('python -m confduino.liblist'), 0)
-        eq_(os.system('python -m confduino.mculist'), 0)
+        check_print('boardlist')
+        check_print('boardlist --verbose')
+        check_print('hwpacklist')
+        check_print('proglist')
+        check_print('proglist --verbose')
+        check_print('boardlist')
+        check_print('liblist')
+        check_print('mculist')
