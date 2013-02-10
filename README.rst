@@ -10,6 +10,7 @@ Features:
  - fix ``examples`` directory name before installing
  - clean library (.*,_*,..) before installing
  - move examples under ``examples`` directory
+    - upgrade library to 1.0: replace ``#include "wprogram.h"`` with ``#include "Arduino.h"``
  - list, install, remove arduino_ programmers
  - list, install, remove arduino_ boards
  - written in python

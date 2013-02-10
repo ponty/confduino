@@ -147,9 +147,43 @@ def fix_examples_dir(lib_dir):
             x.rename(x.parent / 'examples')
             return
 
+WPROGRAM = '''
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include "WProgram.h"
+#include "pins_arduino.h"
+#endif
+'''
+
+
+def replace_line_in_file(filename, tester, replacement):
+    ''
+    filename = path(filename)
+    change = False
+    lines = filename.lines()
+    for i in range(len(lines)):
+        if tester(lines[i]):
+            change = True
+            lines[i] = replacement
+
+    if change:
+        filename.write_lines(lines)
+#        print '\n'.join(lines)
+
+
+def fix_wprogram_in_files(directory):
+    ''
+    files = [x for x in directory.walk('*.h')]
+    files += [x for x in directory.walk('*.cpp')]
+    for f in files:
+        if '"arduino.h"' not in f.text().lower():
+            replace_line_in_file(
+                f, lambda x: '"wprogram.h"' in x.lower(), WPROGRAM)
+
 
 @entrypoint
-def install_lib(url, replace_existing=False):
+def install_lib(url, replace_existing=False, fix_wprogram=True):
     '''install library from web or local files system
 
     :param url: web address or file path
@@ -164,6 +198,8 @@ def install_lib(url, replace_existing=False):
     d, src_dlib = find_lib_dir(d)
     move_examples(d, src_dlib)
     fix_examples_dir(src_dlib)
+    if fix_wprogram:
+        fix_wprogram_in_files(src_dlib)
 
     targ_dlib = libraries_dir() / src_dlib.name
     if targ_dlib.exists():
