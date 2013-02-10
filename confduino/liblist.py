@@ -25,7 +25,7 @@ def libraries_dir():
 def libraries():
     'return installed library names'
     ls = libraries_dir().dirs()
-    ls = [x.name for x in ls]
+    ls = [str(x.name) for x in ls]
     ls.sort()
     return ls
 
