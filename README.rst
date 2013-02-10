@@ -6,10 +6,10 @@ Links:
  
 Features:
  - list, install, remove arduino_ libraries
- - install libraries from internet or local drive
- - fix ``examples`` directory name before installing
- - clean library (.*,_*,..) before installing
- - move examples under ``examples`` directory
+    - install libraries from internet or local drive
+    - fix ``examples`` directory name before installing
+    - clean library (.*,_*,..) before installing
+    - move examples under ``examples`` directory
     - upgrade library to 1.0: replace ``#include "wprogram.h"`` with ``#include "Arduino.h"``
  - list, install, remove arduino_ programmers
  - list, install, remove arduino_ boards
@@ -23,7 +23,6 @@ Features:
  - supported Arduino versions: 0022, 0023, 1.0, 1.0.3
  
 Known problems:
- - Python 3 is not supported
  - tested only on linux
  - some libraries with unusual structure can not be installed
  - not all commands have console interface

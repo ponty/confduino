@@ -23,11 +23,6 @@ From python
     >>> version()
     >>> intversion()
     >>> sketch_extension()
-    >>>
-    >>> set_arduino_path('/usr/share/arduino')
-    >>> version()
-    >>> intversion()
-    >>> sketch_extension()
 
 From console
 ---------------------------
@@ -59,13 +54,6 @@ Examples
     :prompt:
     :shell:
 
-.. program-output:: env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version
-    :prompt:
-    :shell:
-
-.. program-output:: env ARDUINO_HOME=/usr/share/arduino/ python -m confduino.version --integer
-    :prompt:
-    :shell:
 
 
     
