@@ -25,7 +25,6 @@ def upgrade_many(upgrade=True, create_examples_all=True):
         except Exception as e:
             print e
 
-
     ############################
     # github.com
     ############################
@@ -59,10 +58,10 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     ############################
     # TODO: how to get latest version??
     # parse http://code.google.com/p/arduino-pinchangeint/downloads/list
-    
+
     # simplified version in core
     inst('http://rogue-code.googlecode.com/files/Arduino-Library-Tone.zip')
-         
+
     inst('http://arduino-playground.googlecode.com/files/LedDisplay03.zip')
     inst('http://sserial2mobile.googlecode.com/files/SSerial2Mobile-1.1.0.zip')
     inst('http://webduino.googlecode.com/files/webduino-1.4.1.zip')
@@ -83,9 +82,9 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     ############################
     inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
     inst('http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip')
-    
+
 # too big
-#    inst('http://www.state-machine.com/arduino/qp_arduino.zip') 
+#    inst('http://www.state-machine.com/arduino/qp_arduino.zip')
 
     inst('http://www.shikadi.net/files/arduino/SerialIP-1.0.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
@@ -113,7 +112,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
 # inst('http://www.arduino.cc/playground/uploads/Code/Time.zip')
 
     inst('http://arduino.cc/playground/uploads/Main/LedControl.zip')
-    
+
 # can't install
 # inst('http://www.arduino.cc/playground/uploads/Code/ks0108GLCD.zip')#
 
@@ -137,7 +136,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduino.cc/playground/uploads/Code/AdvButton_11.zip')
 
     # old version
-    # inst('http://arduino.cc/playground/uploads/Code/AdvButton.zip') 
+    # inst('http://arduino.cc/playground/uploads/Code/AdvButton.zip')
 
 # can't install
 # inst('http://arduino.cc/playground/uploads/Code/SerialDebugger.zip') #
