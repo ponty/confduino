@@ -148,27 +148,51 @@ def fix_examples_dir(lib_dir):
             return
 
 WPROGRAM = '''
+///////////////////////////////////////
+// inserted by confduino
+//
 #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
 #else
 #include "WProgram.h"
 #include "pins_arduino.h"
 #endif
+//
+// end
+///////////////////////////////////////
+
 '''
 
+OLD_INCLUDES = '''
+pins_arduino
+wprogram
+wiring
+'''.strip().split()
 
-def replace_line_in_file(filename, tester, replacement):
+
+def fix_wprogram_in_file(filename):
     ''
     filename = path(filename)
     change = False
     lines = filename.lines()
+
+    def tester(line):
+        line = line.lower()
+        for i in OLD_INCLUDES:
+            if '"%s.h"' % i in line:
+                return True
+            if '<%s.h>' % i in line:
+                return True
+
     for i in range(len(lines)):
         if tester(lines[i]):
             change = True
-            lines[i] = replacement
+            lines[i] = '// %s // disabled by confduino' % lines[i].strip()
 
     if change:
         filename.write_lines(lines)
+    s = WPROGRAM + filename.text()
+    filename.write_text(s)
 #        print '\n'.join(lines)
 
 
@@ -178,8 +202,7 @@ def fix_wprogram_in_files(directory):
     files += [x for x in directory.walk('*.cpp')]
     for f in files:
         if '"arduino.h"' not in f.text().lower():
-            replace_line_in_file(
-                f, lambda x: '"wprogram.h"' in x.lower(), WPROGRAM)
+            fix_wprogram_in_file(f)
 
 
 @entrypoint
