@@ -19,30 +19,30 @@ import os
 
 class Test(TestCase):
 
-    def test_lib(self):
-        url = 'http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip'
-        f = path(__file__).parent / 'data' / 'PS2Keyboard002.zip'
-        d = tmpdir(suffix='_test')
-        os.environ['ARDUINO_HOME'] = d
-
-        (d / 'libraries').makedirs()
-        eq_(libraries(), [])
-
-        install_lib(url)
-        eq_(libraries(), ['PS2Keyboard'])
-
-        remove_lib('PS2Keyboard')
-        eq_(libraries(), [])
-
-        install_lib(f)
-        eq_(libraries(), ['PS2Keyboard'])
-
-        try:
-            install_lib(f)
-            assert 0
-        except ConfduinoError:
-            # OK
-            eq_(libraries(), ['PS2Keyboard'])
+#    def test_lib(self):
+#        url = 'http://arduino.cc/playground/uploads/Main/PS2Keyboard002.zip'
+#        f = path(__file__).parent / 'data' / 'PS2Keyboard002.zip'
+#        d = tmpdir(suffix='_test')
+#        os.environ['ARDUINO_HOME'] = d
+#
+#        (d / 'libraries').makedirs()
+#        eq_(libraries(), [])
+#
+#        install_lib(url)
+#        eq_(libraries(), ['PS2Keyboard'])
+#
+#        remove_lib('PS2Keyboard')
+#        eq_(libraries(), [])
+#
+#        install_lib(f)
+#        eq_(libraries(), ['PS2Keyboard'])
+#
+#        try:
+#            install_lib(f)
+#            assert 0
+#        except ConfduinoError:
+#            # OK
+#            eq_(libraries(), ['PS2Keyboard'])
 
     def test_prog(self):
         d = tmpdir(suffix='_test')
