@@ -78,14 +78,20 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://narcoleptic.googlecode.com/files/Narcoleptic_v1a.zip')
 
     ############################
+    # teensy
+    ############################
+    inst('http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip')
+    inst('http://www.pjrc.com/teensy/arduino_libraries/VirtualWire.zip')
+    inst('http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip')
+
+    ############################
     # others
     ############################
-    inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
-    inst('http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip')
-
+    
 # too big
 #    inst('http://www.state-machine.com/arduino/qp_arduino.zip')
 
+    inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
     inst('http://www.shikadi.net/files/arduino/SerialIP-1.0.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
@@ -95,7 +101,6 @@ def upgrade_many(upgrade=True, create_examples_all=True):
 # inst('http://gkaindl.com/php/download.php?key=ArduinoEthernet')
 
     inst('http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip')
-    inst('http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip')
     inst('http://alexandre.quessy.net/static/avr/Tween_01.zip')
     inst('http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip')
     # inst('http://nootropicdesign.com/hackvision/downloads/Controllers.zip')
