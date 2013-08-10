@@ -50,6 +50,7 @@ def main(
         install_board(board_id, board, replace_existing=replace_existing)
 
     install('atmega8', 1000000, 8)
+    install('atmega8', 8000000, 8)
     install('atmega8', 12000000, 8)
     install('atmega88', 1000000, 8)
     install('atmega88', 8000000, 8)
