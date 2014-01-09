@@ -120,31 +120,51 @@ def find_lib_dir(root):
     assert lib_dir
     return root, lib_dir
 
+INO_PATTERNS=['*.pde','*.ino']
+EXAMPLES='examples'
+
+def files_multi_pattern(directory, patterns):
+    ls=[list(directory.walkfiles(pattern)) for pattern in patterns]
+    return set(reduce(list.__add__, ls))
 
 def move_examples(root, lib_dir):
     '''find examples not under lib dir, and move into ``examples``
     '''
-    all_pde = set(root.walkfiles('*.pde'))
-    lib_pde = set(lib_dir.walkfiles('*.pde'))
+    all_pde = files_multi_pattern(root, INO_PATTERNS)
+    lib_pde = files_multi_pattern(lib_dir, INO_PATTERNS)
     stray_pde = all_pde.difference(lib_pde)
     if len(stray_pde) and not len(lib_pde):
         log.debug(
             'examples found outside lib dir, moving them:' + str(stray_pde))
-        examples = lib_dir / 'examples'
+        examples = lib_dir / EXAMPLES
         examples.makedirs()
         for x in stray_pde:
             d = examples / x.namebase
             d.makedirs()
             x.move(d)
 
-
+def _fix_dir(x):
+            log.debug('fixing examples dir name:' + x)
+            log.debug('new dir name:' + x.parent / EXAMPLES)
+            x.rename(x.parent / EXAMPLES)
+            
 def fix_examples_dir(lib_dir):
     '''rename examples dir to ``examples``
     '''
     for x in lib_dir.dirs():
-        if x != 'examples' and len(list(x.walkfiles('*.pde'))):
-            log.debug('fixing examples dir name:' + x)
-            x.rename(x.parent / 'examples')
+        if x.name.lower() == EXAMPLES:
+            return
+    for x in lib_dir.dirs():
+        if x.name.lower() == EXAMPLES:
+            _fix_dir(x)
+            return
+    for x in lib_dir.dirs():
+        if 'example' in x.name.lower():
+            _fix_dir(x)
+            return
+    for x in lib_dir.dirs():
+        if len(files_multi_pattern(x, INO_PATTERNS)):
+            _fix_dir(x)
             return
 
 WPROGRAM = '''
