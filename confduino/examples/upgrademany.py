@@ -28,6 +28,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     ############################
     # github.com
     ############################
+    inst('https://github.com/sensorium/Mozzi/zipball/master')
     inst('https://github.com/madsci1016/Arduino-EasyTransfer/zipball/master')
     inst('https://github.com/sparkfun/SevSeg/zipball/master')
     inst('https://github.com/madsci1016/Arduino-SoftEasyTransfer/zipball/master')
@@ -41,6 +42,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('https://github.com/carlynorama/Arduino-Library-FancyLED/zipball/master')
     inst('https://github.com/markfickett/arduinomorse/zipball/master')
     inst('https://github.com/rocketscream/Low-Power/zipball/master')
+    inst('https://github.com/arduino-libraries/CapacitiveSensor/zipball/master')
 
     ############################
     # arduiniana.org
@@ -83,15 +85,19 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://www.pjrc.com/teensy/arduino_libraries/OneWire.zip')
     inst('http://www.pjrc.com/teensy/arduino_libraries/VirtualWire.zip')
     inst('http://www.pjrc.com/teensy/arduino_libraries/FrequencyTimer2.zip')
+    inst('http://www.pjrc.com/teensy/arduino_libraries/FreqCount.zip')
+    inst('http://www.pjrc.com/teensy/arduino_libraries/FreqMeasure.zip')
 
     ############################
     # others
     ############################
-    
+
 # too big
 #    inst('http://www.state-machine.com/arduino/qp_arduino.zip')
 
-    inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
+# The owner of this website (download.milesburton.com) has banned your access based on your browser's signature
+#     inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
+
     inst('http://www.shikadi.net/files/arduino/SerialIP-1.0.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
     inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
@@ -105,6 +111,7 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip')
     # inst('http://nootropicdesign.com/hackvision/downloads/Controllers.zip')
     inst('http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter_1_12.zip')
+    inst('http://interface.khm.de/wp-content/uploads/2010/06/FreqPeriod_1_12.zip')
 
     ############################
     # arduino.cc

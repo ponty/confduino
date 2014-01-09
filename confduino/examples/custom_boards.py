@@ -57,5 +57,6 @@ def main(
     install('atmega88', 12000000, 8)
     install('atmega88', 20000000, 8)
     install('atmega328p', 20000000, 32)
+    install('atmega328p', 16000000, 32)
     install('atmega328p', 8000000, 32)
     install('atmega328p', 1000000, 32)
