@@ -27,23 +27,29 @@ def intversion(text=None):
     0023 ->  23
     1.0  -> 100
     1.0.3  -> 103
+    1:1.0.5+dfsg2-2 -> 105
     '''
-    s = text
-
-    if not s:
-        s = version()
-
-    s = s.split('ubuntu')[0]
-
-    # <100
-    if s.startswith('00'):
-        i = int(s[0:4])
-    # >=100
-    elif '.' in s:
-        ls = s.split('.')
-        ls += [0, 0, 0]
-        i = int(ls[0]) * 100 + int(ls[1]) * 10 + int(ls[2])
-
+    try:
+        s = text
+    
+        if not s:
+            s = version()
+    
+        s = s.split('ubuntu')[0]
+        s = s.split(':')[-1]
+        s = s.split('+')[0]
+    
+        # <100
+        if s.startswith('00'):
+            i = int(s[0:4])
+        # >=100
+        elif '.' in s:
+            ls = s.split('.')
+            ls += [0, 0, 0]
+            i = int(ls[0]) * 100 + int(ls[1]) * 10 + int(ls[2])
+    except ValueError:
+        print ('Can not parse version: %s' % text)
+        raise
     return i
 
 

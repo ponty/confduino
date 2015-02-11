@@ -19,6 +19,7 @@ def test_iver():
     eq_(intversion('1.0'), 100)
     eq_(intversion('1.0.3'), 103)
     eq_(intversion('3.2.1'), 321)
+    eq_(intversion('1:1.0.5+dfsg2-2'), 105)
 
 
 def test_iver2():
