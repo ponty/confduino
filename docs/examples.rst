@@ -1,8 +1,8 @@
 Examples
-=========
+========
 
 Install libraries
-------------------
+-----------------
 
 Many libraries are upgraded in examples/upgrademany.py, this can be started::
 
@@ -13,20 +13,8 @@ Code:
 .. literalinclude:: ../confduino/examples/upgrademany.py
 
 
-Install USBasp programmer
---------------------------
-
-::
-
-    python -m confduino.examples.usbasp
-
-Code:
-
-.. literalinclude:: ../confduino/examples/usbasp.py
-
-
 Install STK200 programmer
----------------------------
+-------------------------
 
 ::
 
@@ -37,7 +25,7 @@ Code:
 .. literalinclude:: ../confduino/examples/stk200.py
 
 Install atmega88 board
--------------------------
+----------------------
 
 ::
 
@@ -54,7 +42,7 @@ options:
 
     
 remove boards
--------------------------
+-------------
     
 .. program-screenshot:: python -m confduino.examples.remove_boards
     :prompt:
@@ -67,7 +55,7 @@ Code:
 .. literalinclude:: ../confduino/examples/remove_boards.py
 
 remove libraries
--------------------------
+----------------
     
 .. program-screenshot:: python -m confduino.examples.remove_libraries
     :prompt:
