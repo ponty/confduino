@@ -14,7 +14,7 @@ def install(
     core='arduino',
     replace_existing=True,
 ):
-    'install atmega88 board'
+    """install atmega88 board."""
 
     board = AutoBunch()
     board.name = TEMPL.format(mcu=mcu, f_cpu=f_cpu, upload=upload)

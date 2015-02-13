@@ -5,24 +5,25 @@ from entrypoint2 import entrypoint
 
 @entrypoint
 def upgrade_many(upgrade=True, create_examples_all=True):
-    '''upgrade many libs
+    """upgrade many libs.
 
     source: http://arduino.cc/playground/Main/LibraryList
 
     you can set your arduino path if it is not default
     os.environ['ARDUINO_HOME'] = '/home/...'
-    '''
+
+    """
     urls = set()
 
     def inst(url):
-        print( 'upgrading %s' % url )
+        print('upgrading %s' % url)
         assert url not in urls
         urls.add(url)
         try:
             lib = install_lib(url, upgrade)
-            print( ' -> %s' % lib )
+            print(' -> %s' % lib)
         except Exception as e:
-            print( e )
+            print(e)
 
     ############################
     # github.com
@@ -30,18 +31,22 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('https://github.com/sensorium/Mozzi/zipball/master')
     inst('https://github.com/madsci1016/Arduino-EasyTransfer/zipball/master')
     inst('https://github.com/sparkfun/SevSeg/zipball/master')
-    inst('https://github.com/madsci1016/Arduino-SoftEasyTransfer/zipball/master')
+    inst(
+        'https://github.com/madsci1016/Arduino-SoftEasyTransfer/zipball/master')
     inst('https://github.com/madsci1016/Arduino-PS2X/zipball/master')
-#    inst('http://github.com/wimleers/flexitimer2/zipball/v1.0')# can't install
+# inst('http://github.com/wimleers/flexitimer2/zipball/v1.0')# can't install
     inst('https://github.com/kerinin/arduino-splines/zipball/master')
     inst('https://github.com/asynclabs/WiShield/zipball/master')
     inst('https://github.com/asynclabs/dataflash/zipball/master')
     inst('https://github.com/slugmobile/AtTouch/zipball/master')
-    inst('https://github.com/carlynorama/Arduino-Library-Button/zipball/master')
-    inst('https://github.com/carlynorama/Arduino-Library-FancyLED/zipball/master')
+    inst(
+        'https://github.com/carlynorama/Arduino-Library-Button/zipball/master')
+    inst(
+        'https://github.com/carlynorama/Arduino-Library-FancyLED/zipball/master')
     inst('https://github.com/markfickett/arduinomorse/zipball/master')
     inst('https://github.com/rocketscream/Low-Power/zipball/master')
-    inst('https://github.com/arduino-libraries/CapacitiveSensor/zipball/master')
+    inst(
+        'https://github.com/arduino-libraries/CapacitiveSensor/zipball/master')
 
     ############################
     # arduiniana.org
@@ -73,7 +78,8 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     inst('http://arduinode.googlecode.com/files/arduinode_0.1.zip')
     inst('http://arduino-edb.googlecode.com/files/EDB_r7.zip')
     inst('http://arduino-dblib.googlecode.com/files/DB.zip')
-    inst('http://morse-endecoder.googlecode.com/files/Morse_EnDecoder_2010.12.06.tar.gz')
+    inst(
+        'http://morse-endecoder.googlecode.com/files/Morse_EnDecoder_2010.12.06.tar.gz')
     inst('http://arduino-pinchangeint.googlecode.com/files/PinChangeInt.zip')
     inst('http://arduino-tvout.googlecode.com/files/TVout_R5.91.zip')
     inst('http://narcoleptic.googlecode.com/files/Narcoleptic_v1a.zip')
@@ -98,19 +104,25 @@ def upgrade_many(upgrade=True, create_examples_all=True):
 #     inst('http://download.milesburton.com/Arduino/MaximTemperature/DallasTemperature_370Beta.zip')
 
     inst('http://www.shikadi.net/files/arduino/SerialIP-1.0.zip')
-    inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
-    inst('http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
+    inst(
+        'http://siggiorn.com/wp-content/uploads/libraries/ArduinoByteBuffer.zip')
+    inst(
+        'http://siggiorn.com/wp-content/uploads/libraries/ArduinoSerialManager.zip')
     inst('http://arduino-tweet.appspot.com/Library-Twitter-1.2.2.zip')
 
 # can't install
 # inst('http://gkaindl.com/php/download.php?key=ArduinoEthernet')
 
-    inst('http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip')
+    inst(
+        'http://sebastian.setz.name/wp-content/uploads/2011/01/multiCameraIrControl_1-5.zip')
     inst('http://alexandre.quessy.net/static/avr/Tween_01.zip')
-    inst('http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip')
+    inst(
+        'http://www.lpelettronica.it/images/stories/LPM11162_images/Arduino/LPM11162_ArduinoLib_v1.zip')
     # inst('http://nootropicdesign.com/hackvision/downloads/Controllers.zip')
-    inst('http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter_1_12.zip')
-    inst('http://interface.khm.de/wp-content/uploads/2010/06/FreqPeriod_1_12.zip')
+    inst(
+        'http://interface.khm.de/wp-content/uploads/2009/01/FreqCounter_1_12.zip')
+    inst(
+        'http://interface.khm.de/wp-content/uploads/2010/06/FreqPeriod_1_12.zip')
 
     ############################
     # arduino.cc
@@ -163,6 +175,6 @@ def upgrade_many(upgrade=True, create_examples_all=True):
 #    inst('')
 
     if create_examples_all:
-        print( 'create "all" menu item' )
+        print('create "all" menu item')
         exampallcreate.create_examples_all()
-    print( 'install finished' )
+    print('install finished')

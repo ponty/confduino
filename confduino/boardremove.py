@@ -7,11 +7,12 @@ log = logging.getLogger(__name__)
 
 @entrypoint
 def remove_board(board_id):
-    '''remove board
+    """remove board.
 
     :param board_id: board id (e.g. 'diecimila')
     :rtype: None
-    '''
+
+    """
 
     log.debug('remove %s' % (board_id))
     lines = boards_txt().lines()

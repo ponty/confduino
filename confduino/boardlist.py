@@ -8,25 +8,25 @@ log = logging.getLogger(__name__)
 
 
 def boards_txt(hwpack='arduino'):
-    'path of boards.txt'
+    """path of boards.txt."""
     x = arduino_path() / 'hardware' / hwpack / 'boards.txt'
     assert x.exists(), x
     return x
 
 
 def boards(hwpack='arduino'):
-    ''' read boards from boards.txt
-
+    """read boards from boards.txt.
 
     :param core_package: 'all,'arduino',..
-    '''
+
+    """
     bunch = read_properties(boards_txt(hwpack))
 
     bunch_items = list(bunch.items())
-    
+
     # remove invalid boards
     for bid, board in bunch_items:
-#        log.debug('    board found:' + bid)
+        #        log.debug('    board found:' + bid)
         if not 'build' in board.keys() or not 'name' in board.keys():
             log.debug('invalid board found:' + bid)
             del bunch[bid]
@@ -35,7 +35,7 @@ def boards(hwpack='arduino'):
 
 
 def board_names(hwpack='arduino'):
-    'return installed board names'
+    """return installed board names."""
     ls = list(boards(hwpack).keys())
     ls.sort()
     return ls
@@ -43,7 +43,7 @@ def board_names(hwpack='arduino'):
 
 @entrypoint
 def print_boards(hwpack='arduino', verbose=False):
-    ''' print boards from boards.txt'''
+    """print boards from boards.txt."""
     if verbose:
         pp(boards(hwpack))
     else:

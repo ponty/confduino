@@ -5,7 +5,7 @@ from entrypoint2 import entrypoint
 
 @entrypoint
 def install(replace_existing=False):
-    'install usbasp programmer'
+    """install usbasp programmer."""
     usbasp = AutoBunch()
     usbasp.name = 'USBasp'
     usbasp.communication = 'usb'

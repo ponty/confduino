@@ -19,13 +19,14 @@ def tmpdir(dir=None, suffix=''):
 
 
 def download(url):
-    log.debug("downloading " + url)
+    log.debug('downloading ' + url)
     f, _ = urllib.urlretrieve(url)
-    log.debug("downloaded file:" + f)
+    log.debug('downloaded file:' + f)
     return f
 
 
 class AutoBunch (Munch):
+
     def __getattr__(self, k):
         '''
         Bunch is created for missing keys:
@@ -36,28 +37,31 @@ class AutoBunch (Munch):
         try:
             return self[k]
         except KeyError:
-#            raise AttributeError(k)
+            #            raise AttributeError(k)
             self[k] = AutoBunch()
             return self[k]
+
     def __setattr__(self, k, v):
-        '''
-        Recursive
+        """Recursive.
 
         >>> x=AutoBunch()
         >>> setattr(x, 'mega.name', 'xy')
-        '''
-        k2,_,k3=k.partition('.')
+
+        """
+        k2, _, k3 = k.partition('.')
         if k3:
             self.__getattr__(k2).__setattr__(k3, v)
         else:
             Munch.__setattr__(self, k, v)
 
+
 def read_properties(filename):
-    ''' read properties file into bunch
+    """read properties file into bunch.
 
     :param filename: string
     :rtype: bunch (dict like and object like)
-    '''
+
+    """
     s = path(filename).text()
     dummy_section = 'xxx'
     cfgparser = configparser.RawConfigParser()

@@ -10,10 +10,11 @@ log = logging.getLogger(__name__)
 
 @entrypoint
 def create_examples_all():
-    '''create arduino/examples/all directory
+    """create arduino/examples/all directory.
 
     :rtype: None
-    '''
+
+    """
     remove_examples_all()
     examples_all_dir().mkdir()
 

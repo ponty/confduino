@@ -8,8 +8,7 @@ log = logging.getLogger(__name__)
 
 
 def mcus():
-    '''MCU list
-    '''
+    """MCU list."""
     ls = []
     for h in hwpack_names():
         for b in board_names(h):
@@ -19,14 +18,13 @@ def mcus():
 
 
 def mcu(board_id, hwpack_id):
-    '''
-    '''
+    """"""
     board = boards(hwpack=hwpack_id)[board_id]
     return board.build.mcu
 
 
 @entrypoint
 def print_mcus():
-    ''' print boards from boards.txt'''
+    """print boards from boards.txt."""
     ls = unmunchify(mcus())
-    print( '\n'.join(ls) )
+    print('\n'.join(ls))

@@ -21,7 +21,7 @@ def create_name(root):
     goodh = []
     for h in root.files('*.h'):
         cpp = h.stripext() + '.cpp'
-        if  header_only or cpp.exists():
+        if header_only or cpp.exists():
             goodh += [h]
     assert len(goodh) > 0
     log.debug('candidate headers:%s' % goodh)
@@ -62,7 +62,7 @@ def fix_libdir(lib_dir):
 
 
 def find_lib_dir(root):
-    '''search for lib dir under root'''
+    """search for lib dir under root."""
     root = path(root)
     log.debug('files in dir:' + root)
     for x in root.walkfiles():
@@ -73,7 +73,7 @@ def find_lib_dir(root):
         log.debug('go inside root')
         root = root.dirs()[0]
 
-    if  len(root.files('keywords.txt')):
+    if len(root.files('keywords.txt')):
         root = rename_root(root)
         return root, root
 
@@ -95,7 +95,7 @@ def find_lib_dir(root):
 
     for h in headers:
         cpp = h.stripext() + '.cpp'
-        if  (header_only or cpp.exists()) and h.parent.name.lower() == h.namebase.lower():
+        if (header_only or cpp.exists()) and h.parent.name.lower() == h.namebase.lower():
             assert not lib_dir
             lib_dir = h.parent
             log.debug('found lib:' + lib_dir)
@@ -120,16 +120,17 @@ def find_lib_dir(root):
     assert lib_dir
     return root, lib_dir
 
-INO_PATTERNS=['*.pde','*.ino']
-EXAMPLES='examples'
+INO_PATTERNS = ['*.pde', '*.ino']
+EXAMPLES = 'examples'
+
 
 def files_multi_pattern(directory, patterns):
-    ls=[list(directory.walkfiles(pattern)) for pattern in patterns]
+    ls = [list(directory.walkfiles(pattern)) for pattern in patterns]
     return set(reduce(list.__add__, ls))
 
+
 def move_examples(root, lib_dir):
-    '''find examples not under lib dir, and move into ``examples``
-    '''
+    """find examples not under lib dir, and move into ``examples``"""
     all_pde = files_multi_pattern(root, INO_PATTERNS)
     lib_pde = files_multi_pattern(lib_dir, INO_PATTERNS)
     stray_pde = all_pde.difference(lib_pde)
@@ -143,14 +144,15 @@ def move_examples(root, lib_dir):
             d.makedirs()
             x.move(d)
 
+
 def _fix_dir(x):
-            log.debug('fixing examples dir name:' + x)
-            log.debug('new dir name:' + x.parent / EXAMPLES)
-            x.rename(x.parent / EXAMPLES)
-            
+    log.debug('fixing examples dir name:' + x)
+    log.debug('new dir name:' + x.parent / EXAMPLES)
+    x.rename(x.parent / EXAMPLES)
+
+
 def fix_examples_dir(lib_dir):
-    '''rename examples dir to ``examples``
-    '''
+    """rename examples dir to ``examples``"""
     for x in lib_dir.dirs():
         if x.name.lower() == EXAMPLES:
             return
@@ -191,7 +193,7 @@ wiring
 
 
 def fix_wprogram_in_file(filename):
-    ''
+    """"""
     filename = path(filename)
     change = False
     lines = filename.lines()
@@ -217,7 +219,7 @@ def fix_wprogram_in_file(filename):
 
 
 def fix_wprogram_in_files(directory):
-    ''
+    """"""
     files = [x for x in directory.walk('*.h')]
     files += [x for x in directory.walk('*.cpp')]
     for f in files:
@@ -227,12 +229,13 @@ def fix_wprogram_in_files(directory):
 
 @entrypoint
 def install_lib(url, replace_existing=False, fix_wprogram=True):
-    '''install library from web or local files system
+    """install library from web or local files system.
 
     :param url: web address or file path
     :param replace_existing: bool
     :rtype: None
-    '''
+
+    """
     d = tmpdir(tmpdir())
     f = download(url)
     Archive(f).extractall(d)

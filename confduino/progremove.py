@@ -7,11 +7,12 @@ log = logging.getLogger(__name__)
 
 @entrypoint
 def remove_programmer(programmer_id):
-    '''remove programmer
+    """remove programmer.
 
     :param programmer_id: programmer id (e.g. 'avrisp')
     :rtype: None
-    '''
+
+    """
 
     log.debug('remove %s' % (programmer_id))
     lines = programmers_txt().lines()

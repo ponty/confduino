@@ -8,7 +8,7 @@ import psidialogs
 
 @entrypoint
 def remove_boards_gui(hwpack=''):
-    'remove boards by GUI'
+    """remove boards by GUI."""
     if not hwpack:
         if len(hwpack_names()) > 1:
             hwpack = psidialogs.choice(hwpack_names(),
@@ -16,15 +16,16 @@ def remove_boards_gui(hwpack=''):
                                        title='select')
         else:
             hwpack = hwpack_names()[0]
-    print( '%s selected' % hwpack )
+    print('%s selected' % hwpack)
 
     if hwpack:
         sel = psidialogs.multi_choice(board_names(hwpack),
-                                      'select boards to remove from %s!' % boards_txt(hwpack),
+                                      'select boards to remove from %s!' % boards_txt(
+                                          hwpack),
                                       title='remove boards')
-        print( '%s selected' % sel)
+        print('%s selected' % sel)
 
         if sel:
             for x in sel:
                 remove_board(x)
-                print( '%s was removed' % x)
+                print('%s was removed' % x)

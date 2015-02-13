@@ -6,15 +6,15 @@ import psidialogs
 
 @entrypoint
 def gui():
-    'remove libraries by GUI'
+    """remove libraries by GUI."""
 
     sel = psidialogs.multi_choice(libraries(),
                                   'select libraries to remove from %s!' % libraries_dir(),
                                   title='remove boards')
-    print( '%s selected' % sel )
+    print('%s selected' % sel)
 
     if sel:
         if psidialogs.ask_yes_no('Do you really want to remove selected libraries?\n' + '\n'.join(sel)):
             for x in sel:
                 remove_lib(x)
-                print( '%s was removed' % x)
+                print('%s was removed' % x)

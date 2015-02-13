@@ -20,12 +20,12 @@ def install_board_with_programmer(mcu,
                                   core='arduino',
                                   replace_existing=False,
                                   ):
-    'install board with programmer'
+    """install board with programmer."""
     bunch = AutoBunch()
     id = '{mcu}_{f_cpu}_{programmer}'.format(f_cpu=f_cpu,
                                              mcu=mcu,
                                              programmer=programmer,
-                                                 )
+                                             )
     bunch.name = '{mcu}@{f} Prog:{programmer}'.format(f=strfreq(f_cpu),
                                                       mcu=mcu,
                                                       programmer=programmer,

@@ -14,7 +14,7 @@ _ARDUINO_PATH = None
 
 
 def arduino_default_path():
-    'platform specific default root path'
+    """platform specific default root path."""
     if sys.platform == 'darwin':
         s = path('/Applications/Arduino.app/Contents/Resources/Java')
     elif sys.platform == 'win32':
@@ -30,7 +30,7 @@ def set_arduino_path(directory):
 
 
 def arduino_path():
-    'expanded root path, ARDUINO_HOME env var or arduino_default_path()'
+    """expanded root path, ARDUINO_HOME env var or arduino_default_path()"""
 
     x = _ARDUINO_PATH
     if not x:

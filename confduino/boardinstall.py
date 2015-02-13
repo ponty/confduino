@@ -9,13 +9,14 @@ log = logging.getLogger(__name__)
 
 
 def install_board(board_id, board_options, hwpack='arduino', replace_existing=False):
-    '''install board in boards.txt
+    """install board in boards.txt.
 
     :param board_id: string identifier
     :param board_options: dict like
     :param replace_existing: bool
     :rtype: None
-    '''
+
+    """
     doaction = 0
     if board_id in boards(hwpack).keys():
         log.debug('board already exists:' + board_id)

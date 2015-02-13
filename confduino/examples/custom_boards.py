@@ -26,7 +26,7 @@ def main(
     core='arduino',
     replace_existing=True,
 ):
-    'install custom boards'
+    """install custom boards."""
 
     def install(mcu, f_cpu, kbyte):
         board = AutoBunch()

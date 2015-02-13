@@ -1,9 +1,11 @@
 from confduino.util import AutoBunch, bunch2properties
 from nose.tools import eq_
 
-def check_keys(ls1,ls2):
+
+def check_keys(ls1, ls2):
     eq_(sorted(list(ls1)), ls2)
-    
+
+
 def test_1():
     x = AutoBunch()
     check_keys(x.keys(), [])

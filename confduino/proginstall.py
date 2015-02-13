@@ -9,13 +9,14 @@ log = logging.getLogger(__name__)
 
 
 def install_programmer(programmer_id, programmer_options, replace_existing=False):
-    '''install programmer in programmers.txt
+    """install programmer in programmers.txt.
 
     :param programmer_id: string identifier
     :param programmer_options: dict like
     :param replace_existing: bool
     :rtype: None
-    '''
+
+    """
     doaction = 0
     if programmer_id in programmers().keys():
         log.debug('programmer already exists:' + programmer_id)

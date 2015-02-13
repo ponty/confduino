@@ -8,19 +8,19 @@ log = logging.getLogger(__name__)
 
 
 def programmers_txt():
-    'path of programmers.txt'
+    """path of programmers.txt."""
     x = arduino_path() / 'hardware' / 'arduino' / 'programmers.txt'
     assert x.exists()
     return x
 
 
 def programmers():
-    ''' read programmers from programmers.txt'''
+    """read programmers from programmers.txt."""
     return read_properties(programmers_txt())
 
 
 def programmer_names(hwpack='arduino'):
-    'return installed board names'
+    """return installed board names."""
     ls = list(programmers().keys())
     ls.sort()
     return ls
@@ -28,7 +28,7 @@ def programmer_names(hwpack='arduino'):
 
 @entrypoint
 def print_programmers(verbose=False):
-    ''' print programmers from programmers.txt'''
+    """print programmers from programmers.txt."""
     if verbose:
         pp(programmers())
     else:

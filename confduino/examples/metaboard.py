@@ -7,10 +7,11 @@ from entrypoint2 import entrypoint
 def install_metaboard(
     replace_existing=False,
 ):
-    '''install metaboard
+    """install metaboard.
 
     http://metalab.at/wiki/Metaboard
-    '''
+
+    """
     metaboard = AutoBunch()
     metaboard.name = 'Metaboard'
 

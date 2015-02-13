@@ -5,7 +5,7 @@ import sys
 NAME = 'confduino'
 URL = 'https://github.com/ponty/confduino'
 DESCRIPTION = 'Arduino software configurator'
-exec(open(NAME+'/about.py').read())
+exec(open(NAME + '/about.py').read())
 VERSION = __version__
 
 extra = {}
@@ -15,20 +15,20 @@ if sys.version_info >= (3,):
 classifiers = [
     # Get more strings from
     # http://www.python.org/pypi?%3Aaction=list_classifiers
-    "License :: OSI Approved :: BSD License",
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.6",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3",
-#     "Programming Language :: Python :: 3.2",
-    "Programming Language :: Python :: 3.3",
-    "Programming Language :: Python :: 3.4",
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 2',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    #     "Programming Language :: Python :: 3.2",
+    'Programming Language :: Python :: 3.3',
+    'Programming Language :: Python :: 3.4',
 ]
 
-install_requires = open("requirements.txt").read().split('\n')
+install_requires = open('requirements.txt').read().split('\n')
 
 setup(
     name=NAME,

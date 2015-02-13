@@ -5,7 +5,7 @@ from entrypoint2 import entrypoint
 
 @entrypoint
 def install(replace_existing=False):
-    'install stk200 programmer'
+    """install stk200 programmer."""
     bunch = AutoBunch()
     bunch.name = 'STK200'
     bunch.protocol = 'stk200'

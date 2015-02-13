@@ -5,7 +5,7 @@ from entrypoint2 import entrypoint
 
 @entrypoint
 def install(replace_existing=False):
-    'install dapa programmer'
+    """install dapa programmer."""
     bunch = AutoBunch()
     bunch.name = 'DAPA'
     bunch.protocol = 'dapa'

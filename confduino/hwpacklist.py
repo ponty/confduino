@@ -8,7 +8,7 @@ log = logging.getLogger(__name__)
 
 
 def hwpack_dir():
-    'return hardware packages root path'
+    """return hardware packages root path."""
     x = arduino_path() / 'hardware'
     assert x.exists(), x
     return x
@@ -91,7 +91,7 @@ def hwpacks():
 
 
 def hwpack_names():
-    'return installed hardware package names'
+    """return installed hardware package names."""
     ls = hwpack_dir().listdir()
     ls = [x.name for x in ls]
     ls = [x for x in ls if x != 'tools']
@@ -105,5 +105,5 @@ def hwpack_names():
 
 @entrypoint
 def print_hwpacks():
-    'print installed arduino hardware packages'
-    print( '\n'.join(hwpack_names()) )
+    """print installed arduino hardware packages."""
+    print('\n'.join(hwpack_names()))

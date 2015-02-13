@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 
 
 def find_hwpack_dir(root):
-    '''search for hwpack dir under root'''
+    """search for hwpack dir under root."""
     root = path(root)
     log.debug('files in dir:' + root)
     for x in root.walkfiles():
@@ -27,12 +27,13 @@ def find_hwpack_dir(root):
 
 @entrypoint
 def install_hwpack(url, replace_existing=False):
-    '''install hwpackrary from web or local files system
+    """install hwpackrary from web or local files system.
 
     :param url: web address or file path
     :param replace_existing: bool
     :rtype: None
-    '''
+
+    """
     d = tmpdir(tmpdir())
     f = download(url)
     Archive(f).extractall(d)
