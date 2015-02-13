@@ -1,7 +1,6 @@
 from confduino.proglist import programmers_txt, programmers
 from confduino.progremove import remove_programmer
 from confduino.util import bunch2properties
-from entrypoint2 import entrypoint
 import logging
 
 log = logging.getLogger(__name__)

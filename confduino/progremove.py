@@ -1,6 +1,5 @@
 from confduino.proglist import programmers_txt
 from entrypoint2 import entrypoint
-from path import path
 import logging
 
 log = logging.getLogger(__name__)

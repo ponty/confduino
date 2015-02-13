@@ -1,7 +1,6 @@
 from confduino.boardlist import boards_txt, boards
 from confduino.boardremove import remove_board
 from confduino.util import bunch2properties
-from entrypoint2 import entrypoint
 import logging
 
 log = logging.getLogger(__name__)

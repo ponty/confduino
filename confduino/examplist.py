@@ -1,5 +1,4 @@
 from confduino import arduino_path
-from entrypoint2 import entrypoint
 import logging
 
 log = logging.getLogger(__name__)

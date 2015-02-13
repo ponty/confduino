@@ -1,18 +1,14 @@
 from confduino.boardinstall import install_board
-from confduino.boardlist import print_boards, boards, board_names
+from confduino.boardlist import board_names
+from confduino.boardlist import boards
 from confduino.boardremove import remove_board
-from confduino.hwpacklist import print_hwpacks, hwpacks, hwpack_names
-from confduino.libinstall import install_lib
-from confduino.liblist import print_libraries, libraries
-from confduino.libremove import remove_lib
-from confduino.mculist import print_mcus
+from confduino.hwpacklist import hwpack_names
 from confduino.proginstall import install_programmer
-from confduino.proglist import print_programmers, programmers
+from confduino.proglist import programmers
 from confduino.progremove import remove_programmer
-from confduino.util import tmpdir, ConfduinoError
-from confduino.version import print_version, version
+from confduino.util import tmpdir
+from confduino.version import version
 from nose.tools import eq_
-from path import path
 from unittest import TestCase
 import os
 

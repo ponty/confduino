@@ -1,5 +1,5 @@
 from confduino import set_arduino_path
-from confduino.version import version, intversion
+from confduino.version import intversion
 from nose.tools import eq_
 from data import TEST_ARDUINO_INSTALLATIONS
 

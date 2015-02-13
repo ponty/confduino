@@ -1,7 +1,4 @@
 from path import path
-import logging
-import sphinx
-import sys
 from setuptools import find_packages
 
 

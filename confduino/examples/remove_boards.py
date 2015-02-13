@@ -1,4 +1,5 @@
-from confduino.boardlist import boards, boards_txt, board_names
+from confduino.boardlist import board_names
+from confduino.boardlist import boards_txt
 from confduino.boardremove import remove_board
 from confduino.hwpacklist import hwpack_names
 from entrypoint2 import entrypoint

@@ -1,9 +1,5 @@
 from paver.easy import *
-from paver.setuputils import setup
-from setuptools import find_packages
 
-import paver.doctools
-import paver.misctasks
 from paved import *
 from paved.dist import *
 from paved.util import *
@@ -60,7 +56,6 @@ options.paved.dist.manifest.include.add('requirements.txt')
 )
 def alltest():
     'all tasks to check'
-    pass
 
 
 @task
@@ -68,4 +63,3 @@ def alltest():
 def sdist():
     """Overrides sdist to make sure that our MANIFEST.in is generated.
     """
-    pass

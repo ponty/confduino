@@ -1,6 +1,5 @@
 from confduino import exampallcreate
 from confduino.libinstall import install_lib
-from confduino.util import ConfduinoError
 from entrypoint2 import entrypoint
 
 
