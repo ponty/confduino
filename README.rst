@@ -4,6 +4,31 @@ Links:
  * home: https://github.com/ponty/confduino
  * documentation: http://ponty.github.com/confduino
  
+.. image:: https://pypip.in/version/confduino/badge.svg
+    :target: https://pypi.python.org/pypi/confduino/
+    :alt: Latest Version
+
+.. image:: https://pypip.in/py_versions/confduino/badge.svg
+    :target: https://pypi.python.org/pypi/confduino/
+    :alt: Supported Python versions
+
+.. image:: https://pypip.in/license/confduino/badge.svg
+    :target: https://pypi.python.org/pypi/confduino/
+    :alt: License
+            
+.. image:: https://pypip.in/download/confduino/badge.svg
+    :target: https://pypi.python.org/pypi/confduino/
+    :alt: Downloads
+    
+.. image:: https://travis-ci.org/ponty/confduino.svg?branch=master
+    :target: https://travis-ci.org/ponty/confduino
+    :alt: Build
+        
+.. image:: https://coveralls.io/repos/ponty/confduino/badge.svg?branch=master
+    :target: https://coveralls.io/r/ponty/confduino?branch=master
+    :alt: Coverage
+
+ 
 Features:
  - list, install, remove arduino_ libraries
     - install libraries from internet or local drive
