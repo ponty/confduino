@@ -1,4 +1,3 @@
-from bunch import unbunchify
 from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
@@ -46,6 +45,6 @@ def board_names(hwpack='arduino'):
 def print_boards(hwpack='arduino', verbose=False):
     ''' print boards from boards.txt'''
     if verbose:
-        pp(unbunchify(boards(hwpack)))
+        pp(boards(hwpack))
     else:
         print('\n'.join(board_names(hwpack)))

@@ -1,4 +1,4 @@
-from bunch import unbunchify
+from munch import unmunchify
 from confduino.boardlist import boards, board_names
 from confduino.hwpacklist import hwpack_names
 from entrypoint2 import entrypoint
@@ -28,5 +28,5 @@ def mcu(board_id, hwpack_id):
 @entrypoint
 def print_mcus():
     ''' print boards from boards.txt'''
-    ls = unbunchify(mcus())
+    ls = unmunchify(mcus())
     print( '\n'.join(ls) )

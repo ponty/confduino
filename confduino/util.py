@@ -1,5 +1,5 @@
 from six import StringIO
-from bunch import Bunch
+from munch import Munch
 from path import path
 from six.moves import configparser
 import logging
@@ -25,7 +25,7 @@ def download(url):
     return f
 
 
-class AutoBunch (Bunch):
+class AutoBunch (Munch):
     def __getattr__(self, k):
         '''
         Bunch is created for missing keys:
@@ -50,7 +50,7 @@ class AutoBunch (Bunch):
         if k3:
             self.__getattr__(k2).__setattr__(k3, v)
         else:
-            Bunch.__setattr__(self, k, v)
+            Munch.__setattr__(self, k, v)
 
 def read_properties(filename):
     ''' read properties file into bunch

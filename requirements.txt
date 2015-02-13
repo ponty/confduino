@@ -1,5 +1,5 @@
 entrypoint2
 path.py
-Bunch
+munch
 pyunpack
 six
