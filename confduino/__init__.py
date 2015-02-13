@@ -1,12 +1,12 @@
-from path import path
 import logging
 import os
+from path import path
 import sys
 
-__version__ = '0.2.1'
+from confduino.about import __version__
+
 
 log = logging.getLogger(__name__)
-# log=logging
 
 log.debug('version=' + __version__)
 

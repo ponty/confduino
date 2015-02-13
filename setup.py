@@ -1,21 +1,12 @@
 from setuptools import find_packages, setup
-import os.path
 import sys
 
-
-def read_project_version(package):
-    py = os.path.join(package, '__init__.py')
-    __version__ = None
-    for line in open(py).read().splitlines():
-        if '__version__' in line:
-            exec(line)
-            break
-    return __version__
 
 NAME = 'confduino'
 URL = 'https://github.com/ponty/confduino'
 DESCRIPTION = 'Arduino software configurator'
-VERSION = read_project_version(NAME)
+exec(open(NAME+'/about.py').read())
+VERSION = __version__
 
 extra = {}
 if sys.version_info >= (3,):
