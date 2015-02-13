@@ -29,4 +29,4 @@ def mcu(board_id, hwpack_id):
 def print_mcus():
     ''' print boards from boards.txt'''
     ls = unbunchify(mcus())
-    print '\n'.join(ls)
+    print( '\n'.join(ls) )

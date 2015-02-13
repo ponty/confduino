@@ -16,14 +16,14 @@ def upgrade_many(upgrade=True, create_examples_all=True):
     urls = set()
 
     def inst(url):
-        print 'upgrading ' + url
+        print( 'upgrading %s' % url )
         assert url not in urls
         urls.add(url)
         try:
             lib = install_lib(url, upgrade)
-            print ' -> ', lib
+            print( ' -> %s' % lib )
         except Exception as e:
-            print e
+            print( e )
 
     ############################
     # github.com
@@ -164,6 +164,6 @@ def upgrade_many(upgrade=True, create_examples_all=True):
 #    inst('')
 
     if create_examples_all:
-        print 'create "all" menu item'
+        print( 'create "all" menu item' )
         exampallcreate.create_examples_all()
-    print 'install finished'
+    print( 'install finished' )

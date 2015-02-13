@@ -11,10 +11,10 @@ def gui():
     sel = psidialogs.multi_choice(libraries(),
                                   'select libraries to remove from %s!' % libraries_dir(),
                                   title='remove boards')
-    print sel, 'selected'
+    print( '%s selected' % sel )
 
     if sel:
         if psidialogs.ask_yes_no('Do you really want to remove selected libraries?\n' + '\n'.join(sel)):
             for x in sel:
                 remove_lib(x)
-                print x + ' was removed'
+                print( '%s was removed' % x)

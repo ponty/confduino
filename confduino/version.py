@@ -74,6 +74,6 @@ def print_version(integer=False):
     example: 0022
     '''
     if integer:
-        print intversion()
+        print( intversion() )
     else:
-        print version()
+        print( version() )

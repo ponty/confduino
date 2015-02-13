@@ -71,4 +71,4 @@ def lib_examples(lib):
 @entrypoint
 def print_libraries():
     'print installed arduino libraries'
-    print '\n'.join(libraries())
+    print( '\n'.join(libraries()) )

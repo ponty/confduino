@@ -106,4 +106,4 @@ def hwpack_names():
 @entrypoint
 def print_hwpacks():
     'print installed arduino hardware packages'
-    print '\n'.join(hwpack_names())
+    print( '\n'.join(hwpack_names()) )

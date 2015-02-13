@@ -15,15 +15,15 @@ def remove_boards_gui(hwpack=''):
                                        title='select')
         else:
             hwpack = hwpack_names()[0]
-    print hwpack, 'selected'
+    print( '%s selected' % hwpack )
 
     if hwpack:
         sel = psidialogs.multi_choice(board_names(hwpack),
                                       'select boards to remove from %s!' % boards_txt(hwpack),
                                       title='remove boards')
-        print sel, 'selected'
+        print( '%s selected' % sel)
 
         if sel:
             for x in sel:
                 remove_board(x)
-                print x + ' was removed'
+                print( '%s was removed' % x)
