@@ -1,7 +1,7 @@
-from StringIO import StringIO
+from six import StringIO
 from bunch import Bunch
 from path import path
-import ConfigParser
+from six.moves import configparser
 import logging
 import tempfile
 import urllib
@@ -39,7 +39,18 @@ class AutoBunch (Bunch):
 #            raise AttributeError(k)
             self[k] = AutoBunch()
             return self[k]
+    def __setattr__(self, k, v):
+        '''
+        Recursive
 
+        >>> x=AutoBunch()
+        >>> setattr(x, 'mega.name', 'xy')
+        '''
+        k2,_,k3=k.partition('.')
+        if k3:
+            self.__getattr__(k2).__setattr__(k3, v)
+        else:
+            Bunch.__setattr__(self, k, v)
 
 def read_properties(filename):
     ''' read properties file into bunch
@@ -49,7 +60,7 @@ def read_properties(filename):
     '''
     s = path(filename).text()
     dummy_section = 'xxx'
-    cfgparser = ConfigParser.RawConfigParser()
+    cfgparser = configparser.RawConfigParser()
 
     # avoid converting options to lower case
     cfgparser.optionxform = str
@@ -57,8 +68,7 @@ def read_properties(filename):
     cfgparser.readfp(StringIO('[%s]\n' % dummy_section + s))
     bunch = AutoBunch()
     for x in cfgparser.options(dummy_section):
-        cmd = 'bunch.%s = "%s"' % (x, cfgparser.get(dummy_section, x))
-        exec cmd
+        setattr(bunch, x, cfgparser.get(dummy_section, str(x)))
     return bunch
 
 

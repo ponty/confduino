@@ -17,6 +17,9 @@ from unittest import TestCase
 import os
 
 
+def check_keys(ls1,ls2):
+    eq_(sorted(list(ls1)), ls2)
+
 class Test(TestCase):
 
 #    def test_lib(self):
@@ -52,23 +55,23 @@ class Test(TestCase):
         programmers_txt.parent.makedirs()
 
         programmers_txt.write_text('')
-        eq_(programmers().keys(), [])
+        check_keys(programmers().keys(), [])
 
         programmers_txt.write_text('''
 brd.x1.y1=foo
 brd.x2=foo
 brd.x3=foo
         ''')
-        eq_(programmers().keys(), ['brd'])
+        check_keys(programmers().keys(), ['brd'])
 
         install_programmer('ardu', dict(x1='hi'))
-        eq_(programmers().keys(), ['brd', 'ardu'])
+        check_keys(programmers().keys(), ['ardu', 'brd'])
 
         install_programmer('ardu', dict(x1='hi'))
-        eq_(programmers().keys(), ['brd', 'ardu'])
+        check_keys(programmers().keys(), ['ardu', 'brd'])
 
         remove_programmer('brd')
-        eq_(programmers().keys(), ['ardu'])
+        check_keys(programmers().keys(), ['ardu'])
 
     def test_boards(self):
         d = tmpdir(suffix='_test')
@@ -79,7 +82,7 @@ brd.x3=foo
 
         boards_txt.write_text('')
         eq_(board_names(), [])
-        eq_(boards().keys(), [])
+        check_keys(boards().keys(), [])
 
         # invalid board
         boards_txt.write_text('''
@@ -93,7 +96,7 @@ brd.build=foo
 brd.x3=foo
         ''')
         eq_(board_names(), ['brd'])
-        eq_(boards().keys(), ['brd'])
+        check_keys(boards().keys(), ['brd'])
 
         # invalid
         install_board('ardu', dict(x1='hi'))

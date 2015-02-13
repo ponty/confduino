@@ -3,7 +3,7 @@ from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
 from pprint import pprint
-from prettyprint.prettyprint import pp
+from confduino.prettyprint import pp
 import logging
 
 log = logging.getLogger(__name__)
@@ -23,7 +23,7 @@ def programmers():
 
 def programmer_names(hwpack='arduino'):
     'return installed board names'
-    ls = programmers().keys()
+    ls = list(programmers().keys())
     ls.sort()
     return ls
 

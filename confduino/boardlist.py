@@ -2,7 +2,7 @@ from bunch import unbunchify
 from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
-from prettyprint.prettyprint import pp
+from confduino.prettyprint import pp
 import logging
 
 log = logging.getLogger(__name__)
@@ -23,8 +23,10 @@ def boards(hwpack='arduino'):
     '''
     bunch = read_properties(boards_txt(hwpack))
 
+    bunch_items = list(bunch.items())
+    
     # remove invalid boards
-    for bid, board in bunch.items():
+    for bid, board in bunch_items:
 #        log.debug('    board found:' + bid)
         if not 'build' in board.keys() or not 'name' in board.keys():
             log.debug('invalid board found:' + bid)
@@ -35,7 +37,7 @@ def boards(hwpack='arduino'):
 
 def board_names(hwpack='arduino'):
     'return installed board names'
-    ls = boards(hwpack).keys()
+    ls = list(boards(hwpack).keys())
     ls.sort()
     return ls
 
