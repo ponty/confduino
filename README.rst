@@ -19,7 +19,7 @@ Features:
  - unpacker back-end: pyunpack_
  - downloader back-end: urllib_
  - some functionality is based on arscons_
- - supported python versions: 2.6, 2.7
+ - supported python versions: 2.6, 2.7, 3.3, 3.4
  - supported Arduino versions: 0022, 0023, 1.0, 1.0.3
  
 Known problems:
@@ -30,7 +30,7 @@ Known problems:
 arduino libraries: http://www.arduino.cc/en/Reference/Libraries
  
 Basic usage
-============
+===========
 
 install library:
 
@@ -49,7 +49,7 @@ Installation
 ============
 
 General
---------
+-------
 
  * install arduino_
  * install python_
@@ -63,7 +63,7 @@ General
 
 
 Ubuntu
-----------
+------
 ::
 
     sudo apt-get install arduino
@@ -72,7 +72,7 @@ Ubuntu
     sudo apt-get install unzip unrar p7zip-full
 
 Uninstall
-----------
+---------
 
 ::
 
