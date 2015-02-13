@@ -2,7 +2,6 @@ from bunch import unbunchify
 from confduino import arduino_path
 from confduino.util import read_properties
 from entrypoint2 import entrypoint
-from pprint import pprint
 from prettyprint.prettyprint import pp
 import logging
 
