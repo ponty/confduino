@@ -1,3 +1,4 @@
+import os.path
 from setuptools import find_packages, setup
 import sys
 
@@ -5,7 +6,10 @@ import sys
 NAME = 'confduino'
 URL = 'https://github.com/ponty/confduino'
 DESCRIPTION = 'Arduino software configurator'
-exec(open(NAME + '/about.py').read())
+
+# get __version__
+__version__ = None
+exec(open(os.path.join(NAME , 'about.py')).read())
 VERSION = __version__
 
 extra = {}
