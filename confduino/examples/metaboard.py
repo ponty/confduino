@@ -25,6 +25,6 @@ def install_metaboard(
 
     metaboard.upload.disable_flushing = 'true'
 
-    id = 'metaboard'
+    board_id = 'metaboard'
 
-    install_board(id, metaboard, replace_existing=replace_existing)
+    install_board(board_id, metaboard, replace_existing=replace_existing)

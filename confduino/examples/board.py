@@ -22,7 +22,7 @@ def install_board_with_programmer(mcu,
                                   ):
     """install board with programmer."""
     bunch = AutoBunch()
-    id = '{mcu}_{f_cpu}_{programmer}'.format(f_cpu=f_cpu,
+    board_id = '{mcu}_{f_cpu}_{programmer}'.format(f_cpu=f_cpu,
                                              mcu=mcu,
                                              programmer=programmer,
                                              )
@@ -37,4 +37,4 @@ def install_board_with_programmer(mcu,
     bunch.build.f_cpu = str(f_cpu) + 'L'
     bunch.build.core = core
 
-    install_board(id, bunch, replace_existing=replace_existing)
+    install_board(board_id, bunch, replace_existing=replace_existing)

@@ -19,7 +19,7 @@ def programmers():
     return read_properties(programmers_txt())
 
 
-def programmer_names(hwpack='arduino'):
+def programmer_names():
     """return installed board names."""
     ls = list(programmers().keys())
     ls.sort()

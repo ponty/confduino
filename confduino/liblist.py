@@ -5,11 +5,11 @@ import logging
 log = logging.getLogger(__name__)
 
 
-def nocase_subitem(dir, name):
-    for x in dir.listdir():
+def nocase_subitem(directory, name):
+    for x in directory.listdir():
         if x.name.lower() == name.lower():
             return x
-    return dir / name
+    return directory / name
 
 
 def libraries_dir():

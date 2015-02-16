@@ -13,8 +13,8 @@ class ConfduinoError(Exception):
     pass
 
 
-def tmpdir(dir=None, suffix=''):
-    x = tempfile.mkdtemp(suffix=suffix, prefix='confduino_', dir=dir)
+def tmpdir(directory=None, suffix=''):
+    x = tempfile.mkdtemp(suffix=suffix, prefix='confduino_', dir=directory)
     return path(x)
 
 
