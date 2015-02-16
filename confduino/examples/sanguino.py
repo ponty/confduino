@@ -6,5 +6,5 @@ from entrypoint2 import entrypoint
 def install(replace_existing=False):
     """install sanguino hardware package."""
     install_hwpack(
-        'http://sanguino.googlecode.com/files/Sanguino-0018r2_1_4.zip',
+        'https://sanguino.googlecode.com/files/Sanguino-0101r1.zip',
         replace_existing=replace_existing)
