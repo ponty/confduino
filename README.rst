@@ -1,4 +1,4 @@
-confduino is an arduino_ library configurator
+confduino is an Arduino_ library, programmer, board configurator
 
 Links:
  * home: https://github.com/ponty/confduino
@@ -30,27 +30,25 @@ Links:
 
  
 Features:
- - list, install, remove arduino_ libraries
+ - get Arduino_ version
+ - list, install, remove Arduino_ libraries
     - install libraries from internet or local drive
     - fix ``examples`` directory name before installing
     - clean library (.*,_*,..) before installing
     - move examples under ``examples`` directory
     - upgrade library to 1.0: replace ``#include "wprogram.h"`` with ``#include "Arduino.h"``
- - list, install, remove arduino_ programmers
- - list, install, remove arduino_ boards
- - written in python
- - cross-platform
+ - list, install, remove Arduino_ programmers
+ - list, install, remove Arduino_ boards
  - can be used as a python library or as a console program
  - unpacker back-end: pyunpack_
  - downloader back-end: urllib_
  - some functionality is based on arscons_
  - supported python versions: 2.6, 2.7, 3.3, 3.4
- - supported Arduino versions: 0022, 0023, 1.0, 1.0.3
+ - supported Arduino versions: 1.0.5
  
 Known problems:
  - tested only on linux
  - some libraries with unusual structure can not be installed
- - not all commands have console interface
 
 arduino libraries: http://www.arduino.cc/en/Reference/Libraries
  

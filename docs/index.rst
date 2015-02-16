@@ -1,7 +1,6 @@
 **confduino**
 
 :Date: |today|
-:PDF: `confduino.pdf <confduino.pdf>`_
 
 
 Contents:

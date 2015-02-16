@@ -1,25 +1,14 @@
-from path import path
-from setuptools import find_packages
+import os.path
 
 
-def read_project_version(py=None, where='.', exclude=['bootstrap', 'pavement', 'doc', 'docs', 'test', 'tests', ]):
-    if not py:
-        py = path(where) / find_packages(where=where, exclude=exclude)[0]
-    py = path(py)
-    if py.isdir():
-        py = py / '__init__.py'
-    __version__ = None
-    for line in py.lines():
-        if '__version__' in line:
-            exec line
-            break
-    return __version__
-
-
-release = read_project_version(where='..')
 project = 'confduino'
 author = 'ponty'
 copyright = '2011, ponty'
+
+# get __version__
+__version__ = None
+exec(open(os.path.join('..', project , 'about.py')).read())
+release = __version__
 
 # logging.basicConfig(level=logging.DEBUG)
 
