@@ -1,4 +1,5 @@
 from paver.easy import *
+from paver.setuputils import setup, find_packages
 
 from paved import *
 from paved.dist import *
