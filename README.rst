@@ -28,7 +28,10 @@ Links:
     :target: https://coveralls.io/r/ponty/confduino?branch=master
     :alt: Coverage
 
- 
+.. image:: https://landscape.io/github/ponty/confduino/master/landscape.svg?style=flat
+    :target: https://landscape.io/github/ponty/confduino/master
+    :alt: Code Health
+   
 Features:
  - get Arduino_ version
  - list, install, remove Arduino_ libraries
