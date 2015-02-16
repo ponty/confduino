@@ -8,7 +8,7 @@ from confduino.about import __version__
 
 log = logging.getLogger(__name__)
 
-log.debug('version=' + __version__)
+log.debug('version=%s', __version__)
 
 _ARDUINO_PATH = None
 

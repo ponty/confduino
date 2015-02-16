@@ -14,5 +14,5 @@ def remove_hwpack(name):
 
     """
     targ_dlib = hwpack_dir() / name
-    log.debug('remove %s' % (targ_dlib))
+    log.debug('remove %s', targ_dlib)
     targ_dlib.rmtree()

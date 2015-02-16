@@ -19,9 +19,9 @@ def install_board(board_id, board_options, hwpack='arduino', replace_existing=Fa
     """
     doaction = 0
     if board_id in boards(hwpack).keys():
-        log.debug('board already exists:' + board_id)
+        log.debug('board already exists: %s', board_id)
         if replace_existing:
-            log.debug('remove board: %s' % (board_id))
+            log.debug('remove board: %s' , board_id)
             remove_board(board_id)
             doaction = 1
     else:

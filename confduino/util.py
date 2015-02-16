@@ -19,9 +19,9 @@ def tmpdir(dir=None, suffix=''):
 
 
 def download(url):
-    log.debug('downloading ' + url)
+    log.debug('downloading %s', url)
     f, _ = urllib.urlretrieve(url)
-    log.debug('downloaded file:' + f)
+    log.debug('downloaded file: %s', f)
     return f
 
 

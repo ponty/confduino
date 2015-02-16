@@ -26,9 +26,8 @@ def boards(hwpack='arduino'):
 
     # remove invalid boards
     for bid, board in bunch_items:
-        #        log.debug('    board found:' + bid)
-        if not 'build' in board.keys() or not 'name' in board.keys():
-            log.debug('invalid board found:' + bid)
+        if 'build' not in board.keys() or 'name' not in board.keys():
+            log.debug('invalid board found: %s', bid)
             del bunch[bid]
 
     return bunch

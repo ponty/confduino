@@ -14,7 +14,7 @@ def remove_board(board_id):
 
     """
 
-    log.debug('remove %s' % (board_id))
+    log.debug('remove %s', board_id)
     lines = boards_txt().lines()
     lines = filter(lambda x: not x.strip().startswith(board_id + '.'), lines)
     boards_txt().write_lines(lines)

@@ -19,9 +19,9 @@ def install_programmer(programmer_id, programmer_options, replace_existing=False
     """
     doaction = 0
     if programmer_id in programmers().keys():
-        log.debug('programmer already exists:' + programmer_id)
+        log.debug('programmer already exists: %s', programmer_id)
         if replace_existing:
-            log.debug('remove programmer: %s' % (programmer_id))
+            log.debug('remove programmer: %s', programmer_id)
             remove_programmer(programmer_id)
             doaction = 1
     else:

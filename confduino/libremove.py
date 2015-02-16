@@ -14,5 +14,5 @@ def remove_lib(lib_name):
 
     """
     targ_dlib = libraries_dir() / lib_name
-    log.debug('remove %s' % (targ_dlib))
+    log.debug('remove %s', targ_dlib)
     targ_dlib.rmtree()

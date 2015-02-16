@@ -14,7 +14,7 @@ def remove_programmer(programmer_id):
 
     """
 
-    log.debug('remove %s' % (programmer_id))
+    log.debug('remove %s', programmer_id)
     lines = programmers_txt().lines()
     lines = filter(
         lambda x: not x.strip().startswith(programmer_id + '.'), lines)

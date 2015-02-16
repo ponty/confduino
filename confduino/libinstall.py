@@ -24,7 +24,7 @@ def create_name(root):
         if header_only or cpp.exists():
             goodh += [h]
     assert len(goodh) > 0
-    log.debug('candidate headers:%s' % goodh)
+    log.debug('candidate headers: %s', goodh)
 
     hchoosen = None
     if len(goodh) == 1:
@@ -37,7 +37,7 @@ def create_name(root):
         if not hchoosen:
             hchoosen = goodh[0]
 
-    log.debug('choosing:%s' % hchoosen)
+    log.debug('choosing: %s', hchoosen)
 
 #            assert not libname
     libname = hchoosen.namebase
@@ -64,9 +64,9 @@ def fix_libdir(lib_dir):
 def find_lib_dir(root):
     """search for lib dir under root."""
     root = path(root)
-    log.debug('files in dir:' + root)
+    log.debug('files in dir: %s', root)
     for x in root.walkfiles():
-        log.debug('  ' + x)
+        log.debug('  %s', x)
 
     # only 1 dir in root? (example: github)
     if not len(root.files()) and len(root.dirs()) == 1:
@@ -88,7 +88,7 @@ def find_lib_dir(root):
         return root, lib_dir
 
     header_only = len(list(noexample(root.walkfiles('*.cpp')))) == 0
-    log.debug('header_only:%s' % header_only)
+    log.debug('header_only: %s', header_only)
     lib_dir = None
 
     headers = list(noexample(root.walkfiles('*.h')))
@@ -98,7 +98,7 @@ def find_lib_dir(root):
         if (header_only or cpp.exists()) and h.parent.name.lower() == h.namebase.lower():
             assert not lib_dir
             lib_dir = h.parent
-            log.debug('found lib:' + lib_dir)
+            log.debug('found lib: %s', lib_dir)
 
     if not lib_dir:
         if len(headers) == 1 and len(list(root.files('*.h'))) == 0:
@@ -114,7 +114,6 @@ def find_lib_dir(root):
 #            cpp = h.stripext() + '.cpp'
 #            if  header_only or cpp.exists():
 #                assert not lib_dir
-#                log.debug('lib has no own dir')
 #                root.rename(root.parent / h.namebase)
 #                root = lib_dir = root.parent / h.namebase
     assert lib_dir
@@ -136,7 +135,7 @@ def move_examples(root, lib_dir):
     stray_pde = all_pde.difference(lib_pde)
     if len(stray_pde) and not len(lib_pde):
         log.debug(
-            'examples found outside lib dir, moving them:' + str(stray_pde))
+            'examples found outside lib dir, moving them: %s', stray_pde)
         examples = lib_dir / EXAMPLES
         examples.makedirs()
         for x in stray_pde:
@@ -146,8 +145,8 @@ def move_examples(root, lib_dir):
 
 
 def _fix_dir(x):
-    log.debug('fixing examples dir name:' + x)
-    log.debug('new dir name:' + x.parent / EXAMPLES)
+    log.debug('fixing examples dir name: %s', x)
+    log.debug('new dir name: %s', x.parent / EXAMPLES)
     x.rename(x.parent / EXAMPLES)
 
 
@@ -249,14 +248,14 @@ def install_lib(url, replace_existing=False, fix_wprogram=True):
 
     targ_dlib = libraries_dir() / src_dlib.name
     if targ_dlib.exists():
-        log.debug('library already exists:' + targ_dlib)
+        log.debug('library already exists: %s', targ_dlib)
         if replace_existing:
-            log.debug('remove %s' % (targ_dlib))
+            log.debug('remove %s', targ_dlib)
             targ_dlib.rmtree()
         else:
             raise ConfduinoError('library already exists:' + targ_dlib)
 
-    log.debug('move %s -> %s' % (src_dlib, targ_dlib))
+    log.debug('move %s -> %s', src_dlib, targ_dlib)
     src_dlib.move(targ_dlib)
 
     libraries_dir().copymode(targ_dlib)

@@ -14,7 +14,7 @@ def remove_examples_all():
     """
     d = examples_all_dir()
     if d.exists():
-        log.debug('remove %s' % (d))
+        log.debug('remove %s', d)
         d.rmtree()
     else:
-        log.debug('nothing to remove:%s' % (d))
+        log.debug('nothing to remove: %s', d)

@@ -11,15 +11,15 @@ log = logging.getLogger(__name__)
 def find_hwpack_dir(root):
     """search for hwpack dir under root."""
     root = path(root)
-    log.debug('files in dir:' + root)
+    log.debug('files in dir: %s', root)
     for x in root.walkfiles():
-        log.debug('  ' + x)
+        log.debug('  %s', x)
 
     hwpack_dir = None
     for h in (root.walkfiles('boards.txt')):
         assert not hwpack_dir
         hwpack_dir = h.parent
-        log.debug('found hwpack:' + hwpack_dir)
+        log.debug('found hwpack: %s', hwpack_dir)
 
     assert hwpack_dir
     return hwpack_dir
@@ -44,16 +44,16 @@ def install_hwpack(url, replace_existing=False):
     targ_dhwpack = hwpack_dir() / src_dhwpack.name
     doaction = 0
     if targ_dhwpack.exists():
-        log.debug('hwpack already exists:' + targ_dhwpack)
+        log.debug('hwpack already exists: %s', targ_dhwpack)
         if replace_existing:
-            log.debug('remove %s' % (targ_dhwpack))
+            log.debug('remove %s', targ_dhwpack)
             targ_dhwpack.rmtree()
             doaction = 1
     else:
         doaction = 1
 
     if doaction:
-        log.debug('move %s -> %s' % (src_dhwpack, targ_dhwpack))
+        log.debug('move %s -> %s', src_dhwpack, targ_dhwpack)
         src_dhwpack.move(targ_dhwpack)
 
         hwpack_dir().copymode(targ_dhwpack)
