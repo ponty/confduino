@@ -1,6 +1,6 @@
 from six import StringIO
 from munch import Munch
-from path import path
+from path import Path as path
 from six.moves import configparser
 import logging
 import tempfile

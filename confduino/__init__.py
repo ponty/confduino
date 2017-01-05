@@ -1,6 +1,6 @@
 import logging
 import os
-from path import path
+from path import Path as path
 import sys
 
 from confduino.about import __version__
