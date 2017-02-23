@@ -46,7 +46,7 @@ Features:
  - unpacker back-end: pyunpack_
  - downloader back-end: urllib_
  - some functionality is based on arscons_
- - supported python versions: 2.6, 2.7, 3.3, 3.4
+ - supported python versions: 2.7, 3.3, 3.4
  - supported Arduino versions: 1.0.5
  
 Known problems:
